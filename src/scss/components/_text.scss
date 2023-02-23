@@ -1,0 +1,48 @@
+.title {
+    font-size: 70px;
+    @include Cormorant-Regular;
+    color: $MAIN_TEXT;
+    line-height: 85px;
+}
+
+.sub1 {
+    font-size: 40px;
+    @include Cormorant-Medium;
+    color: $MAIN_TEXT;
+    line-height: 48px;
+}
+
+.sub2 {
+    font-size: 32px;
+    @include Cormorant-Medium;
+    color: $MAIN_TEXT;
+    line-height: 39px;
+}
+
+.sub3 {
+    font-size: 24px;
+    @include Cormorant-Medium;
+    color: $MAIN_TEXT;
+    line-height: 29px;
+}
+
+.body_text {
+    font-size: 18px;
+    @include OpenSans-Light;
+    color: $MAIN_TEXT;
+    line-height: 160%;
+}
+
+.button_text {
+    font-size: 20px;
+    @include OpenSans-SemiBold;
+    color: $MAIN_TEXT;
+    line-height: 160%;
+}
+
+.input_text {
+    font-size: 20px;
+    @include OpenSans-Regular;
+    color: $MAIN_TEXT;
+    line-height: 160%;
+}

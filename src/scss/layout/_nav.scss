@@ -1,0 +1,93 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 130px;
+    padding-left: 114px;
+    position: relative;
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        margin: 0 auto;
+        
+        & li:not(:last-child) {
+            margin-right: 45px;
+        }
+    }
+
+    &--link {
+        text-transform: uppercase;
+        -webkit-background-clip: text;
+        background: linear-gradient(90deg, #F63F44 0%, #F17C08 100%);
+        background-size: 200% 200%;
+        background-clip: text;
+        -webkit-background-clip:text;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: rgba(0,0,0,0);
+        }
+    }
+
+    &__lang {
+        width: 115px;
+        background-color: #F0F0F3;
+        box-shadow: 2px 2px 8px rgba(51, 51, 51, 0.1);
+        padding: 12px 24px;
+        border-radius: 24px;
+        cursor: pointer;
+
+        &--country {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .flag {
+                width: 22px;
+                height: 16px;
+                margin-right: 12px;
+            }
+
+            & p {
+                width: 31px;
+            }
+
+            &:nth-child(2) {
+                margin: 0;
+                opacity: 0;
+                transition: 0.3s;
+                height: 0px;
+                transform: translateY(-15px);
+            }
+
+            &:nth-child(3) {
+                opacity: 0;
+                transition: 0.3s;
+                height: 0px;
+                transform: translateY(0px);
+            }
+        }
+
+        &:hover {
+            transition: 0.3s;
+            
+            & .nav__lang--country {
+                &:nth-child(2) {
+                    margin: 24px 0;
+                    height: 29px;
+                    transition: height transform 0.3s;
+                    opacity: 1;
+                    transform: translateY(0px); 
+                }
+
+                &:nth-child(3) {
+                    height: 29px;
+                    transition: height transform 0.3s;
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+        }
+    }
+}
