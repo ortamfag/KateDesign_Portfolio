@@ -3,6 +3,7 @@
     justify-content: space-between;
     margin: 0 130px;
     padding-left: 114px;
+    padding-bottom: 121px;
     position: relative;
 
     &__list {
@@ -42,6 +43,9 @@
         flex-direction: column;
         justify-content: center;
 
+        position: absolute;
+        right: 0;
+
         &--country {
             display: flex;
             justify-content: center;
@@ -59,22 +63,24 @@
 
             &[data-country='1'] {
                 transition: all 0.3s;
-                order: 1; 
+                margin: 0;
+                opacity: 0;
+                height: 0px;
+                order: 1;
+                transform: translateY(-144px);
             }
 
             &[data-country='2'] {
                 transition: all 0.3s;
-                margin: 0;
-                opacity: 0;
-                height: 0px;
-                order: 2;
+                order: 2; 
             }
 
             &[data-country='3'] {
                 transition: all 0.3s;
                 opacity: 0;
                 height: 0px;
-                order: 3
+                order: 3;
+                transform: translateY(144px);
             }
         }
 
@@ -82,12 +88,15 @@
             transition: 0.3s;
 
             & .nav__lang--country {
-                &[data-country='2'] {
-                    margin: 24px 0;
+                &[data-country='1'] {
                     height: 29px;
                     transition: height transform 0.3s;
                     opacity: 1;
                     transform: translateY(0px); 
+                }
+
+                &[data-country='2'] {
+                    margin: 24px 0;
                 }
 
                 &[data-country='3'] {
