@@ -1,4 +1,75 @@
 .header {
     width: 100vw;
+    height: 100vh;
     padding-top: 40px;
+    position: relative;
+
+    &::before {
+        content: "";
+        animation: backgroundOpacity 4s linear;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin: 40px 0;
+        height: calc(100vh - 80px);
+        z-index: -1;
+        background-image: url('../img/header_background.svg');
+        background-size: 100% 100%;
+        background-repeat: space;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__inner {
+        margin-left: 30px;
+
+        & h1 {
+            text-transform: uppercase;
+            overflow: hidden;
+            white-space: nowrap;
+            opacity: 0;
+            animation: typing 2s ease-in-out 4.5s;
+        }
+
+        & h2 {
+            @include OpenSans-Light;
+            font-size: 36px;
+            line-height: 160%;
+            color: $MAIN_TEXT;
+            margin-top: 10px;
+
+            opacity: 0;
+
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 2s ease-in 6.5s;
+        }
+    }
+
+    &__portrait {
+        width: 30%;
+    }
+}
+
+@keyframes backgroundOpacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from { 
+        width: 0;
+    }
+
+    to { 
+        width: 100%;
+    }
 }

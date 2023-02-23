@@ -3,7 +3,7 @@
     justify-content: space-between;
     margin: 0 130px;
     padding-left: 114px;
-    padding-bottom: 121px;
+    padding-bottom: 35px;
     position: relative;
 
     &__list {
@@ -11,6 +11,10 @@
         justify-content: center;
         align-items: top;
         margin: 0 auto;
+
+        padding: 20px;
+        border-radius: 10px;
+        background: radial-gradient(50% 2513.09% at 50% 50%, #F0F0F3 0%, rgba(240, 240, 243, 0) 100%);;
         
         & li:not(:last-child) {
             margin-right: 45px;

@@ -87,6 +87,23 @@ ukr.addEventListener('click', () => {
 
 /***/ }),
 
+/***/ "./src/js/components/textOpacity.js":
+/*!******************************************!*\
+  !*** ./src/js/components/textOpacity.js ***!
+  \******************************************/
+/***/ (() => {
+
+const headerTitle = document.querySelector('.js-headerTitle');
+const headerSubTitle = document.querySelector('.js-headerSubTitle');
+setTimeout(() => {
+  headerTitle.classList.add('view');
+}, 4600);
+setTimeout(() => {
+  headerSubTitle.classList.add('view');
+}, 6600);
+
+/***/ }),
+
 /***/ "./src/js/translation.js":
 /*!*******************************!*\
   !*** ./src/js/translation.js ***!
@@ -2242,6 +2259,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _translation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./translation */ "./src/js/translation.js");
 /* harmony import */ var _components_langSwitcher__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/langSwitcher */ "./src/js/components/langSwitcher.js");
 /* harmony import */ var _components_langSwitcher__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_langSwitcher__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_textOpacity__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/textOpacity */ "./src/js/components/textOpacity.js");
+/* harmony import */ var _components_textOpacity__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_textOpacity__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 })();
