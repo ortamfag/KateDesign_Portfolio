@@ -60,7 +60,6 @@
             &[data-country='1'] {
                 transition: all 0.3s;
                 order: 1; 
-                transform: translateY(0px);
             }
 
             &[data-country='2'] {
@@ -68,15 +67,13 @@
                 margin: 0;
                 opacity: 0;
                 height: 0px;
-                transform: translateY(0px);
                 order: 2;
             }
 
             &[data-country='3'] {
-                transition: all 0.6s;
+                transition: all 0.3s;
                 opacity: 0;
                 height: 0px;
-                transform: translateY(0px);
                 order: 3
             }
         }

@@ -18,25 +18,25 @@ eng.addEventListener('click', () => {
 })
 
 ukr.addEventListener('click', () => {
-    if (rus.dataset.country = "1") {
-        ukr.dataset.country = "2"
-        eng.dataset.country = "3"
+    // if (rus.dataset.country = "1") {
+    //     ukr.dataset.country = "2"
+    //     eng.dataset.country = "3"
 
-        setTimeout(() => {
-            ukr.dataset.country = "1"
-            rus.dataset.country = "2"
-        }, 100)
-    } else {
-        ukr.dataset.country = "2"
-        rus.dataset.country = "3"
+    //     setTimeout(() => {
+    //         ukr.dataset.country = "1"
+    //         rus.dataset.country = "2"
+    //     }, 200)
+    // } else {
+    //     ukr.dataset.country = "2"
+    //     rus.dataset.country = "3"
 
-        setTimeout(() => {
-            ukr.dataset.country = "1"
-            eng.dataset.country = "2"
-        }, 100)
-    }
+    //     setTimeout(() => {
+    //         ukr.dataset.country = "1"
+    //         eng.dataset.country = "2"
+    //     }, 200)
+    // }
 
-    // ukr.dataset.country = "1"
-    // rus.dataset.country = "2"
-    // eng.dataset.country = "3"
+    ukr.dataset.country = "1"
+    rus.dataset.country = "2"
+    eng.dataset.country = "3"
 })
