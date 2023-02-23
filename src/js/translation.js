@@ -2,8 +2,8 @@ import i18next from './vendor/i18next.min'
 
 let lang = navigator.language || navigator.userLanguage;
 
-let translationEn = {
-    "translate1": "Main",
+let translationEn= {
+    "translate1": "Главн=sdfая",
 }
 
 let translationRu = {
