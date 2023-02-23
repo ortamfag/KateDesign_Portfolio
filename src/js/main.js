@@ -1,1 +1,2 @@
-import './_components';
+import './components/translation';
+import './components/langSwitcher';

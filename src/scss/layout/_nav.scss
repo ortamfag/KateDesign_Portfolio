@@ -52,47 +52,41 @@
             & p {
                 width: 31px;
             }
-        }
 
-        & .eng {
-            opacity: 0;
-            transition: 0.3s;
-            height: 0px;
-            transform: translateY(29px);
-        }
+            &:nth-child(2) {
+                margin: 0;
+                opacity: 0;
+                transition: 0.3s;
+                height: 0px;
+                transform: translateY(-15px);
+            }
 
-        & .rus {
-            transition: 0.3s;
-            margin: 0px;
-        }
-
-        & .ukr {
-            opacity: 0;
-            transition: 0.3s;
-            height: 0px;
-            transform: translateY(144px);
+            &:nth-child(3) {
+                opacity: 0;
+                transition: 0.3s;
+                height: 0px;
+                transform: translateY(0px);
+            }
         }
 
         &:hover {
             transition: 0.3s;
+            
+            & .nav__lang--country {
+                &:nth-child(2) {
+                    margin: 24px 0;
+                    height: 29px;
+                    transition: height transform 0.3s;
+                    opacity: 1;
+                    transform: translateY(0px); 
+                }
 
-            & .ukr {
-                height: 29px;
-                transition: height transform 0.3s;
-                opacity: 1;
-                transform: translateY(0px);
-            }
-
-            & .eng {
-                height: 29px;
-                transition: height transform 0.3s;
-                opacity: 1;
-                transform: translateY(0px);              
-            }
-
-            & .rus {
-                transition: 0.3s;
-                margin: 24px 0;
+                &:nth-child(3) {
+                    height: 29px;
+                    transition: height transform 0.3s;
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
             }
         }
     }
