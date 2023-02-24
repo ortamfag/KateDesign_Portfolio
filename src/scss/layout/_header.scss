@@ -1,22 +1,22 @@
 .header {
+    position: relative;
+    padding: 40px 0 20px;
     width: 100vw;
     height: 100vh;
-    padding-top: 40px;
-    position: relative;
 
     &::before {
         content: "";
-        animation: backgroundOpacity 4s linear;
         position: absolute;
-        top: 0;
         left: 0;
-        width: 100%;
-        margin: 40px 0;
-        height: calc(100vh - 80px);
+        top: 0;
         z-index: -1;
-        background-image: url('../img/header_background.svg');
+        margin: 40px 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-image: url("../img/header_background.svg");
         background-size: 100% 100%;
         background-repeat: space;
+        animation: background-opacity 4s linear;
     }
 
     &__wrapper {
@@ -25,51 +25,59 @@
     }
 
     &__inner {
-        margin-left: 30px;
+        margin-left: 100px;
 
-        & h1 {
-            text-transform: uppercase;
+        &--title {
+            @include adaptiveFont(24, 70);
+            @include Cormorant-Regular;
+
             overflow: hidden;
+            padding: 25px 0;
             white-space: nowrap;
+            text-transform: uppercase;
+            color: $mainTextColor;
+            background: radial-gradient(50% 2513.09% at 50% 50%, #f0f0f3 0%, rgba(240 240 243 / 0%) 100%);
             opacity: 0;
-            animation: typing 2s ease-in-out 4.5s;
+            animation: typing-text 2s ease-in-out 4.5s;
         }
 
-        & h2 {
+        &--subtitle {
             @include OpenSans-Light;
-            font-size: 36px;
-            line-height: 160%;
-            color: $MAIN_TEXT;
-            margin-top: 10px;
+            @include adaptiveFont(18, 36);
 
-            opacity: 0;
-
+            display: inline-block;
             overflow: hidden;
+            padding: 15px 0;
+            line-height: 100%;
             white-space: nowrap;
-            animation: typing 2s ease-in 6.5s;
+            color: $mainTextColor;
+            background: radial-gradient(43.93% 2223.01% at 50% 50%, #f0f0f3 0%, rgba(240 240 243 / 0%) 100%);
+            opacity: 0;
+            animation: typing-text 2s ease-in-out 4.5s;
         }
     }
 
     &__portrait {
-        width: 30%;
+        width: 27vw;
     }
 }
 
-@keyframes backgroundOpacity {
+@keyframes background-opacity {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
-@keyframes typing {
-    from { 
+@keyframes typing-text {
+    from {
         width: 0;
     }
 
-    to { 
+    to {
         width: 100%;
     }
 }

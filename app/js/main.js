@@ -1,6 +1,27 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/headerAnimation.js":
+/*!**********************************************!*\
+  !*** ./src/js/components/headerAnimation.js ***!
+  \**********************************************/
+/***/ (() => {
+
+const headerTitle = document.querySelector('.js-headerTitle');
+const headerSubTitle = document.querySelector('.js-headerSubTitle');
+const nav = document.querySelector('.js-nav');
+setTimeout(() => {
+  headerTitle.classList.add('view');
+  headerSubTitle.classList.add('view');
+  nav.classList.add('return');
+}, 4600);
+const headerSVG = document.querySelectorAll('.js-headerSVG');
+for (let i = 0; i < headerSVG.length; i++) {
+  headerSVG[i].classList.add(`headerSVG${i}`);
+}
+
+/***/ }),
+
 /***/ "./src/js/components/langSwitcher.js":
 /*!*******************************************!*\
   !*** ./src/js/components/langSwitcher.js ***!
@@ -84,23 +105,6 @@ ukr.addEventListener('click', () => {
       break;
   }
 });
-
-/***/ }),
-
-/***/ "./src/js/components/textOpacity.js":
-/*!******************************************!*\
-  !*** ./src/js/components/textOpacity.js ***!
-  \******************************************/
-/***/ (() => {
-
-const headerTitle = document.querySelector('.js-headerTitle');
-const headerSubTitle = document.querySelector('.js-headerSubTitle');
-setTimeout(() => {
-  headerTitle.classList.add('view');
-}, 4600);
-setTimeout(() => {
-  headerSubTitle.classList.add('view');
-}, 6600);
 
 /***/ }),
 
@@ -2259,8 +2263,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _translation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./translation */ "./src/js/translation.js");
 /* harmony import */ var _components_langSwitcher__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/langSwitcher */ "./src/js/components/langSwitcher.js");
 /* harmony import */ var _components_langSwitcher__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_langSwitcher__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_textOpacity__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/textOpacity */ "./src/js/components/textOpacity.js");
-/* harmony import */ var _components_textOpacity__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_textOpacity__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_headerAnimation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/headerAnimation */ "./src/js/components/headerAnimation.js");
+/* harmony import */ var _components_headerAnimation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_headerAnimation__WEBPACK_IMPORTED_MODULE_2__);
 
 
 

@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background-color: #F0F0F3;
+    background-color: #f0f0f3;
 }
 
 *,
@@ -40,4 +40,8 @@ a {
 
 .view {
     opacity: 1 !important;
+}
+
+.return {
+    transform: translate(0) !important;
 }

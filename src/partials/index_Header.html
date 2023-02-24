@@ -1,43 +1,104 @@
 <header class="header">
-    <nav class="nav">
+    <nav class="nav js-nav">
         <ul class="nav__list">
-            <li><a id="translate1" class="nav--link sub3" href="">Главная</a></li>
-            <li><a class="nav--link sub3" href="">Обо мне</a></li>
-            <li><a class="nav--link sub3" href="">Портфолио</a></li>
-            <li><a class="nav--link sub3" href="">Контакты</a></li>
+            <li><a id="translate1" class="nav--link" href="">Главная</a></li>
+            <li><a class="nav--link" href="">Обо мне</a></li>
+            <li><a class="nav--link" href="">Портфолио</a></li>
+            <li><a class="nav--link" href="">Контакты</a></li>
         </ul>
 
         <div class="nav__lang [ js-nav__lang ]">
             <div data-country="1" id="eng" class="nav__lang--country [ js-nav__lang--country ]">
-                <svg class="flag">
-                  <use xlink:href="img/sprite.svg#eng"></use>
-                </svg>
-                <p class="sub3">EN</p>
+                <svg class="flag"><use xlink:href="img/sprite.svg#eng"></use></svg>
+                <p class="nav__lang--name">EN</p>
             </div>
 
             <div data-country="2" id="rus" class="nav__lang--country [ js-nav__lang--country ]">
-                <svg class="flag">
-                  <use xlink:href="img/sprite.svg#rus"></use>
-                </svg>
-                <p class="sub3">RU</p>
+                <svg class="flag"><use xlink:href="img/sprite.svg#rus"></use></svg>
+                <p class="nav__lang--name">RU</p>
             </div>
 
             <div data-country="3" id="ukr" class="nav__lang--country [ js-nav__lang--country ]">
-                <svg class="flag">
-                  <use xlink:href="img/sprite.svg#ukr"></use>
-                </svg>
-                <p class="sub3">UA</p>
+                <svg class="flag"><use xlink:href="img/sprite.svg#ukr"></use></svg>
+                <p class="nav__lang--name">UA</p>
             </div>
         </div>
     </nav>
 
     <div class="header__wrapper">
-        <img class="header__portrait" src="img/vector.svg">
+        <div class="header__portrait">
+            <svg viewBox="0 0 377 605" fill="none" xmlns="http://www.w3.org/2000/svg" style="">
+                <g clip-path="url(#clip0_709_332)">
+                    <path width="547.61" height="604.4" transform="translate(-171)" fill="url(#paint0_radial_709_332)"
+                        d="M0 0 L547.61 0 L547.61 604.4 L0 604.4 Z" class="js-headerSVG headerSVG-diactive"></path>
+                    <path
+                        d="M249.5 397.5C249.5 397.5 189.39 404.07 144 374.85C98.6101 345.63 84.0001 317.72 77.7401 297.5C71.4801 277.28 70.9601 212.07 77.7401 193.8C78.1701 192.65 110.81 117.85 113.74 105.63C116.87 92.5899 153.39 55.0199 218.61 65.4599C283.83 75.8999 298.1 90.8799 307.14 152.78"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path
+                        d="M249.38 176.59C249.38 176.59 232.05 164.59 215.99 176.59M215.99 176.59C215.99 176.59 220.51 233.46 166.08 233.98C111.65 234.5 115.82 164.59 115.82 164.59C115.82 164.59 130.54 141.11 175.18 146.46C175.18 146.46 204.51 154.16 215.99 176.59Z"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path d="M77.7401 193.8C77.7401 193.8 96.0001 168.76 115.31 164.58" stroke="#0F0F0F" stroke-miterlimit="10"
+                        class="js-headerSVG headerSVG-diactive"></path>
+                    <path
+                        d="M186.78 313.28C186.78 313.28 214.95 310.67 234.78 313.28C254.61 315.89 263.48 316.41 268.69 319.02C268.69 319.02 259.82 334.67 235.82 334.15C211.82 333.63 186.78 313.28 186.78 313.28Z"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path
+                        d="M186.78 313.28C186.78 313.28 221.87 300.11 235.82 300.89C248.41 301.6 268.69 319.02 268.69 319.02C267.26 300.11 248.86 284.06 248.86 284.06C245.97 284.57 242.36 288.06 236.71 287.29C234.39 286.97 231.25 282.75 228.51 282.75C225.77 282.75 186.77 313.27 186.77 313.27"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path d="M224.8 259.74C222.26 255.44 223.63 251.06 229.5 249.3C229.5 249.3 236.15 246.05 234.39 257"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path d="M248.87 256.61C248.87 256.61 252 248.59 255.13 250.15C258.26 251.71 257.87 258.17 252 263.06"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path
+                        d="M252.97 268.93C252.97 268.93 261.33 266.84 262.7 261.36C264.07 255.88 265.5 243 257 235M220.44 238.14C209.76 247.34 207.4 256.61 207.4 259.73C207.4 264.95 212.1 267.36 217.05 267.62"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path d="M257.07 235.24C257.07 235.24 241.04 212.84 240 195.63" stroke="#0F0F0F" stroke-miterlimit="10"
+                        class="js-headerSVG headerSVG-diactive"></path>
+                    <path
+                        d="M196.43 196.93C196.43 196.93 176.6 202.41 161.21 202.67C145.82 202.93 140.34 195.63 133.3 193.8C133.3 193.8 148.69 183.1 163.56 183.89C178.43 184.68 196.43 196.93 196.43 196.93Z"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path
+                        d="M251 200.5C251 200.5 264.37 206.48 273.5 207C282.63 207.52 304.17 203.98 304.17 203.98C304.17 203.98 290.6 192.49 279.65 189.36C276.38 188.43 272.5 188.53 268.66 189.13C259.62 190.54 250 194.5 250 194.5"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path
+                        d="M161.11 201.93C166.666 201.93 171.17 197.883 171.17 192.89C171.17 187.897 166.666 183.85 161.11 183.85C155.554 183.85 151.05 187.897 151.05 192.89C151.05 197.883 155.554 201.93 161.11 201.93Z"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path
+                        d="M272.76 207.08C278.316 207.08 282.82 203.033 282.82 198.04C282.82 193.047 278.316 189 272.76 189C267.204 189 262.7 193.047 262.7 198.04C262.7 203.033 267.204 207.08 272.76 207.08Z"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path
+                        d="M77.5 298C77.5 298 92.8701 360.59 96.5201 386.67C100.17 412.75 98.0901 438.84 108 455.54C117.91 472.24 169.57 556.24 145.57 607.89L5.50001 621C5.50001 621 -51 632 -68 575C-86 533 -29.9999 444 -51 360C-51 360 -99.39 229.11 14.87 165.72C14.87 165.72 50.87 134.42 49.3 93.72C47.73 53.02 125.22 4.5 176.09 4.5C226.96 4.5 298.96 17.02 332.61 72.59C366.26 128.16 384.26 218.16 372.52 265.11C360.78 312.06 333.39 319.89 327.91 368.41C322.43 416.93 350.61 525.71 350.61 525.71C350.783 544.4 345.6 587.002 323.48 607.89M206.61 598.49C206.61 598.49 223.83 557.79 207.39 499.88L248.87 397.36C248.87 397.36 270.78 393.45 287.22 368.4C303.66 343.35 324.49 271.02 325.57 263.53C326.65 256.04 323.88 233.41 323.48 232.23C323.48 232.23 354.26 195.71 350.61 172.23C350.61 172.23 326.61 156.06 295.83 156.06C268.23 156.06 252.38 170.74 249.39 178.29C249.05 179.16 248.87 179.94 248.87 180.59C248.87 186.85 250.44 230.16 280.7 239.55C310.96 248.94 323.48 232.25 323.48 232.25"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path d="M147.65 173.2C147.65 173.2 159.65 169.55 168.52 170.85C177.39 172.15 186.78 178.15 186.78 178.15"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path d="M260.87 183.85C260.87 183.85 273.13 176.06 284.35 179.2C295.57 182.34 301.57 191.46 301.57 191.46"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path d="M70 152C70 152 59.8619 170.904 25.5724 205.896C-8.71705 240.887 33.7792 304.391 25.5724 357"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path d="M356.09 229.71C360.79 254.07 321.66 306.5 312.26 344.07C302.86 381.64 306.78 436.42 316.96 464.59"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path d="M268.821 418C269.601 446.17 286.561 475.13 281.601 497.83C276.641 520.53 246.801 560.23 252.791 581.57"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                    <path d="M53.821 347C54.601 375.17 71.561 404.13 66.601 426.83C61.641 449.53 31.801 489.23 37.791 510.57"
+                        stroke="#0F0F0F" stroke-miterlimit="10" class="js-headerSVG headerSVG-diactive"></path>
+                </g>
+                <defs>
+                    <radialGradient id="paint0_radial_709_332" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(273.805 302.2) rotate(90) scale(302.2 273.805)">
+                        <stop stop-color="white"></stop>
+                        <stop offset="1" stop-color="white" stop-opacity="0"></stop>
+                    </radialGradient>
+                    <clipPath id="clip0_709_332">
+                        <path width="547.61" height="604.4" fill="white" transform="translate(-171)"
+                            d="M0 0 L547.61 0 L547.61 604.4 L0 604.4 Z" class="js-headerSVG  headerSVG-diactive"></path>
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
 
         <div class="header__inner">
-            <h1 class="title js-headerTitle">Екатерина Ракитова</h1>
-            
-            <h2 class="js-headerSubTitle">дизайнер веб-интерфейсов</h2>
+            <h1 class="header__inner--title js-headerTitle">Екатерина Ракитова</h1>
+            <h2 class="header__inner--subtitle js-headerSubTitle">дизайнер веб-интерфейсов</h2>
         </div>
     </div>
 
