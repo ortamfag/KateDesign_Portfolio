@@ -1,4 +1,117 @@
 .header {
+    position: relative;
+    padding: 40px 0 20px;
     width: 100vw;
-    padding-top: 40px;
+    height: 100vh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        margin: 40px 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-image: url("../img/header_background.svg");
+        background-size: 100% 100%;
+        background-repeat: space;
+        animation: background-opacity 4s linear;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__inner {
+        margin-left: 100px;
+
+        &--title {
+            @include adaptiveFont(24, 70);
+            @include Cormorant-Regular;
+
+            overflow: hidden;
+            padding: 25px 0;
+            white-space: nowrap;
+            text-transform: uppercase;
+            color: $mainTextColor;
+            background: radial-gradient(50% 2513.09% at 50% 50%, #f0f0f3 0%, rgba(240 240 243 / 0%) 100%);
+            opacity: 0;
+            animation: typing-text 2s ease-in-out 4.5s;
+        }
+
+        &--subtitle {
+            @include OpenSans-Light;
+            @include adaptiveFont(18, 36);
+
+            display: inline-block;
+            overflow: hidden;
+            padding: 15px 0;
+            line-height: 100%;
+            white-space: nowrap;
+            color: $mainTextColor;
+            background: radial-gradient(43.93% 2223.01% at 50% 50%, #f0f0f3 0%, rgba(240 240 243 / 0%) 100%);
+            opacity: 0;
+            animation: typing-text 2s ease-in-out 4.5s;
+        }
+    }
+
+    &__portrait {
+        width: 26vw;
+    }
+}
+
+@keyframes background-opacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes typing-text {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .header__inner {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 743px) {
+    .header {
+        padding: 15px;
+    }
+
+    .header__inner {
+        margin-left: 20px;
+
+        &--title {
+            padding: 15px 0;
+        }
+
+        &--subtitle {
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .header__wrapper {
+        flex-direction: column;
+    }
+
+    .header__portrait svg defs {
+        display: none;
+    }
 }

@@ -1,0 +1,177 @@
+.headerSVG-diactive {
+    opacity: 0;
+}
+
+.headerSVG0 {
+    stroke-dasharray: 2305 2307;
+    stroke-dashoffset: 2306;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 0ms forwards;
+}
+
+.headerSVG1 {
+    stroke-dasharray: 673 675;
+    stroke-dashoffset: 674;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 63ms forwards;
+}
+
+.headerSVG2 {
+    stroke-dasharray: 337 339;
+    stroke-dashoffset: 338;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 126ms forwards;
+}
+
+.headerSVG3 {
+    stroke-dasharray: 49 51;
+    stroke-dashoffset: 50;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 190ms forwards;
+}
+
+.headerSVG4 {
+    stroke-dasharray: 175 177;
+    stroke-dashoffset: 176;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 253ms forwards;
+}
+
+.headerSVG5 {
+    stroke-dasharray: 204 206;
+    stroke-dashoffset: 205;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 317ms forwards;
+}
+
+.headerSVG6 {
+    stroke-dasharray: 26 28;
+    stroke-dashoffset: 27;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 380ms forwards;
+}
+
+.headerSVG7 {
+    stroke-dasharray: 26 28;
+    stroke-dashoffset: 27;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 444ms forwards;
+}
+
+.headerSVG8 {
+    stroke-dasharray: 81 83;
+    stroke-dashoffset: 82;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 507ms forwards;
+}
+
+.headerSVG9 {
+    stroke-dasharray: 44 46;
+    stroke-dashoffset: 45;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 571ms forwards;
+}
+
+.headerSVG10 {
+    stroke-dasharray: 134 136;
+    stroke-dashoffset: 135;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 634ms forwards;
+}
+
+.headerSVG11 {
+    stroke-dasharray: 114 116;
+    stroke-dashoffset: 115;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 698ms forwards;
+}
+
+.headerSVG12 {
+    stroke-dasharray: 61 63;
+    stroke-dashoffset: 62;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 761ms forwards;
+}
+
+.headerSVG13 {
+    stroke-dasharray: 61 63;
+    stroke-dashoffset: 62;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 825ms forwards;
+}
+
+.headerSVG14 {
+    stroke-dasharray: 2694 2696;
+    stroke-dashoffset: 2695;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 888ms forwards;
+}
+
+.headerSVG15 {
+    stroke-dasharray: 41 43;
+    stroke-dashoffset: 42;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 952ms forwards;
+}
+
+.headerSVG16 {
+    stroke-dasharray: 47 49;
+    stroke-dashoffset: 48;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 1015ms forwards;
+}
+
+.headerSVG17 {
+    stroke-dasharray: 226 228;
+    stroke-dashoffset: 227;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 1079ms forwards;
+}
+
+.headerSVG18 {
+    stroke-dasharray: 246 248;
+    stroke-dashoffset: 247;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 1142ms forwards;
+}
+
+.headerSVG19 {
+    stroke-dasharray: 172 174;
+    stroke-dashoffset: 173;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 1206ms forwards;
+}
+
+.headerSVG20 {
+    stroke-dasharray: 172 174;
+    stroke-dashoffset: 173;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 1269ms forwards;
+}
+
+.headerSVG21 {
+    stroke-dasharray: 2305 2307;
+    stroke-dashoffset: 2306;
+    opacity: 1 !important;
+    animation: header-svg-draw 2666ms ease-in-out 1333ms forwards;
+}
+
+@keyframes header-svg-draw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes header-svg-fade {
+    0% {
+        stroke-opacity: 1;
+    }
+
+    95.1219512195122% {
+        stroke-opacity: 1;
+    }
+
+    100% {
+        stroke-opacity: 0;
+    }
+}

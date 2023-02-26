@@ -1,11 +1,11 @@
 @import "./base/reset";
-
 @import "vars";
 @import "mixins/font-face";
+@import "mixins/adaptive-font";
 @import "fonts";
 @import "settings";
-
 @import "./components/text";
-
+@import "./components/headerPortrait";
+@import "./components/burger";
 @import "./layout/header";
 @import "./layout/nav";

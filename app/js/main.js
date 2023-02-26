@@ -1,6 +1,42 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/burger.js":
+/*!*************************************!*\
+  !*** ./src/js/components/burger.js ***!
+  \*************************************/
+/***/ (() => {
+
+const burger = document.querySelector('.js-burger');
+const nav = document.querySelector('.js-nav');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('burger-menu__active');
+  nav.classList.toggle('nav--active');
+});
+
+/***/ }),
+
+/***/ "./src/js/components/headerAnimation.js":
+/*!**********************************************!*\
+  !*** ./src/js/components/headerAnimation.js ***!
+  \**********************************************/
+/***/ (() => {
+
+const headerTitle = document.querySelector('.js-headerTitle');
+const headerSubTitle = document.querySelector('.js-headerSubTitle');
+const nav = document.querySelector('.js-nav');
+setTimeout(() => {
+  headerTitle.classList.add('view');
+  headerSubTitle.classList.add('view');
+  nav.classList.add('return');
+}, 4600);
+const headerSVG = document.querySelectorAll('.js-headerSVG');
+for (let i = 0; i < headerSVG.length; i++) {
+  headerSVG[i].classList.add(`headerSVG${i}`);
+}
+
+/***/ }),
+
 /***/ "./src/js/components/langSwitcher.js":
 /*!*******************************************!*\
   !*** ./src/js/components/langSwitcher.js ***!
@@ -13,37 +49,76 @@ const ukr = document.getElementById('ukr');
 const langSwitcher = document.querySelector('.js-nav__lang');
 const languages = document.querySelectorAll('.js-nav__lang--country');
 rus.addEventListener('click', () => {
-  rus.dataset.country = "1";
-  eng.dataset.country = "2";
-  ukr.dataset.country = "3";
+  switch (`${rus.dataset.country}, ${eng.dataset.country}`) {
+    case "1, 2":
+      eng.dataset.country = "1";
+      rus.dataset.country = "2";
+      ukr.dataset.country = "3";
+      break;
+    case "1, 3":
+      eng.dataset.country = "3";
+      rus.dataset.country = "2";
+      ukr.dataset.country = "1";
+      break;
+    case "3, 2":
+      eng.dataset.country = "3";
+      rus.dataset.country = "2";
+      ukr.dataset.country = "1";
+      break;
+    case "3, 1":
+      eng.dataset.country = "1";
+      rus.dataset.country = "2";
+      ukr.dataset.country = "3";
+      break;
+  }
 });
 eng.addEventListener('click', () => {
-  eng.dataset.country = "1";
-  rus.dataset.country = "2";
-  ukr.dataset.country = "3";
+  switch (`${eng.dataset.country}, ${rus.dataset.country}`) {
+    case "1, 2":
+      eng.dataset.country = "2";
+      rus.dataset.country = "1";
+      ukr.dataset.country = "3";
+      break;
+    case "1, 3":
+      eng.dataset.country = "2";
+      rus.dataset.country = "3";
+      ukr.dataset.country = "1";
+      break;
+    case "3, 2":
+      eng.dataset.country = "2";
+      rus.dataset.country = "3";
+      ukr.dataset.country = "1";
+      break;
+    case "3, 1":
+      eng.dataset.country = "2";
+      rus.dataset.country = "1";
+      ukr.dataset.country = "3";
+      break;
+  }
 });
 ukr.addEventListener('click', () => {
-  // if (rus.dataset.country = "1") {
-  //     ukr.dataset.country = "2"
-  //     eng.dataset.country = "3"
-
-  //     setTimeout(() => {
-  //         ukr.dataset.country = "1"
-  //         rus.dataset.country = "2"
-  //     }, 200)
-  // } else {
-  //     ukr.dataset.country = "2"
-  //     rus.dataset.country = "3"
-
-  //     setTimeout(() => {
-  //         ukr.dataset.country = "1"
-  //         eng.dataset.country = "2"
-  //     }, 200)
-  // }
-
-  ukr.dataset.country = "1";
-  rus.dataset.country = "2";
-  eng.dataset.country = "3";
+  switch (`${ukr.dataset.country}, ${eng.dataset.country}`) {
+    case "1, 2":
+      eng.dataset.country = "1";
+      rus.dataset.country = "3";
+      ukr.dataset.country = "2";
+      break;
+    case "1, 3":
+      eng.dataset.country = "3";
+      rus.dataset.country = "1";
+      ukr.dataset.country = "2";
+      break;
+    case "3, 2":
+      eng.dataset.country = "3";
+      rus.dataset.country = "1";
+      ukr.dataset.country = "2";
+      break;
+    case "3, 1":
+      eng.dataset.country = "1";
+      rus.dataset.country = "3";
+      ukr.dataset.country = "2";
+      break;
+  }
 });
 
 /***/ }),
@@ -2203,6 +2278,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _translation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./translation */ "./src/js/translation.js");
 /* harmony import */ var _components_langSwitcher__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/langSwitcher */ "./src/js/components/langSwitcher.js");
 /* harmony import */ var _components_langSwitcher__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_langSwitcher__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_headerAnimation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/headerAnimation */ "./src/js/components/headerAnimation.js");
+/* harmony import */ var _components_headerAnimation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_headerAnimation__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 })();

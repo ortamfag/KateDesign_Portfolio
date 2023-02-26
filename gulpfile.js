@@ -197,7 +197,7 @@ const resources = () => {
 
 //images
 const images = () => {
-    return src(`${paths.srcImgFolder}/**/**.{png, jpg, jpeg, gif}`)
+    return src(`${paths.srcImgFolder}/**/**.{png, jpg, jpeg, gif, svg}`)
         .pipe(plumber(
             notify.onError({
                 title: "IMAGES",
@@ -220,6 +220,26 @@ const images = () => {
             verbose: true
         }))
         .pipe(dest(paths.srcImgFolder))
+        .pipe(dest(paths.buildImgFolder))
+};
+
+const imagesSVG = () => {
+    return src(`${paths.srcImgFolder}/**.svg`)
+        .pipe(plumber(
+            notify.onError({
+                title: "IMAGES",
+                message: "Error: <%= error.message %>"
+            })
+        ))
+
+        .pipe(
+            svgmin({
+                js2svg: {
+                    pretty: true,
+                },
+            })
+        )
+
         .pipe(dest(paths.buildImgFolder))
 };
 
@@ -289,6 +309,6 @@ const toProd = (done) => {
 
 //functions
 exports.fonts = series(fontsWoff, fontsWoff2);
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, watchFiles);
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, svgSprites, htmlMinify);
+exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, imagesSVG, svgSprites, watchFiles);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, imagesSVG, svgSprites, htmlMinify);
 exports.zip = zipFiles;

@@ -1,48 +1,48 @@
 .title {
-    font-size: 70px;
+    @include adaptiveFont(24, 70);
     @include Cormorant-Regular;
-    color: $MAIN_TEXT;
-    line-height: 85px;
+    color: $mainTextColor;
+    line-height: 100%;
 }
 
 .sub1 {
     font-size: 40px;
     @include Cormorant-Medium;
-    color: $MAIN_TEXT;
-    line-height: 48px;
+    color: $mainTextColor;
+    line-height: 100%;
 }
 
 .sub2 {
     font-size: 32px;
     @include Cormorant-Medium;
-    color: $MAIN_TEXT;
-    line-height: 39px;
+    color: $mainTextColor;
+    line-height: 100%;
 }
 
 .sub3 {
-    font-size: 24px;
+    @include adaptiveFont(18, 24);
     @include Cormorant-Medium;
-    color: $MAIN_TEXT;
-    line-height: 29px;
+    color: $mainTextColor;
+    line-height: 100%;
 }
 
 .body_text {
     font-size: 18px;
     @include OpenSans-Light;
-    color: $MAIN_TEXT;
-    line-height: 160%;
+    color: $mainTextColor;
+    line-height: 100%;
 }
 
 .button_text {
     font-size: 20px;
     @include OpenSans-SemiBold;
-    color: $MAIN_TEXT;
-    line-height: 160%;
+    color: $mainTextColor;
+    line-height: 100%;
 }
 
 .input_text {
     font-size: 20px;
     @include OpenSans-Regular;
-    color: $MAIN_TEXT;
-    line-height: 160%;
+    color: $mainTextColor;
+    line-height: 100%;
 }
