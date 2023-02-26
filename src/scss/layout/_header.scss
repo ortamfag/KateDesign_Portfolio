@@ -133,8 +133,11 @@
     .header__inner {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         margin-left: 0;
+
+        &--subtitle {
+            display: inline-flex;
+        }
     }
 }
