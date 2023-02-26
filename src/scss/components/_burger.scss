@@ -4,6 +4,8 @@
     display: none;
     padding: 0 35px;
     -webkit-tap-highlight-color: transparent;
+    opacity: 0;
+    transition: 0.3s;
     cursor: pointer;
 
     div {
@@ -26,7 +28,7 @@
     &__active {
         position: relative;
         right: 0;
-        top: 15px;
+        top: 5px;
         width: 100%;
 
         div:nth-child(1) {

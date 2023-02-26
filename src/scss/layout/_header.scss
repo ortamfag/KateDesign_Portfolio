@@ -85,12 +85,20 @@
 @media (max-width: 1023px) {
     .header__inner {
         margin-left: 5%;
+
+        &--title {
+            padding: 10px 0;
+        }
     }
 }
 
 @media (max-width: 743px) {
     .header {
-        padding: 15px;
+        padding: 25px 15px;
+
+        &::before {
+            background-size: 100% 48%;
+        }
     }
 
     .header__inner {
@@ -109,9 +117,24 @@
 @media (max-width: 560px) {
     .header__wrapper {
         flex-direction: column;
+        justify-content: center;
+        padding-bottom: 22px;
+        height: 100%;
+    }
+
+    .header__portrait {
+        width: 50vw;
     }
 
     .header__portrait svg defs {
         display: none;
+    }
+
+    .header__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
     }
 }
