@@ -58,7 +58,7 @@
     }
 
     &__portrait {
-        width: 27vw;
+        width: 26vw;
     }
 }
 
@@ -79,5 +79,39 @@
 
     to {
         width: 100%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .header__inner {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 743px) {
+    .header {
+        padding: 15px;
+    }
+
+    .header__inner {
+        margin-left: 20px;
+
+        &--title {
+            padding: 15px 0;
+        }
+
+        &--subtitle {
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .header__wrapper {
+        flex-direction: column;
+    }
+
+    .header__portrait svg defs {
+        display: none;
     }
 }

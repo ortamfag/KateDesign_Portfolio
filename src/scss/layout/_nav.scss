@@ -4,7 +4,6 @@
     justify-content: space-between;
     margin: 0 130px;
     padding-bottom: 35px;
-    padding-left: 114px;
     transform: translateY(-100px);
     transition: 0.6s;
 
@@ -118,6 +117,149 @@
 
         &:hover {
             color: rgba(0 0 0 / 0%);
+        }
+    }
+}
+
+.burger-menu {
+    position: relative;
+    z-index: 1000;
+    display: none;
+    padding: 0 35px;
+    cursor: pointer;
+
+    div {
+        margin-bottom: 7px;
+        width: 25px;
+        height: 1px;
+        background-color: $black;
+        transition: 0.3s;
+    }
+
+    svg {
+        position: relative;
+        display: block;
+        width: 25px;
+        height: 6px;
+        transform: translateY(0);
+        transition: 0.3s;
+    }
+
+    &__active {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: calc(100% - 40px);
+
+        div:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            transition: 0.3s;
+        }
+
+        div:nth-child(2) {
+            transform: translateY(0) rotate(-45deg);
+            transition: 0.3s;
+        }
+
+        svg {
+            left: calc(-50% + 35px);
+            top: -12px;
+            width: calc(100vw - 70px);
+            height: 14px;
+            transition: 0.3s;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .nav {
+        margin: 0 5%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .nav {
+        margin: 0 4%;
+
+        &__lang {
+            top: 5px;
+
+            &--name {
+                display: none;
+            }
+
+            &--country .flag {
+                margin-right: 0;
+            }
+        }
+
+        &__list li:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+}
+
+@media (max-width: 743px) {
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0 20px;
+        transform: translateY(0);
+
+        &--active {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .nav {
+        position: absolute;
+        left: 0%;
+        top: -100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 15px 35px;
+        width: 100%;
+        height: 100%;
+        background: #f0f0f3;
+        transition: 0.5s;
+
+        &__list {
+            flex-direction: column;
+            background: none;
+            transform: translateY(20px);
+
+            li {
+                text-align: center;
+
+                &:not(:last-child) {
+                    margin: 0 0 25px;
+                }
+            }
+        }
+
+        &__lang {
+            position: static;
+            z-index: 1;
+            margin-top: 25px;
+            width: 114px;
+
+            &--name {
+                display: block;
+            }
+
+            &--country .flag {
+                margin-right: 12px;
+            }
+        }
+
+        &--active {
+            top: 0%;
+            transition: 0.5s;
         }
     }
 }

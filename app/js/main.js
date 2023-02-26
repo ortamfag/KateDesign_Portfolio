@@ -1,6 +1,22 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/burger.js":
+/*!*************************************!*\
+  !*** ./src/js/components/burger.js ***!
+  \*************************************/
+/***/ (() => {
+
+const burger = document.querySelector('.js-burger');
+const nav = document.querySelector('.js-nav');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('burger-menu__active');
+  nav.classList.toggle('nav--active');
+  navTop.classList.toggle('nav__top--active');
+});
+
+/***/ }),
+
 /***/ "./src/js/components/headerAnimation.js":
 /*!**********************************************!*\
   !*** ./src/js/components/headerAnimation.js ***!
@@ -2265,6 +2281,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_langSwitcher__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_langSwitcher__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_headerAnimation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/headerAnimation */ "./src/js/components/headerAnimation.js");
 /* harmony import */ var _components_headerAnimation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_headerAnimation__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/burger */ "./src/js/components/burger.js");
+/* harmony import */ var _components_burger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_burger__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
