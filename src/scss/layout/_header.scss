@@ -25,7 +25,7 @@
     }
 
     &__inner {
-        margin-left: 100px;
+        margin: 0 0 5% 100px;
 
         &--title {
             @include adaptiveFont(24, 70);
@@ -134,10 +134,12 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-left: 0;
+        margin: 0;
 
         &--subtitle {
             display: inline-flex;
+            justify-content: center;
+            padding-bottom: 5px;
         }
     }
 }
