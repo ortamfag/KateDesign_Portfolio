@@ -57,8 +57,9 @@
         }
     }
 
-    &__portrait {
-        width: 26vw;
+    &__portrait svg {
+        width: 25vw;
+        height: 70vh;
     }
 }
 
@@ -122,8 +123,9 @@
         height: 100%;
     }
 
-    .header__portrait {
+    .header__portrait svg {
         width: 50vw;
+        height: auto;
     }
 
     .header__portrait svg defs {
