@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Gilroy", sans-serif;
+    color: $white;
+    background-color: $black;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 $container-offset;
+    max-width: $container-width;
+}
+
+.centered {
+    text-align: center;
+}
+
+.h1 {
+    font-family: "Bebas", sans-serif;
+    font-weight: 400;
+    font-size: 96px;
+    line-height: 96px;
+}
+
+.h2 {
+    font-family: "Bebas", sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 40.8px;
+    letter-spacing: 5%;
+}
+
+.text16 {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.text20 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.text24 {
+    font-weight: 500;
+    font-size: 24px;
+}

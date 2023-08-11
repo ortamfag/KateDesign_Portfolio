@@ -1,3 +1,0 @@
-@mixin adaptiveFont($minSize, $maxSize) {
-    font-size: calc(#{$minSize + px} + #{$maxSize - $minSize} * (100vw - #{$minLayoutWidth + px}) / #{$maxLayoutWidth - $minLayoutWidth});
-}

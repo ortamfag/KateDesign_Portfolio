@@ -1,0 +1,60 @@
+.nav {
+    position: fixed;
+
+    // left: -100%
+    z-index: 3;
+    display: flex;
+    justify-content: right;
+    border-radius: 0 8px 8px 0;
+    padding: 31.5px 24px 24px $container-offset;
+    width: 602px;
+    background-color: $grey;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    &__item {
+        margin-right: 24px;
+        font-weight: 400;
+        color: $white;
+        transition: all 0.4s;
+        cursor: pointer;
+
+        &:hover {
+            color: $violet;
+            transition: all 0.4s;
+        }
+    }
+
+    &__lang {
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 7px 12px;
+        width: 80px;
+        box-shadow: 2px 2px 8px 0 #3333331A;
+        cursor: pointer;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 0;
+            opacity: 0;
+        }
+
+        &-flag {
+            margin-right: 12px;
+            width: 22px;
+            height: 16px;
+        }
+
+        &-isActive {
+            height: 24px !important;
+            opacity: 1 !important;
+        }
+    }
+}

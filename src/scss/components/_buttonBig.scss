@@ -1,0 +1,38 @@
+.buttonBig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 24px;
+    box-shadow: 1px 1px 5px 0 #C8B5FC40;
+    font-weight: 600;
+    font-size: 22px;
+    color: $white;
+    background-color: $violet;
+    transition: all 0.3s;
+    cursor: pointer;
+    gap: 12px;
+
+    p {
+        margin-right: 12px;
+    }
+
+    svg {
+        width: 32px;
+        height: 32px;
+        transform: rotate(0deg);
+        transition: 0.3s;
+    }
+
+    &:hover {
+        background-color: $violet-dark;
+        transition: all 0.3s;
+
+        svg {
+            transform: rotate(45deg);
+            transition: 0.3s;
+        }
+    }
+}

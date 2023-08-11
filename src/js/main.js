@@ -1,4 +1,5 @@
-import './translation'
-import './components/langSwitcher';
-import './components/headerAnimation';
-import './components/burger';
+// //Отдельные компоненты
+// import "./components";
+
+// Модули
+// import "./modules.js"
