@@ -1,1 +1,1 @@
-import '../modules/header/header.js'
+import '../modules/nav/nav.js';

@@ -2,4 +2,4 @@
 // import "./components";
 
 // Модули
-// import "./modules.js"
+import './modules.js';

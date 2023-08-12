@@ -30,31 +30,71 @@
         }
     }
 
-    &__lang {
+    &__translate {
+        position: relative;
         border: 1px solid #333;
         border-radius: 8px;
-        padding: 7px 12px;
+        padding: 7px 14px;
         width: 80px;
+        height: 40px;
         box-shadow: 2px 2px 8px 0 #3333331A;
+        transition: all 0.3s;
         cursor: pointer;
 
-        div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 0;
-            opacity: 0;
-        }
+        &:hover {
+            height: 110px;
+            transition: all 0.3s;
 
-        &-flag {
-            margin-right: 12px;
-            width: 22px;
-            height: 16px;
-        }
+            .nav__lang {
+                opacity: 1 !important;
+                transition: all 0.3s;
 
-        &-isActive {
-            height: 24px !important;
+                &[data-position="1"] {
+                    top: 7px;
+                }
+
+                &[data-position="2"] {
+                    top: 43px;
+                }
+
+                &[data-position="3"] {
+                    top: 79px;
+                }
+            }
+        }
+    }
+
+    &__lang {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.3s;
+
+        &[data-position="1"] {
+            top: 7px;
+            z-index: 11;
+            height: 24px;
             opacity: 1 !important;
         }
+
+        &[data-position="2"] {
+            top: 7px;
+            z-index: 10;
+            height: 24px;
+        }
+
+        &[data-position="3"] {
+            top: 7px;
+            z-index: 9;
+            height: 24px;
+        }
+    }
+
+    &__flag {
+        margin-right: 12px;
+        width: 22px;
+        height: 16px;
     }
 }
