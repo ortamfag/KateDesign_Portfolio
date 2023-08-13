@@ -124,6 +124,132 @@
         </picture>
     </div>
 </div>
+        <main class="main">
+            <section id="about">
+    <div class="about container">
+        <h2 class="about__title h2">ОБО МНЕ</h2>
+
+        <!-- CHAT -->
+        <div class="chat">
+            <!-- CLIENT -->
+            <div data-whois="client" class="chat__item">
+                <div class="chat__avatar">
+                    <svg class="">
+                        <use xlink:href="img/sprite.svg#user"></use>
+                    </svg>
+
+                    <div class="chat__avatar-online"></div>
+                </div>
+
+                <div class="chat__message">
+                    <p class="chat__user">Клиент</p>
+
+                    <!-- chat__typing-isTyped -->
+                    <div class="chat__typing js-clientChatPoints">
+                        <div class="chat__typing-isActivePoint"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <!--  chat__text-isTyped -->
+                    <div class="chat__text js-clientMessage">
+                        <p>Привет! Почему ты решила стать UX/UI дизайнером?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FREELANCER -->
+            <div data-whois="freelancer" class="chat__item">
+                <div class="chat__message">
+                    <p class="chat__user">Екатерина</p>
+
+                    <!-- chat__typing-isTyped -->
+                    <div class="chat__typing js-freelancerChatPoints">
+                        <div class="chat__typing-isActivePoint"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <!--  chat__text-isTyped -->
+                    <div class="chat__text js-freelancerMessage">
+                        <p class="text16">
+                            Эта профессия позволяет сочетать творческий процесс с практической
+                            пользой для пользователей. Я работаю над созданием удобных и интуитивно
+                            понятных интерфейсов для различных приложений и сайтов,
+                            что улучшает опыт пользователей и повышает эффективность работы
+                            компаний. Кроме того, этот вид деятельности является одним из
+                            самых востребованных в IT-отрасли
+                        </p>
+                    </div>
+                </div>
+
+                <div class="chat__avatar">
+                    <picture>
+                      <source type="image/avif" srcset="img/about__avatar@1x.avif 1x, img/about__avatar@2x.avif 2x">
+                      <source type="image/webp" srcset="img/about__avatar@1x.webp 1x, img/about__avatar@2x.webp 2x">
+                      <img src="img/about__avatar@1x.png" srcset="img/about__avatar@2x.png 2x" alt="My photo in chat">
+                    </picture>
+
+                    <div class="chat__avatar-online">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabcontainer -->
+        <div class="tabs">
+            <div class="tabs__header">
+                <div data-header="0" class="tabs__item tabs__item-isActive h3">Общая информация</div>
+                <div data-header="1" class="tabs__item h3">Образование</div>
+                <div data-header="2" class="tabs__item h3">Опыт работы</div>
+                <div data-header="3" class="tabs__item h3">Инструменты</div>
+            </div>
+
+            <div class="tabs__content">
+                <div data-tab="0" class="tabs__info tabs__info-isVisible">
+                    <p>
+                        Меня зовут Екатерина, я — UX/UI дизайнер, мне 21 год. Заканчиваю университет.
+                        Очень люблю свою профессиональную сферу. Верю в то, что правильный дизайн поможет
+                        пользователю достичь своих целей.
+                    </p>
+
+                    <p>
+                        Работаю как с крупными компаниями, так и с небольшими проектами.
+                    </p>
+
+                    <p>
+                        Создаю красивые и практичные сайты, повышающие конверсию.
+                        Разрабатываю стилистику сайта, исходя из фирменного стиля компании, или с нуля.
+                        Продумываю анимации и переходы по страницам.
+                    </p>
+
+                    <a class="tabs__resume">
+                        <!-- <picture>
+                          <source type="image/avif" srcset="img/{name}@1x.avif 1x, img/{name}@2x.avif 2x">
+                          <source type="image/webp" srcset="img/{name}@1x.webp 1x, img/{name}@2x.webp 2x">
+                          <img src="img/{name}@1x.jpg" srcset="img/{name}@2x.jpg 2x" alt="">
+                        </picture> -->
+
+                        <p>Резюме_Ракитова_Екатерина.pdf</p>
+                    </a>
+                </div>
+
+                <div data-tab="1" class="tabs__info">
+                    test1
+                </div>
+
+                <div data-tab="2" class="tabs__info">
+                    test
+                </div>
+
+                <div data-tab="3" class="tabs__info">
+                    test
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </main>
 
         <!-- https://vk.com/@vk_it-webp?t2fs=232db2370e4cfe3c00_3 -->
         <script src="js/import/modernizr-webp.js"></script>
