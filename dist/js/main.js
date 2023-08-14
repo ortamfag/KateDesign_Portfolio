@@ -2,6 +2,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/components/scroll-animation.js":
+/*!***********************************************!*\
+  !*** ./src/js/components/scroll-animation.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// scroll
+
+const onEntry = entry => {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
+};
+const options = {
+  threshold: [0.5]
+};
+const observer = new IntersectionObserver(onEntry, options);
+const elements = document.querySelectorAll('.element-animation');
+elements.forEach(elem => {
+  observer.observe(elem);
+});
+
+/***/ }),
+
 /***/ "./src/js/modules.js":
 /*!***************************!*\
   !*** ./src/js/modules.js ***!
@@ -9,9 +36,11 @@
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_nav_nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/nav/nav.js */ "./src/modules/nav/nav.js");
-/* harmony import */ var _modules_about_tabs_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/about/tabs.js */ "./src/modules/about/tabs.js");
-/* harmony import */ var _modules_about_chat_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/about/chat.js */ "./src/modules/about/chat.js");
+/* harmony import */ var _modules_preloader_preloader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/preloader/preloader.js */ "./src/modules/preloader/preloader.js");
+/* harmony import */ var _modules_nav_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/nav/nav.js */ "./src/modules/nav/nav.js");
+/* harmony import */ var _modules_about_tabs_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/about/tabs.js */ "./src/modules/about/tabs.js");
+/* harmony import */ var _modules_about_chat_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules/about/chat.js */ "./src/modules/about/chat.js");
+
 
 
 
@@ -123,6 +152,23 @@ languages.forEach(lang => {
   });
 });
 
+/***/ }),
+
+/***/ "./src/modules/preloader/preloader.js":
+/*!********************************************!*\
+  !*** ./src/modules/preloader/preloader.js ***!
+  \********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const preloader = document.querySelector('#preloader');
+window.addEventListener('load', () => {
+  preloader.classList.add('preloader-hidden');
+  setTimeout(() => {
+    preloader.classList.add('is-hidden');
+  }, 200);
+});
+
 /***/ })
 
 /******/ 	});
@@ -171,9 +217,10 @@ var __webpack_exports__ = {};
   !*** ./src/js/main.js ***!
   \************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules.js */ "./src/js/modules.js");
+/* harmony import */ var _components_scroll_animation_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/scroll-animation.js */ "./src/js/components/scroll-animation.js");
+/* harmony import */ var _modules_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules.js */ "./src/js/modules.js");
 // //Отдельные компоненты
-// import "./components";
+
 
 // Модули
 
