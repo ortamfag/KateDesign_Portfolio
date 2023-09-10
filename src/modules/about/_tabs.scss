@@ -1,0 +1,40 @@
+.tabs {
+    margin-top: 64px;
+
+    &__header {
+        display: flex;
+        margin-bottom: 32px;
+    }
+
+    &__item {
+        text-transform: uppercase;
+        color: $white;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 48px;
+        }
+
+        &-isActive {
+            color: $violet !important;
+            transition: all 0.3s;
+        }
+    }
+
+    &__info {
+        height: 0;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        p:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        &-isVisible {
+            height: 100%;
+            opacity: 1 !important;
+            transition: opacity 0.3s;
+        }
+    }
+}
