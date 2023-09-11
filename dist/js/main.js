@@ -130,6 +130,23 @@ tabsHeaders.forEach(header => {
   });
 });
 
+// dropdown
+
+const tabsDropdowns = document.querySelectorAll('.js-tabs__dropdown');
+tabsDropdowns.forEach(item => {
+  item.addEventListener('click', e => {
+    const dataset = e.currentTarget.dataset.customer;
+    for (let i = 0; i < tabsDropdowns.length; i += 1) {
+      if (dataset === tabsDropdowns[i].dataset.customer) {
+        const contentPart = tabsDropdowns[i].children[1];
+        const plus = tabsDropdowns[i].children[0].children[1];
+        contentPart.classList.toggle('tabs__description-isVisible');
+        plus.classList.toggle('tabs__plus-isActive');
+      }
+    }
+  });
+});
+
 /***/ }),
 
 /***/ "./src/modules/nav/nav.js":

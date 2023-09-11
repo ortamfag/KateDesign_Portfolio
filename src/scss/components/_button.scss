@@ -1,19 +1,38 @@
-.buttonBig {
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
     outline: none;
-    border: 0;
     border-radius: 8px;
-    padding: 12px 24px;
     box-shadow: 1px 1px 5px 0 #C8B5FC40;
     font-weight: 600;
     font-size: 22px;
     color: $white;
-    background-color: $violet;
     transition: all 0.3s;
     cursor: pointer;
     gap: 12px;
+
+    &-big {
+        padding: 12px 24px;
+    }
+
+    &-small {
+        padding: 6px 12px;
+    }
+
+    &-solid {
+        border: 0;
+        background-color: $violet;
+    }
+
+    &-opacity {
+        border: 3px solid $violet;
+        background-color: inherit;
+
+        &:hover {
+            background-color: $violet !important;
+        }
+    }
 
     p {
         margin-right: 12px;
