@@ -4,10 +4,13 @@
     z-index: 3;
     display: flex;
     justify-content: right;
+    border-right: 1px solid $violet;
+    border-bottom: 1px solid $violet;
     border-radius: 0 8px 8px 0;
     padding: 31.5px 24px 24px $container-offset;
     width: 602px;
     background-color: $grey;
+    transition: all 0.3s;
 
     &__list {
         display: flex;
@@ -27,6 +30,11 @@
             color: $violet;
             transition: all 0.4s;
         }
+    }
+
+    &__active {
+        left: 0% !important;
+        transition: all 0.3s !important;
     }
 
     &__translate {

@@ -171,6 +171,14 @@ languages.forEach(lang => {
     }
   });
 });
+const nav = document.querySelector('.js-nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > window.innerHeight / 4) {
+    nav.classList.add('nav__active');
+  } else {
+    nav.classList.remove('nav__active');
+  }
+});
 
 /***/ }),
 
