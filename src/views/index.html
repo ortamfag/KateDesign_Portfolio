@@ -48,15 +48,17 @@
         <link rel="stylesheet" href="css/style.min.css">
     </head>
     <body class="body">
-        @include('../modules/preloader/preloader.html')
-        @include('../modules/nav/nav.html')
-        @include('../modules/header/header.html')
-        <main class="main">
-            @include('../modules/about/about.html')
-            @include('../modules/services/services.html')
-            @include('../modules/portfolio/portfolio.html')
-            @include('../modules/reasons/reasons.html')
-        </main>
+        <div class="scroll">
+            @include('../modules/preloader/preloader.html')
+            @include('../modules/nav/nav.html')
+            @include('../modules/header/header.html')
+            <main class="main">
+                @include('../modules/about/about.html')
+                @include('../modules/services/services.html')
+                @include('../modules/portfolio/portfolio.html')
+                @include('../modules/reasons/reasons.html')
+            </main>
+        </div>
 
         <!-- https://vk.com/@vk_it-webp?t2fs=232db2370e4cfe3c00_3 -->
         <script src="js/import/modernizr-webp.js"></script>
