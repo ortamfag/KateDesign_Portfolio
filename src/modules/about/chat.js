@@ -47,4 +47,6 @@ const typingPointsRotation = (typingBlock, typingPoints, message, typingTime) =>
     }, typingTime);
 };
 
-typingPointsRotation(clientTypingBlock, clientTypingPoints, clientMessage, 1500);
+document.querySelector('.js-chat').addEventListener('transitionstart', () => {
+    typingPointsRotation(clientTypingBlock, clientTypingPoints, clientMessage, 1500);
+}, { once: true });

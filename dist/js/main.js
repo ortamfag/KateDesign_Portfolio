@@ -11,21 +11,20 @@
 __webpack_require__.r(__webpack_exports__);
 // scroll
 
-const onEntry = entry => {
-  entry.forEach(change => {
-    if (change.isIntersecting) {
-      change.target.classList.add('element-show');
+const options = {
+  threshold: 0.3
+};
+const onEntry = entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('hidden-show');
     }
   });
 };
-const options = {
-  threshold: [0.5]
-};
 const observer = new IntersectionObserver(onEntry, options);
-const elements = document.querySelectorAll('.element-animation');
-elements.forEach(elem => {
-  observer.observe(elem);
-});
+const hiddenElements = document.querySelectorAll('.hidden');
+console.log(hiddenElements);
+hiddenElements.forEach(el => observer.observe(el, options));
 
 /***/ }),
 
@@ -95,7 +94,11 @@ const typingPointsRotation = (typingBlock, typingPoints, message, typingTime) =>
     }, 500);
   }, typingTime);
 };
-typingPointsRotation(clientTypingBlock, clientTypingPoints, clientMessage, 1500);
+document.querySelector('.js-chat').addEventListener('transitionstart', () => {
+  typingPointsRotation(clientTypingBlock, clientTypingPoints, clientMessage, 1500);
+}, {
+  once: true
+});
 
 /***/ }),
 

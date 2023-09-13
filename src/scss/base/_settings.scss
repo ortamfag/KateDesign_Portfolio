@@ -44,17 +44,64 @@ a {
 
 // animation of appearance
 
-.element-animation {
+.hidden {
     opacity: 0;
 }
 
-.element-animation.element-show {
-    opacity: 1;
-    transition: opacity 1s;
+.hidden-show {
+    opacity: 1 !important;
+    transition: all 0.5s !important;
+
+    .title-entry {
+        left: 0% !important;
+        transition: all 0.3s;
+    }
+
+    .service-entry {
+        transform: translateY(0) !important;
+        transition: all 0.3s;
+    }
+
+    .portfolio-entry-left {
+        transform: translateX(0%) !important;
+        transition: all 0.4s;
+    }
+
+    .portfolio-entry-right {
+        transform: translateX(0%) !important;
+        transition: all 0.4s;
+    }
+}
+
+.title-entry {
+    position: relative;
+    left: -100%;
+    transition: all 0.3s;
+}
+
+.service-entry {
+    transform: translateY(200px);
+    transition: all 0.3s;
+}
+
+.portfolio-entry-left {
+    transform: translateX(-100%);
+    transition: all 0.4s;
+}
+
+.portfolio-entry-right {
+    transform: translateX(100%);
+    transition: all 0.4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hidden {
+        transition: none;
+    }
 }
 
 @media (max-width: 530px) {
-    .element-animation {
+    .hidden {
         opacity: 1;
     }
 }
@@ -74,7 +121,6 @@ a {
 
     font-family: "Bebas", sans-serif;
     font-weight: 400;
-    // font-size: 96px;
     line-height: 100%;
 }
 
@@ -83,7 +129,6 @@ a {
 
     font-family: "Bebas", sans-serif;
     font-weight: 400;
-    // font-size: 48px;
     line-height: 85%;
     letter-spacing: 0.05em;
 }
@@ -98,7 +143,6 @@ a {
 .buttonBigText {
     @include adaptiveFont(18, 22, 320, 1440);
 
-    // font-size: 22px;
     font-weight: 600;
     line-height: 160%;
 }
@@ -116,7 +160,6 @@ a {
     @include adaptiveFont(13, 20, 320, 1440);
 
     font-weight: 500;
-    // font-size: 20px;
     line-height: 140%;
 }
 

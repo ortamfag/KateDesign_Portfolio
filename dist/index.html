@@ -137,11 +137,13 @@
 </div>
         <main class="main">
             <section id="about">
-    <div class="about container element-animation">
-        <h2 class="about__title h2">ОБО МНЕ</h2>
+    <div class="about container">
+        <div class="hidden">
+            <h2 class="about__title h2 title-entry">ОБО МНЕ</h2>
+        </div>
 
         <!-- CHAT -->
-        <div class="chat">
+        <div class="chat js-chat hidden">
             <!-- CLIENT -->
             <div data-whois="client" class="chat__item">
                 <div class="chat__avatar">
@@ -208,7 +210,7 @@
         </div>
 
         <!-- Tabcontainer -->
-        <div class="tabs">
+        <div class="tabs hidden">
             <div class="tabs__header">
                 <div data-header="0" class="tabs__item tabs__item-isActive h3">Общая информация</div>
                 <div data-header="1" class="tabs__item h3">Образование</div>
@@ -424,138 +426,249 @@
 </section>
             <section id="services">
     <div class="services container">
-        <h2 class="services__title h2">Услуги</h2>
+        <div class="hidden">
+            <h2 class="services__title title-entry h2">Услуги</h2>
+        </div>
 
-        <div class="services__item">
-            <h3 class="h3">Одностраничный сайт</h3>
+        <div class="hidden">
+            <div class="services__item service-entry">
+                <h3 class="h3">Одностраничный сайт</h3>
 
-            <div class="services__about">
-                <div class="services__do">
-                    <ul class="services__list">
-                        <li class="text20">Прототип сайта</li>
-                        <li class="text20">Анализ конкурентов</li>
-                        <li class="text20">UI Kit (отдельная страница со стилями)</li>
-                        <li class="text20">Отрисовка уникального дизайна в Figma</li>
-                        <li class="text20">Отрисовка адаптива (мобильная версия)</li>
-                        <li class="text20">Добавление уместной анимации</li>
-                        <li class="text20">Подготовка макета к верстке</li>
-                    </ul>
+                <div class="services__about">
+                    <div class="services__do">
+                        <ul class="services__list">
+                            <li class="text20">Прототип сайта</li>
+                            <li class="text20">Анализ конкурентов</li>
+                            <li class="text20">UI Kit (отдельная страница со стилями)</li>
+                            <li class="text20">Отрисовка уникального дизайна в Figma</li>
+                            <li class="text20">Отрисовка адаптива (мобильная версия)</li>
+                            <li class="text20">Добавление уместной анимации</li>
+                            <li class="text20">Подготовка макета к верстке</li>
+                        </ul>
+                    </div>
+
+                    <div class="services__image">
+                        <picture>
+                            <source type="image/avif" srcset="img/landing@2x.avif 1x, img/landing@4x.avif 2x">
+                            <source type="image/webp" srcset="img/landing@2x.webp 1x, img/landing@4x.webp 2x">
+                            <img src="img/landing@1x.png" srcset="img/landing@4x.png 2x" alt="">
+                        </picture>
+                    </div>
                 </div>
 
-                <div class="services__image">
+                <div class="services__footer">
+                    <div class="services__price">
+                        <p class="text24"><span>Цена: </span> от 10 000₽ </p>
+                        <p class="text24"><span>Сроки работы: </span> от 1 недели </p>
+                        <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <a href="#">Подробнее</a></p>
+                    </div>
+
+                    <button class="button button-big button-solid">
+                        <p class="buttonBigText">Заказать</p>
+
+                        <svg class="">
+                        <use xlink:href="img/sprite.svg#buttonArrow"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden">
+            <div class="services__item service-entry">
+                <h3 class="h3">многостраничный сайт</h3>
+
+                <div class="services__about">
+                    <div class="services__do">
+                        <ul class="services__list">
+                            <li class="text20">Прототип сайта</li>
+                            <li class="text20">Анализ конкурентов</li>
+                            <li class="text20">Составление пользовательского сценария</li>
+                            <li class="text20">UI Kit (отдельная страница со стилями)</li>
+                            <li class="text20">Отрисовка уникального дизайна в Figma</li>
+                            <li class="text20">Отрисовка адаптива (мобильная версия)</li>
+                            <li class="text20">Добавление уместной анимации</li>
+                            <li class="text20">Страницы ошибок: 404, 500</li>
+                            <li class="text20">Страница загрузки</li>
+                            <li class="text20">Добавление необходимых окон (онлайн-оплата, расчет стоимости товаров, сбор заявок) в макете</li>
+                            <li class="text20">Подготовка макета к верстке</li>
+                        </ul>
+                    </div>
+
+                    <div class="services__image">
+                        <picture>
+                            <source type="image/avif" srcset="img/multipage@2x.avif 1x, img/multipage@4x.avif 2x">
+                            <source type="image/webp" srcset="img/multipage@2x.webp 1x, img/multipage@4x.webp 2x">
+                            <img src="img/multipage@1x.png" srcset="img/multipage@4x.png 2x" alt="">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="services__footer">
+                    <div class="services__price">
+                        <p class="text24"><span>Цена: </span> от 30 000₽ </p>
+                        <p class="text24"><span>Сроки работы: </span> от 3 недель </p>
+                        <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <a href="#">Подробнее</a></p>
+                    </div>
+
+                    <button class="button button-big button-solid">
+                        <p class="buttonBigText">Заказать</p>
+
+                        <svg class="">
+                        <use xlink:href="img/sprite.svg#buttonArrow"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden">
+            <div class="services__item service-entry">
+                <h3 class="h3">Приложение</h3>
+
+                <div class="services__about">
+                    <div class="services__do">
+                        <ul class="services__list">
+                            <li class="text20">Прототип приложения</li>
+                            <li class="text20">Анализ конкурентов</li>
+                            <li class="text20">Составление пользовательского сценария</li>
+                            <li class="text20">UI Kit (отдельная страница со стилями)</li>
+                            <li class="text20">Отрисовка уникального дизайна в Figma (только для мобильных)</li>
+                            <li class="text20">Добавление уместной анимации</li>
+                            <li class="text20">Добавление необходимых окон (онлайн-оплата, расчет стоимости товаров, сбор заявок)</li>
+                            <li class="text20">Подготовка макета к верстке</li>
+                        </ul>
+                    </div>
+
+                    <div data-services="app" class="services__image">
+                        <picture>
+                            <source type="image/avif" srcset="img/app@2x.avif 1x, img/app@4x.avif 2x">
+                            <source type="image/webp" srcset="img/app@2x.webp 1x, img/app@4x.webp 2x">
+                            <img src="img/app@2x.png" srcset="img/app@4x.png 2x" alt="">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="services__footer">
+                    <div class="services__price">
+                        <p class="text24"><span>Цена: </span> от 40 000₽ </p>
+                        <p class="text24"><span>Сроки работы: </span> от 3 недель </p>
+                        <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <a href="#">Подробнее</a></p>
+                    </div>
+
+                    <button class="button button-big button-solid">
+                        <p class="buttonBigText">Заказать</p>
+
+                        <svg class="">
+                        <use xlink:href="img/sprite.svg#buttonArrow"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section id="portfolio">
+    <div class="portfolio container">
+        <div class="hidden">
+            <h2 class="portfolio__title title-entry h2">Портфолио</h2>
+        </div>
+
+        <div class="portfolio__grid">
+            <div class="grid-entry hidden main1">
+                <div class="portfolio__item portfolio-entry-left">
                     <picture>
-                        <source type="image/avif" srcset="img/landing@2x.avif 1x, img/landing@4x.avif 2x">
-                        <source type="image/webp" srcset="img/landing@2x.webp 1x, img/landing@4x.webp 2x">
-                        <img src="img/landing@1x.png" srcset="img/landing@4x.png 2x" alt="">
+                      <source type="image/avif" srcset="img/main1@2x.avif 1x, img/main1@4x.avif 2x">
+                      <source type="image/webp" srcset="img/main1@2x.webp 1x, img/main1@4x.webp 2x">
+                      <img src="img/main1@2x.png" srcset="img/main1@4x.png 2x" alt="">
                     </picture>
                 </div>
             </div>
 
-            <div class="services__footer">
-                <div class="services__price">
-                    <p class="text24"><span>Цена: </span> от 10 000₽ </p>
-                    <p class="text24"><span>Сроки работы: </span> от 1 недели </p>
-                    <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <a href="#">Подробнее</a></p>
-                </div>
-
-                <button class="button button-big button-solid">
-                    <p class="buttonBigText">Заказать</p>
-
-                    <svg class="">
-                      <use xlink:href="img/sprite.svg#buttonArrow"></use>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <div class="services__item">
-            <h3 class="h3">многостраничный сайт</h3>
-
-            <div class="services__about">
-                <div class="services__do">
-                    <ul class="services__list">
-                        <li class="text20">Прототип сайта</li>
-                        <li class="text20">Анализ конкурентов</li>
-                        <li class="text20">Составление пользовательского сценария</li>
-                        <li class="text20">UI Kit (отдельная страница со стилями)</li>
-                        <li class="text20">Отрисовка уникального дизайна в Figma</li>
-                        <li class="text20">Отрисовка адаптива (мобильная версия)</li>
-                        <li class="text20">Добавление уместной анимации</li>
-                        <li class="text20">Страницы ошибок: 404, 500</li>
-                        <li class="text20">Страница загрузки</li>
-                        <li class="text20">Добавление необходимых окон (онлайн-оплата, расчет стоимости товаров, сбор заявок) в макете</li>
-                        <li class="text20">Подготовка макета к верстке</li>
-                    </ul>
-                </div>
-
-                <div class="services__image">
+            <div class="grid-entry hidden sub1">
+                <div class="portfolio__item portfolio-entry-right">
                     <picture>
-                        <source type="image/avif" srcset="img/multipage@2x.avif 1x, img/multipage@4x.avif 2x">
-                        <source type="image/webp" srcset="img/multipage@2x.webp 1x, img/multipage@4x.webp 2x">
-                        <img src="img/multipage@1x.png" srcset="img/multipage@4x.png 2x" alt="">
+                        <source type="image/avif" srcset="img/sub1@2x.avif 1x, img/sub1@4x.avif 2x">
+                        <source type="image/webp" srcset="img/sub1@2x.webp 1x, img/sub1@4x.webp 2x">
+                        <img src="img/sub1@2x.png" srcset="img/sub1@4x.png 2x" alt="">
                     </picture>
                 </div>
             </div>
 
-            <div class="services__footer">
-                <div class="services__price">
-                    <p class="text24"><span>Цена: </span> от 30 000₽ </p>
-                    <p class="text24"><span>Сроки работы: </span> от 3 недель </p>
-                    <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <a href="#">Подробнее</a></p>
-                </div>
-
-                <button class="button button-big button-solid">
-                    <p class="buttonBigText">Заказать</p>
-
-                    <svg class="">
-                      <use xlink:href="img/sprite.svg#buttonArrow"></use>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <div class="services__item">
-            <h3 class="h3">Приложение</h3>
-
-            <div class="services__about">
-                <div class="services__do">
-                    <ul class="services__list">
-                        <li class="text20">Прототип приложения</li>
-                        <li class="text20">Анализ конкурентов</li>
-                        <li class="text20">Составление пользовательского сценария</li>
-                        <li class="text20">UI Kit (отдельная страница со стилями)</li>
-                        <li class="text20">Отрисовка уникального дизайна в Figma (только для мобильных)</li>
-                        <li class="text20">Добавление уместной анимации</li>
-                        <li class="text20">Добавление необходимых окон (онлайн-оплата, расчет стоимости товаров, сбор заявок)</li>
-                        <li class="text20">Подготовка макета к верстке</li>
-                    </ul>
-                </div>
-
-                <div data-services="app" class="services__image">
+            <div class="grid-entry hidden sub2">
+                <div class="portfolio__item portfolio-entry-right">
                     <picture>
-                        <source type="image/avif" srcset="img/app@2x.avif 1x, img/app@4x.avif 2x">
-                        <source type="image/webp" srcset="img/app@2x.webp 1x, img/app@4x.webp 2x">
-                        <img src="img/app@2x.png" srcset="img/app@4x.png 2x" alt="">
+                        <source type="image/avif" srcset="img/sub2@2x.avif 1x, img/sub2@4x.avif 2x">
+                        <source type="image/webp" srcset="img/sub2@2x.webp 1x, img/sub2@4x.webp 2x">
+                        <img src="img/sub2@2x.png" srcset="img/sub2@4x.png 2x" alt="">
                     </picture>
                 </div>
             </div>
 
-            <div class="services__footer">
-                <div class="services__price">
-                    <p class="text24"><span>Цена: </span> от 40 000₽ </p>
-                    <p class="text24"><span>Сроки работы: </span> от 3 недель </p>
-                    <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <a href="#">Подробнее</a></p>
+            <div class="grid-entry hidden sub3">
+                <div class="portfolio__item portfolio-entry-left">
+                    <picture>
+                        <source type="image/avif" srcset="img/sub3@2x.avif 1x, img/sub3@4x.avif 2x">
+                        <source type="image/webp" srcset="img/sub3@2x.webp 1x, img/sub3@4x.webp 2x">
+                        <img src="img/sub3@2x.png" srcset="img/sub3@4x.png 2x" alt="">
+                    </picture>
                 </div>
+            </div>
 
-                <button class="button button-big button-solid">
-                    <p class="buttonBigText">Заказать</p>
+            <div class="grid-entry hidden main2">
+                <div class="portfolio__item portfolio-entry-right">
+                    <picture>
+                        <source type="image/avif" srcset="img/main2@2x.avif 1x, img/main2@4x.avif 2x">
+                        <source type="image/webp" srcset="img/main2@2x.webp 1x, img/main2@4x.webp 2x">
+                        <img src="img/main2@2x.png" srcset="img/main2@4x.png 2x" alt="">
+                    </picture>
+                </div>
+            </div>
 
-                    <svg class="">
-                      <use xlink:href="img/sprite.svg#buttonArrow"></use>
-                    </svg>
-                </button>
+            <div class="grid-entry hidden sub4">
+                <div class="portfolio__item portfolio-entry-right">
+                    <picture>
+                        <source type="image/avif" srcset="img/sub4@2x.avif 1x, img/sub4@4x.avif 2x">
+                        <source type="image/webp" srcset="img/sub4@2x.webp 1x, img/sub4@4x.webp 2x">
+                        <img src="img/sub4@2x.png" srcset="img/sub4@4x.png 2x" alt="">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="grid-entry hidden sub5">
+                <div class="portfolio__item portfolio-entry-left">
+                    <picture>
+                        <source type="image/avif" srcset="img/sub5@2x.avif 1x, img/sub5@4x.avif 2x">
+                        <source type="image/webp" srcset="img/sub5@2x.webp 1x, img/sub5@4x.webp 2x">
+                        <img src="img/sub5@2x.png" srcset="img/sub5@4x.png 2x" alt="">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="grid-entry hidden sub6">
+                <div class="portfolio__item portfolio-entry-left">
+                    <picture>
+                        <source type="image/avif" srcset="img/sub6@2x.avif 1x, img/sub6@4x.avif 2x">
+                        <source type="image/webp" srcset="img/sub6@2x.webp 1x, img/sub6@4x.webp 2x">
+                        <img src="img/sub6@2x.png" srcset="img/sub6@4x.png 2x" alt="">
+                    </picture>
+                </div>
+            </div>
+
+            <div class="grid-entry hidden main3">
+                <div class="portfolio__item portfolio-entry-right">
+                    <picture>
+                        <source type="image/avif" srcset="img/main3@2x.avif 1x, img/main3@4x.avif 2x">
+                        <source type="image/webp" srcset="img/main3@2x.webp 1x, img/main3@4x.webp 2x">
+                        <img src="img/main3@2x.png" srcset="img/main3@4x.png 2x" alt="">
+                    </picture>
+                </div>
             </div>
         </div>
+
+        <button class="button button-big button-solid hidden">
+            <p class="buttonBigText">Смотреть еще</p>
+        </button>
     </div>
 </section>
         </main>
@@ -563,6 +676,6 @@
         <!-- https://vk.com/@vk_it-webp?t2fs=232db2370e4cfe3c00_3 -->
         <script src="js/import/modernizr-webp.js"></script>
         <script type="module" src="js/import/translate.js"></script>
-        <script src="js/main.js"></script>
+        <script defer src="js/main.js"></script>
     </body>
 </html>

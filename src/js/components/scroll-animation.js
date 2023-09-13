@@ -1,17 +1,19 @@
 // scroll
 
-const onEntry = (entry) => {
-    entry.forEach((change) => {
-        if (change.isIntersecting) {
-            change.target.classList.add('element-show');
+const options = {
+    threshold: 0.3,
+};
+
+const onEntry = (entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('hidden-show');
         }
     });
 };
 
-const options = { threshold: [0.5] };
 const observer = new IntersectionObserver(onEntry, options);
-const elements = document.querySelectorAll('.element-animation');
 
-elements.forEach((elem) => {
-    observer.observe(elem);
-});
+const hiddenElements = document.querySelectorAll('.hidden');
+console.log(hiddenElements);
+hiddenElements.forEach((el) => observer.observe(el, options));

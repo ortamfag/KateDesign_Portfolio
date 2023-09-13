@@ -42,12 +42,12 @@
     &__image {
         width: 50%;
 
-        &[data-services="app"] {
-            width: 30% !important;
-        }
-
         img {
             width: 100%;
+        }
+
+        &[data-services="app"] {
+            width: 30% !important;
         }
     }
 
