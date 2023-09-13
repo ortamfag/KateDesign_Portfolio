@@ -1,5 +1,6 @@
 .portfolio {
-    padding-top: 152px;
+    overflow-x: hidden;
+    padding-top: 110px;
 
     &__title {
         color: $white;
@@ -8,18 +9,16 @@
     &__grid {
         display: grid;
         grid-auto-rows: 1fr;
+        grid-gap: 24px;
+
+        // cause gap
+        grid-template: 1fr 1fr 1fr / calc(25% - 18px) calc(25% - 18px) calc(25% - 18px) calc(25% - 18px);
         grid-template-areas:
             "main1 main1 sub1 sub2"
             "sub3 main2 main2 sub4"
             "sub5 sub6 main3 main3";
-
-        // cause gap (18px)
-        grid-template-columns: calc(25% - 18px) calc(25% - 18px) calc(25% - 18px) calc(25% - 18px);
-        // grid-template-rows: 30vh 30vh 30vh;
-        grid-template-rows: 1fr 1fr 1fr;
         margin-top: 48px;
         margin-bottom: 60px;
-        grid-gap: 24px 24px;
     }
 
     &__item {
