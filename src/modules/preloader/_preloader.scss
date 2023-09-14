@@ -1,5 +1,5 @@
 #svg-animation {
-    display: none !important;
+    // display: none !important;
     position: fixed;
     z-index: 999;
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 #preloader {
-    display: none !important;
+    // display: none !important;
     position: fixed;
     z-index: 998;
     display: flex;
@@ -33,7 +33,7 @@
 
 .preloader-hidden {
     opacity: 0 !important;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 .preloader-after-hidden {

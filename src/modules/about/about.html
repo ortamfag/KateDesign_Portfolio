@@ -1,8 +1,6 @@
 <section id="about">
     <div class="about container">
-        <div class="hidden">
-            <h2 class="about__title h2 title-entry">ОБО МНЕ</h2>
-        </div>
+
 
         <!-- CHAT -->
         <div class="chat js-chat hidden">
@@ -74,39 +72,58 @@
         <!-- Tabcontainer -->
         <div class="tabs hidden">
             <div class="tabs__header">
-                <div data-header="0" class="tabs__item tabs__item-isActive h3">Общая информация</div>
-                <div data-header="1" class="tabs__item h3">Образование</div>
-                <div data-header="2" class="tabs__item h3">Опыт работы</div>
-                <div data-header="3" class="tabs__item h3">Инструменты</div>
+                <div data-header="0" class="tabs__item tabs__item-isActive h3 hidden title-parent">
+                    <span data-queue="1" class="title-animation">Общая</span>
+                    <span data-queue="2" class="title-animation">информация</span>
+                </div>
+
+                <div data-header="1" class="tabs__item h3 hidden title-parent">
+                    <span data-queue="3" class="title-animation">Образование</span>
+                </div>
+
+                <div data-header="2" class="tabs__item h3 hidden title-parent">
+                    <span data-queue="4" class="title-animation">Опыт</span>
+                    <span data-queue="5" class="title-animation">работы</span>
+                </div>
+
+                <div data-header="3" class="tabs__item h3 hidden title-parent">
+                    <span data-queue="6" class="title-animation">Инструменты</span>
+                </div>
             </div>
 
             <div class="tabs__content">
                 <div data-tab="0" class="tabs__info tabs__info-isVisible">
                     <div class="tabs__general">
-                        <p class="text20">
-                            Меня зовут Екатерина, я - UX/UI дизайнер, мне 21 год. Заканчиваю университет.
-                            Очень люблю свою профессиональную сферу. Верю в то, что правильный дизайн поможет
-                            пользователю достичь своих целей.
+                        <p class="text20 hidden title-parent">
+                            <span data-queue="7" class="title-animation">
+                                Меня зовут Екатерина, я - UX/UI дизайнер, мне 21 год. Заканчиваю университет.
+                                Очень люблю свою профессиональную сферу. Верю в то, что правильный дизайн поможет
+                                пользователю достичь своих целей.
+                            </span>
                         </p>
 
-                        <p class="text20">
-                            Работаю как с крупными компаниями, так и с небольшими проектами.
+                        <p class="text20 hidden title-parent">
+                            <span data-queue="8" class="title-animation">
+                                Работаю как с крупными компаниями, так и с небольшими проектами.
+                            </span>
                         </p>
 
-                        <p class="text20">
-                            Создаю красивые и практичные сайты, повышающие конверсию.
-                            Разрабатываю стилистику сайта, исходя из фирменного стиля компании, или с нуля.
-                            Продумываю анимации и переходы по страницам.
+                        <p class="text20 hidden title-parent">
+                            <span data-queue="9" class="title-animation">
+                                Создаю красивые и практичные сайты, повышающие конверсию.
+                                Разрабатываю стилистику сайта, исходя из фирменного стиля компании, или с нуля.
+                                Продумываю анимации и переходы по страницам.
+                            </span>
                         </p>
 
-                        <a class="tabs__resume">
+                        <a class="tabs__resume hidden title-parent inline-block">
                             <!-- <picture>
                             <source type="image/avif" srcset="img/{name}@1x.avif 1x, img/{name}@2x.avif 2x">
                             <source type="image/webp" srcset="img/{name}@1x.webp 1x, img/{name}@2x.webp 2x">
                             <img src="img/{name}@1x.jpg" srcset="img/{name}@2x.jpg 2x" alt="">
                             </picture> -->
 
-                            <p class="text20">Резюме_Ракитова_Екатерина.pdf</p>
+                            <span data-queue="10" class="text20 title-animation">Резюме_Ракитова_Екатерина.pdf</span>
                         </a>
                     </div>
                 </div>
