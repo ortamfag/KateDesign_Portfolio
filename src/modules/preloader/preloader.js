@@ -1,8 +1,20 @@
-const preloader = document.querySelector('#preloader');
+// const preloader = document.querySelector('#preloader');
+// const svgAnimation = document.querySelector('#svg-animation');
 
-window.addEventListener('load', () => {
-    preloader.classList.add('preloader-hidden');
-    setTimeout(() => {
-        preloader.classList.add('is-hidden');
-    }, 200);
-});
+// let isLoad = false;
+// console.log(isLoad);
+// window.addEventListener('load', () => {
+//     isLoad = true;
+// });
+
+
+// setTimeout(() => {
+//     svgAnimation.classList.add('preloader-hidden');
+
+//     if (isLoad) {
+//         preloader.classList.add('preloader-after-hidden');
+//         setTimeout(() => {
+//             preloader.classList.add('is-hidden');
+//         }, 200);
+//     }
+// }, 3100);

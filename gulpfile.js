@@ -312,6 +312,6 @@ const toProd = (done) => {
 
 // functions
 
-export const dev = gulp.series(clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, images, webpImages, avifImages, svgSprites, watchFiles);
+export const dev = gulp.series(clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, avifImages, svgSprites, watchFiles);
 export const build = gulp.series(toProd, clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, images, webpImages, avifImages, svgSprites, htmlMinify);
 export const archive = zipFiles;
