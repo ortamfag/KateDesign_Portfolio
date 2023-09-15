@@ -19,9 +19,14 @@ languages.forEach((lang) => {
 const nav = document.querySelector('.js-nav');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > window.innerHeight / 4) {
-        nav.classList.add('nav__active');
+    // 80%
+    if (window.scrollY > window.innerHeight / 1.2) {
+        nav.style.backgroundColor = '';
+        nav.classList.add('nav--isActive');
     } else {
-        nav.classList.remove('nav__active');
+        if (nav.classList.contains('nav--isActive')) {
+            nav.classList.remove('nav--isActive');
+        }
+        nav.style.backgroundColor = `rgba(31 32 37 / ${(window.scrollY / window.innerHeight) * 2})`;
     }
 });

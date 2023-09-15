@@ -1,16 +1,35 @@
 .nav {
+    @include adaptiveFont(16, 22, 320, 2560);
+
     position: fixed;
-    left: -100%;
+    left: 0%;
     z-index: 3;
     display: flex;
-    justify-content: right;
-    border-right: 1px solid $violet;
-    border-bottom: 1px solid $violet;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 0 8px 8px 0;
-    padding: 31.5px 24px 24px $container-offset;
-    width: 602px;
-    background-color: $grey;
+    padding: 31.5px 0 24px;
+    width: 100%;
+    transform: translateY(-100%);
     transition: all 0.3s;
+
+    .h3 {
+        padding-left: $container-offset;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        padding-right: $container-offset;
+
+        button {
+            margin-right: 22px;
+
+            p {
+                margin-right: 0;
+            }
+        }
+    }
 
     &__list {
         display: flex;
@@ -30,11 +49,6 @@
             color: $violet;
             transition: all 0.4s;
         }
-    }
-
-    &__active {
-        left: 0% !important;
-        transition: all 0.3s !important;
     }
 
     &__translate {
@@ -104,4 +118,24 @@
         width: 22px;
         height: 16px;
     }
+
+    &--isActive {
+        background-color: $grey;
+    }
+
+    &--isAnimate {
+        transform: translateY(0%);
+        transition: transform 1s;
+        transition-delay: 1200ms;
+    }
+}
+
+.read-progress {
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: $violet;
+    transition: width 0.5s;
+    transition-delay: 1500ms;
 }
