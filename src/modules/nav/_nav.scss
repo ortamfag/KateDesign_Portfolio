@@ -3,7 +3,7 @@
 
     position: fixed;
     left: 0%;
-    z-index: 3;
+    z-index: 6;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,6 +15,13 @@
 
     .h3 {
         padding-left: $container-offset;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     &__right {
@@ -61,6 +68,12 @@
         box-shadow: 2px 2px 8px 0 #3333331A;
         transition: all 0.3s;
         cursor: pointer;
+
+        p {
+            font-family: "Bebas", sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+        }
 
         &:hover {
             height: 110px;
@@ -119,6 +132,10 @@
         height: 16px;
     }
 
+    &__mobile {
+        display: none;
+    }
+
     &--isActive {
         background-color: $grey;
     }
@@ -138,4 +155,155 @@
     background-color: $violet;
     transition: width 0.5s;
     transition-delay: 1500ms;
+}
+
+@media (max-width: 1280px) {
+    .nav {
+        display: block;
+        border-radius: 0;
+        background-color: $grey !important;
+
+        &__mobile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            transform: translate(0);
+        }
+
+        &__info {
+            flex-direction: column;
+            margin-top: 24px;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.2s;
+
+            h3 {
+                display: none;
+            }
+
+            &--isActive {
+                max-height: 500px;
+                opacity: 1;
+                transition: all 0.5s;
+
+                .nav__list li,
+                .nav__right button,
+                .nav__right .nav__translate {
+                    transform: translateY(0);
+                    transition-property: transform, color, background-color, height;
+
+                    &[data-queue="1"] {
+                        transition-delay: 0ms, 0ms, 0ms, 0ms;
+                    }
+
+                    &[data-queue="2"] {
+                        transition-delay: 100ms, 0ms, 0ms, 0ms;
+                    }
+
+                    &[data-queue="3"] {
+                        transition-delay: 200ms, 0ms, 0ms, 0ms;
+                    }
+
+                    &[data-queue="4"] {
+                        transition-delay: 300ms, 0ms, 0ms, 0ms;
+                    }
+
+                    &[data-queue="5"] {
+                        transition-delay: 400ms, 0ms, 0ms, 0ms;
+                    }
+
+                    &[data-queue="6"] {
+                        transition-delay: 500ms, 0ms, 0ms, 0ms;
+                    }
+
+                    &[data-queue="7"] {
+                        transition-delay: 600ms, 0ms, 0ms, 0ms;
+                    }
+                }
+            }
+        }
+
+        &__list {
+            flex-direction: column;
+
+            li {
+                transform: translateY(-100vh);
+            }
+        }
+
+        &__item {
+            margin-right: 0;
+            margin-bottom: 24px;
+        }
+
+        &__right {
+            flex-direction: column;
+            padding-right: 0;
+
+            button {
+                margin-right: 0;
+                transform: translateY(-100vh);
+            }
+
+            .nav__translate {
+                margin-top: 24px;
+                transform: translateY(-100vh);
+            }
+        }
+
+        &__burger {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-right: $container-offset;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+
+            div {
+                position: absolute;
+                width: 22px;
+                height: 2px;
+                background-color: $white;
+                transform: rotate(0) translateX(0);
+                transition: 0.2s;
+
+                &:nth-child(1) {
+                    right: 0;
+                    top: 5px;
+                }
+
+                &:nth-child(2) {
+                    right: 0;
+                    top: 15px;
+                    width: 15px;
+                }
+
+                &:nth-child(3) {
+                    right: 0;
+                    top: 25px;
+                }
+            }
+
+            &--isActive {
+                div {
+                    &:nth-child(1) {
+                        transform: rotate(-45deg) translate(-4px, 7px);
+                        transition: 0.2s;
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                        transition: 0.2s;
+                    }
+
+                    &:nth-child(3) {
+                        transform: rotate(45deg) translate(-7px, -10px);
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
 }

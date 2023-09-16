@@ -20,7 +20,7 @@ const nav = document.querySelector('.js-nav');
 
 window.addEventListener('scroll', () => {
     // 80%
-    if (window.scrollY > window.innerHeight / 1.2) {
+    if (window.scrollY > window.innerHeight) {
         nav.style.backgroundColor = '';
         nav.classList.add('nav--isActive');
     } else {

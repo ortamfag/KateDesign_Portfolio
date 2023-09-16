@@ -112,8 +112,10 @@ hiddenElements.forEach(el => observer.observe(el, options));
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_preloader_preloader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/preloader/preloader.js */ "./src/modules/preloader/preloader.js");
 /* harmony import */ var _modules_nav_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/nav/nav.js */ "./src/modules/nav/nav.js");
-/* harmony import */ var _modules_about_tabs_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/about/tabs.js */ "./src/modules/about/tabs.js");
-/* harmony import */ var _modules_about_chat_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules/about/chat.js */ "./src/modules/about/chat.js");
+/* harmony import */ var _modules_nav_burger_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/nav/burger.js */ "./src/modules/nav/burger.js");
+/* harmony import */ var _modules_about_tabs_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules/about/tabs.js */ "./src/modules/about/tabs.js");
+/* harmony import */ var _modules_about_chat_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modules/about/chat.js */ "./src/modules/about/chat.js");
+
 
 
 
@@ -227,6 +229,22 @@ tabsDropdowns.forEach(item => {
 
 /***/ }),
 
+/***/ "./src/modules/nav/burger.js":
+/*!***********************************!*\
+  !*** ./src/modules/nav/burger.js ***!
+  \***********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const burger = document.querySelector('.js-burger');
+const navInfo = document.querySelector('.js-nav__info');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('nav__burger--isActive');
+  navInfo.classList.toggle('nav__info--isActive');
+});
+
+/***/ }),
+
 /***/ "./src/modules/nav/nav.js":
 /*!********************************!*\
   !*** ./src/modules/nav/nav.js ***!
@@ -252,7 +270,7 @@ languages.forEach(lang => {
 const nav = document.querySelector('.js-nav');
 window.addEventListener('scroll', () => {
   // 80%
-  if (window.scrollY > window.innerHeight / 1.2) {
+  if (window.scrollY > window.innerHeight) {
     nav.style.backgroundColor = '';
     nav.classList.add('nav--isActive');
   } else {
