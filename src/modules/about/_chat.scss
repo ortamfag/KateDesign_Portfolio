@@ -170,3 +170,31 @@
         transition: all 0.2s;
     }
 }
+
+@media (max-width: 870px) {
+    .chat {
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 810px) {
+    .chat__item[data-whois="freelancer"] {
+        margin-left: 75px;
+    }
+}
+
+@media (max-width: 700px) {
+    .chat__message {
+        width: 100%;
+    }
+
+    .chat__item[data-whois="freelancer"] {
+        margin-top: 12px;
+        margin-left: 0;
+    }
+
+    .chat__avatar {
+        display: none;
+    }
+}

@@ -101,18 +101,6 @@ a {
     transition: all 0.4s;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .hidden {
-        transition: none;
-    }
-}
-
-@media (max-width: 530px) {
-    .hidden {
-        opacity: 1;
-    }
-}
-
 .container {
     margin: 0 auto;
     padding: 0 $container-offset;
@@ -247,6 +235,13 @@ a {
         opacity: 1 !important;
         transition: all 0.5s !important;
         transition-delay: 1000ms !important;
+    }
+}
+
+@media (max-width: 1020px) {
+    .container {
+        padding: 0 $container1020-offset;
+        max-width: $container-width;
     }
 }
 
