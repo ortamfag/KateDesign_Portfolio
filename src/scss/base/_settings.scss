@@ -17,10 +17,12 @@ p {
 }
 
 html {
+    height: 100%;
     scroll-behavior: smooth;
 }
 
 body {
+    height: 100%;
     font-family: "Gilroy", sans-serif;
     color: $white;
     background-color: $black;
@@ -131,6 +133,7 @@ a {
     font-family: "Bebas", sans-serif;
     font-weight: 400;
     line-height: 100%;
+    letter-spacing: 0.05em;
 }
 
 .h2 {
@@ -138,7 +141,7 @@ a {
 
     font-family: "Bebas", sans-serif;
     font-weight: 400;
-    line-height: 85%;
+    line-height: 100%;
     letter-spacing: 0.05em;
 }
 
@@ -169,7 +172,7 @@ a {
 }
 
 .text20 {
-    @include adaptiveFont(13, 20, 320, 1440);
+    @include adaptiveFont(16, 20, 320, 1440);
 
     font-weight: 500;
     line-height: 140%;
@@ -244,5 +247,11 @@ a {
         opacity: 1 !important;
         transition: all 0.5s !important;
         transition-delay: 1000ms !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .h2 {
+        line-height: 100%;
     }
 }

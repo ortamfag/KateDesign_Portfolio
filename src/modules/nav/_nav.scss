@@ -161,6 +161,7 @@
     .nav {
         display: block;
         border-radius: 0;
+        padding: 18px 0;
         background-color: $grey !important;
 
         &__mobile {
@@ -173,7 +174,6 @@
 
         &__info {
             flex-direction: column;
-            margin-top: 24px;
             max-height: 0;
             opacity: 0;
             transition: max-height 0.2s;
@@ -183,6 +183,7 @@
             }
 
             &--isActive {
+                margin-top: 24px;
                 max-height: 500px;
                 opacity: 1;
                 transition: all 0.5s;
@@ -304,6 +305,32 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 1020px) {
+    .nav {
+        .h3 {
+            padding-left: $container1020-offset;
+        }
+
+        &__burger {
+            margin-right: $container1020-offset;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .nav {
+        z-index: 11;
+
+        .h3 {
+            padding-left: $container320-offset;
+        }
+
+        &__burger {
+            margin-right: $container320-offset;
         }
     }
 }
