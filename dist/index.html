@@ -116,19 +116,19 @@
         <h3 class="h3">KateDesign</h3>
 
         <ul class="nav__list">
-            <li data-queue="1" class="nav__item">ОБО МНЕ</li>
-            <li data-queue="2" class="nav__item">УСЛУГИ</li>
-            <li data-queue="3" class="nav__item">ПОРТФОЛИО</li>
+            <li data-queue="7" class="nav__item">ОБО МНЕ</li>
+            <li data-queue="6" class="nav__item">УСЛУГИ</li>
+            <li data-queue="5" class="nav__item">ПОРТФОЛИО</li>
             <li data-queue="4" class="nav__item">ОТЗЫВЫ</li>
-            <li data-queue="5" class="nav__item">КОНТАКТЫ</li>
+            <li data-queue="3" class="nav__item">КОНТАКТЫ</li>
         </ul>
 
         <div class="nav__right">
-            <button data-queue="6" class="button button-small button-opacity">
+            <button data-queue="2" class="button button-small button-opacity">
                 <p class="buttonSmallText">Связаться</p>
             </button>
 
-            <div data-queue="7" class="nav__translate">
+            <div data-queue="1" class="nav__translate">
                 <div data-lang="rus" data-position="1" id="ru" class="nav__lang js-nav__lang">
                     <svg class="nav__flag">
                     <use xlink:href="img/sprite.svg#rus"></use>
@@ -362,7 +362,7 @@
                                     <use xlink:href="img/sprite.svg#education__checkpoint"></use>
                                 </svg>
 
-                                <h4>2019</h4>
+                                <h4 class="h4">2019</h4>
                             </div>
 
                             <div class="tabs__way">
@@ -380,7 +380,7 @@
                                     <use xlink:href="img/sprite.svg#education__checkpoint"></use>
                                 </svg>
 
-                                <h4>2022</h4>
+                                <h4 class="h4">2022</h4>
                             </div>
 
                             <div class="tabs__way">
@@ -398,7 +398,7 @@
                                     <use xlink:href="img/sprite.svg#education__checkpoint"></use>
                                 </svg>
 
-                                <h4>2023</h4>
+                                <h4 class="h4">2023</h4>
                             </div>
 
                             <div class="tabs__way">
@@ -416,7 +416,7 @@
                                     <use xlink:href="img/sprite.svg#education__checkpoint"></use>
                                 </svg>
 
-                                <h4>2020 <span>-</span> 2024</h4>
+                                <h4 class="h4">2020 <span>-</span> 2024</h4>
                             </div>
 
                             <div class="tabs__way">
@@ -562,9 +562,17 @@
                 </div>
 
                 <div class="services__footer">
-                    <div class="services__price">
-                        <p class="text24"><span>Цена: </span> от 10 000₽ </p>
-                        <p class="text24"><span>Сроки работы: </span> от 1 недели </p>
+                    <div class="services__info">
+                        <p class="text24">
+                            <span class="services__question">Цена: </span><br>
+                            <span class="services__answer">от 10 000₽</span>
+                        </p>
+
+                        <p class="text24">
+                            <span class="services__question">Сроки работы: </span><br>
+                            <span class="services__answer">от 1 недели</span>
+                        </p>
+
                         <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <a href="#">Подробнее</a></p>
                     </div>
 
@@ -610,9 +618,15 @@
                 </div>
 
                 <div class="services__footer">
-                    <div class="services__price">
-                        <p class="text24"><span>Цена: </span> от 30 000₽ </p>
-                        <p class="text24"><span>Сроки работы: </span> от 3 недель </p>
+                    <div class="services__info">
+                        <p class="text24">
+                            <span class="services__question">Цена: </span><br>
+                            <span class="services__answer">от 30 000₽</span>
+                        </p>
+                        <p class="text24">
+                            <span class="services__question">Сроки работы: </span><br>
+                            <span class="services__answer">от 3 недель</span>
+                        </p>
                         <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <a href="#">Подробнее</a></p>
                     </div>
 
@@ -655,9 +669,15 @@
                 </div>
 
                 <div class="services__footer">
-                    <div class="services__price">
-                        <p class="text24"><span>Цена: </span> от 40 000₽ </p>
-                        <p class="text24"><span>Сроки работы: </span> от 3 недель </p>
+                    <div class="services__info">
+                        <p class="text24">
+                            <span class="services__question">Цена: </span><br>
+                            <span class="services__answer">от 40 000₽</span>
+                        </p>
+                        <p class="text24">
+                            <span class="services__question">Сроки работы: </span><br>
+                            <span class="services__answer">от 3 недель</span>
+                        </p>
                         <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <a href="#">Подробнее</a></p>
                     </div>
 
@@ -787,6 +807,68 @@
                 причин Почему стоит работать <br>
                 <span class="reasons__highlighted">именно</span> со мной
             </h2>
+        </div>
+
+        <div class="reasons__headers--mobile">
+            <h4 data-reason="1" class="reasons__header reasons__header--isActive js-reasons__header">01</h4>
+            <h4 data-reason="2" class="reasons__header js-reasons__header">02</h4>
+            <h4 data-reason="3" class="reasons__header js-reasons__header">03</h4>
+            <h4 data-reason="4" class="reasons__header js-reasons__header">04</h4>
+            <h4 data-reason="5" class="reasons__header js-reasons__header">05</h4>
+            <h4 data-reason="6" class="reasons__header js-reasons__header">06</h4>
+            <h4 data-reason="7" class="reasons__header js-reasons__header">07</h4>
+        </div>
+
+        <div class="reasons__grid js-reasons__grid">
+            <div data-reason="1" class="reasons__item reasons__item--isActive js-reasons__item">
+                <h4 class="reasons__header h4">01</h4>
+                <h4 class="reasons__reason h4">Уникальный подход</h4>
+                <p class="reasons__text text20">Я всегда стараюсь подходить к каждому проекту индивидуально, учитывая потребности и цели клиента, а также требования пользователей</p>
+            </div>
+
+            <div data-reason="2" class="reasons__item js-reasons__item">
+                <h4 class="reasons__header h4">02</h4>
+                <h4 class="reasons__reason h4">Креативность и инновации</h4>
+                <p class="reasons__text text20">Я постоянно следую за последними тенденциями в дизайне интерфейсов и стремлюсь к созданию уникальных и инновационных решений</p>
+            </div>
+
+            <div data-reason="3" class="reasons__item js-reasons__item">
+                <h4 class="reasons__header h4">03</h4>
+                <h4 class="reasons__reason h4">Соблюдение дедлайнов</h4>
+                <p class="reasons__text text20">Я всегда придерживаюсь сроков выполнения проекта, чтобы клиент мог быть уверен в своевременном получении результатов</p>
+            </div>
+
+            <div data-reason="4" class="reasons__item js-reasons__item">
+                <h4 class="reasons__header h4">04</h4>
+                <h4 class="reasons__reason h4">Коммуникативность</h4>
+                <p class="reasons__text text20">Я открыта для общения и готова работать в команде с клиентом и другими специалистами для достижения общих целей</p>
+            </div>
+
+            <div data-reason="5" class="reasons__item js-reasons__item">
+                <h4 class="reasons__header h4">05</h4>
+                <h4 class="reasons__reason h4">Качество</h4>
+                <p class="reasons__text text20">Я разработаю дизайн с учетом ваших пожеланий. Подберу гармоничное решение. Все элементы дизайна — шрифты, картинки, кнопки, текст, воздух — будут смотреться единой композицией</p>
+            </div>
+
+            <div data-reason="6" class="reasons__item js-reasons__item">
+                <h4 class="reasons__header h4">06</h4>
+                <h4 class="reasons__reason h4">Верстка макета</h4>
+                <p class="reasons__text text20">Я работаю в паре с верстальщиком. Для Вашего удобства, наш утвержденный макет, будет написан на языке программирования и в дальнейшем перенесен в Интернет</p>
+            </div>
+
+            <div data-reason="7" class="reasons__item js-reasons__item">
+                <h4 class="reasons__header h4">07</h4>
+                <h4 class="reasons__reason h4">Гарантия</h4>
+                <p class="reasons__text text20">Я гарантирую высокое качество работы, которое будет соответствовать ожиданиям клиента</p>
+
+                <button class="button button-small button-opacity">
+                    <p class="buttonBigText">Подробнее</p>
+
+                    <svg class="">
+                        <use xlink:href="img/sprite.svg#buttonArrow"></use>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 </section>

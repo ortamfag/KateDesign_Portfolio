@@ -10,7 +10,7 @@
     &__item {
         text-transform: uppercase;
         color: $white;
-        transition: all 0.3s;
+        transition: color 0.3s;
         cursor: pointer;
 
         &:not(:last-child) {
@@ -19,7 +19,7 @@
 
         &-isActive {
             color: $violet !important;
-            transition: all 0.3s;
+            transition: color 0.3s;
         }
     }
 
@@ -58,10 +58,6 @@
         h4 {
             @include adaptiveFont(17, 24, 320, 1440);
 
-            font-family: "Bebas", sans-serif;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 0.96px;
             -webkit-text-stroke-width: 0.6px;
             -webkit-text-stroke-color: #C8B5FC;
             color: $black;
@@ -177,6 +173,51 @@
 
         &:not(:last-child) {
             margin-bottom: 25px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .tabs {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+
+        &__header {
+            flex-direction: column;
+        }
+
+        &__item {
+            margin-right: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 20%;
+            }
+        }
+
+        &__content {
+            margin-right: 5%;
+            max-width: 60%;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .tabs {
+        display: block;
+
+        &__header {
+            flex-flow: wrap;
+            flex-direction: row;
+        }
+
+        &__item {
+            margin-bottom: 0 !important;
+        }
+
+        &__content {
+            max-width: 100%;
         }
     }
 }

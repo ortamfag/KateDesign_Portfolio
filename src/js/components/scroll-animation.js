@@ -1,8 +1,16 @@
 // scroll
 
-const options = {
-    threshold: 0.4,
-};
+// const options = {
+//     threshold: 0.3,
+// };
+
+const options = {};
+
+if (window.screen.width >= 768) {
+    options.threshold = 0.4;
+} else {
+    options.threshold = 0.1;
+}
 
 const onEntry = (entries) => {
     entries.forEach((entry) => {

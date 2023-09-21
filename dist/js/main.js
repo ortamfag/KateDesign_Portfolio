@@ -79,9 +79,16 @@ window.addEventListener('scroll', () => {
 __webpack_require__.r(__webpack_exports__);
 // scroll
 
-const options = {
-  threshold: 0.4
-};
+// const options = {
+//     threshold: 0.3,
+// };
+
+const options = {};
+if (window.screen.width >= 768) {
+  options.threshold = 0.4;
+} else {
+  options.threshold = 0.1;
+}
 const onEntry = entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -115,6 +122,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_nav_burger_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/nav/burger.js */ "./src/modules/nav/burger.js");
 /* harmony import */ var _modules_about_tabs_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules/about/tabs.js */ "./src/modules/about/tabs.js");
 /* harmony import */ var _modules_about_chat_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modules/about/chat.js */ "./src/modules/about/chat.js");
+/* harmony import */ var _modules_reasons_reasons_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modules/reasons/reasons.js */ "./src/modules/reasons/reasons.js");
+
 
 
 
@@ -313,6 +322,46 @@ __webpack_require__.r(__webpack_exports__);
 //         }, 200);
 //     }
 // }, 3100);
+
+/***/ }),
+
+/***/ "./src/modules/reasons/reasons.js":
+/*!****************************************!*\
+  !*** ./src/modules/reasons/reasons.js ***!
+  \****************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const reasonHeaders = document.querySelectorAll('.js-reasons__header');
+const reasonsItem = document.querySelectorAll('.js-reasons__item');
+const reasonsGrid = document.querySelector('.js-reasons__grid');
+let activeHeader;
+const reasonsHeight = reasonsItem[6].offsetHeight;
+reasonsGrid.style.height = `${reasonsHeight}px`;
+reasonHeaders.forEach(header => {
+  if (header.classList.contains('reasons__header--isActive')) {
+    activeHeader = header;
+  }
+  header.addEventListener('click', e => {
+    const queue = e.currentTarget.dataset.reason;
+    activeHeader.classList.remove('reasons__header--isActive');
+    e.currentTarget.classList.add('reasons__header--isActive');
+    activeHeader = e.currentTarget;
+    reasonsItem.forEach(item => {
+      if (queue > item.dataset.reason) {
+        item.classList.add('reasons__item--isLeft');
+      } else if (queue < item.dataset.reason) {
+        if (item.classList.contains('reasons__item--isLeft')) {
+          item.classList.remove('reasons__item--isLeft');
+        }
+      }
+      item.classList.remove('reasons__item--isActive');
+      if (item.dataset.reason === queue) {
+        item.classList.add('reasons__item--isActive');
+      }
+    });
+  });
+});
 
 /***/ })
 

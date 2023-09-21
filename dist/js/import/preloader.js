@@ -25,7 +25,6 @@ setTimeout(() => {
         })
         navAnimation.classList.add('nav--isAnimate');
         readProgressStart.style.width=`${(window.innerHeight / documentHeight.clientHeight) * 100 + 0.8}%`
-        console.log(`${(window.innerHeight / documentHeight.clientHeight) * 100 + 0.8}%`)
         setTimeout(() => {
             preloader.classList.add('is-hidden');
             svgAnimation.classList.add('is-hidden');
@@ -43,6 +42,11 @@ setTimeout(() => {
             navAnimation.classList.add('nav--isAnimate');
             readProgressStart.style.width=`${(window.innerHeight / documentHeight.clientHeight) * 100 + 0.8}%`
             svgAnimation.classList.add('is-hidden');
+
+            setTimeout(() => {
+                preloader.classList.add('is-hidden');
+                svgAnimation.classList.add('is-hidden');
+            }, 200);
         });
     }
 }, 3200);

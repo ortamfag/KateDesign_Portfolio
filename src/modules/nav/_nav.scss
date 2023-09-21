@@ -188,6 +188,14 @@
                 opacity: 1;
                 transition: all 0.5s;
 
+                .nav__right {
+                    visibility: visible;
+                }
+
+                .nav__list {
+                    visibility: visible;
+                }
+
                 .nav__list li,
                 .nav__right button,
                 .nav__right .nav__translate {
@@ -227,6 +235,7 @@
 
         &__list {
             flex-direction: column;
+            visibility: hidden;
 
             li {
                 transform: translateY(-100vh);
@@ -241,6 +250,7 @@
         &__right {
             flex-direction: column;
             padding-right: 0;
+            visibility: hidden;
 
             button {
                 margin-right: 0;
