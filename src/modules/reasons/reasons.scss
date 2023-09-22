@@ -85,7 +85,7 @@
             position: absolute;
             left: 0;
             top: 0;
-            transform: translateX(100%);
+            transform: translateX(105%);
             transition: transform 0.2s;
 
             &--isActive {
@@ -94,7 +94,7 @@
             }
 
             &--isLeft {
-                transform: translateX(-100%);
+                transform: translateX(-105%);
                 transition: transform 0.2s;
             }
         }

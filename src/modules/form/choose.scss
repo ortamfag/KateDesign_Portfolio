@@ -1,0 +1,412 @@
+.choose {
+    .text24 {
+        color: $white;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        margin-top: 24px;
+        margin-bottom: 48px;
+
+        button {
+            border: 2px solid #616161;
+            padding: 8px 16px;
+            color: #616161;
+            background-color: inherit;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+
+            &:hover {
+                border: 2px solid $white;
+                color: $white;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+    &__button--isActive {
+        border: 2px solid $white !important;
+        color: $white !important;
+        transition: all 0.3s;
+    }
+
+    &__budget {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h4 {
+            margin-right: 20px;
+        }
+
+        div {
+            display: flex;
+        }
+
+        p {
+            color: #616161 !important;
+        }
+    }
+
+    &__currency {
+        display: flex;
+        align-items: center;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            padding: 7px 9px;
+            width: 29px;
+            height: 29px;
+            color: $white;
+            background-color: inherit;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                background-color: $violet;
+                transition: all 0.3s;
+            }
+        }
+
+        &--isActive {
+            background-color: $violet !important;
+            transition: all 0.3s !important;
+        }
+    }
+
+    &__range {
+        -webkit-appearance: none;
+        appearance: none;
+        margin-top: 24px;
+        width: 100%;
+        height: 28px;
+        background: inherit;
+
+        &::-webkit-slider-runnable-track {
+            border: 1px solid $violet;
+            border-radius: 50px;
+            width: 100%;
+            height: 2px;
+            box-shadow: 0 0 0 $violet;
+            background: $violet;
+            cursor: pointer;
+        }
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            margin-top: -8.5px;
+            border: 4px solid #7546F766;
+            border-radius: 25px;
+            width: 18px;
+            height: 18px;
+            background: #B199F2;
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+
+            &::-webkit-slider-runnable-track {
+                background: $violet;
+            }
+        }
+
+        &--isNumber {
+            display: none;
+        }
+    }
+
+    &__limit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 48px;
+        color: $white;
+
+        p {
+            width: 16.66667%;
+            text-align: right;
+        }
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 48px;
+    }
+
+    &__deadline {
+        display: flex;
+        flex-direction: column;
+        margin-right: 126px;
+
+        h4 {
+            margin-bottom: 24px;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__programming {
+        h4 {
+            margin-bottom: 24px;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        gap: 24px;
+
+        input {
+            @include adaptiveFont(18, 24, 320, 1440);
+
+            outline: none;
+            border-right: 0;
+            border-bottom: 2px solid #616161;
+            padding: 16px 0;
+            width: calc(50% - 12px);
+            font-weight: 500;
+            color: $white;
+            background-color: inherit;
+            transition: all 0.2s;
+
+            &::placeholder {
+                @include adaptiveFont(18, 24, 320, 1440);
+
+                font-weight: 500;
+                color: $white;
+                transition: all 0.2s;
+            }
+
+            &:focus {
+                border-bottom: 2px solid $violet;
+                transition: all 0.2s;
+            }
+
+            &:focus::placeholder {
+                opacity: 0;
+                transition: all 0.2s;
+            }
+        }
+    }
+
+    &__last {
+        margin-top: 24px;
+
+        input {
+            @include adaptiveFont(18, 24, 320, 1440);
+
+            outline: none;
+            border-right: 0;
+            border-bottom: 2px solid #616161;
+            padding: 16px 0;
+            width: 100%;
+            font-weight: 500;
+            color: $white;
+            background-color: inherit;
+            transition: all 0.2s;
+            resize: horizontal;
+
+            &::placeholder {
+                @include adaptiveFont(18, 24, 320, 1440);
+
+                font-weight: 500;
+                color: $white;
+                transition: all 0.2s;
+            }
+
+            &:focus {
+                border-bottom: 2px solid $violet;
+                transition: all 0.2s;
+            }
+
+            &:focus::placeholder {
+                opacity: 0;
+                transition: all 0.2s;
+            }
+        }
+
+        p {
+            margin-top: 8px;
+        }
+    }
+
+    &__submit {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-top: 24px;
+
+        p {
+            margin-right: 24px;
+            line-height: 120%;
+
+            a {
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+.formNone {
+    display: none;
+}
+
+.choose__item:checked,
+.choose__item:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.choose__item:checked + label,
+.choose__item:not(:checked) + label {
+    position: relative;
+    display: inline-block;
+    padding-left: 34px;
+    line-height: 100%;
+    color: #616161;
+    cursor: pointer;
+}
+
+.choose__item:checked + label::before,
+.choose__item:not(:checked) + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid $violet;
+    border-radius: 100%;
+    width: 22px;
+    height: 22px;
+    background: inherit;
+}
+
+.choose__item:checked + label::after,
+.choose__item:not(:checked) + label::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border-radius: 100%;
+    width: 14px;
+    height: 14px;
+    background: $violet;
+    transition: all 0.2s ease;
+}
+
+.choose__item:not(:checked) + label::after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.choose__item:checked + label::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+@media (max-width: 1040px) {
+    .choose__info {
+        flex-direction: column;
+        align-items: flex-start;
+
+        input {
+            width: 100%;
+        }
+    }
+
+    .choose__buttons {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 850px) {
+    .choose__checkbox {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .choose__limit {
+        display: none;
+    }
+
+    .choose__result {
+        display: none !important;
+    }
+
+    .choose__range {
+        display: none;
+
+        &--isNumber {
+            @include adaptiveFont(18, 24, 320, 1440);
+
+            display: inline-block;
+            margin: 24px 0;
+            outline: none;
+            border-right: 0;
+            border-bottom: 2px solid #616161;
+            padding: 16px 0;
+            width: 100%;
+            font-weight: 500;
+            color: $white;
+            background-color: inherit;
+            transition: all 0.2s;
+            resize: horizontal;
+
+            &::placeholder {
+                @include adaptiveFont(18, 24, 320, 1440);
+
+                font-weight: 500;
+                color: $white;
+                transition: all 0.2s;
+            }
+
+            &:focus {
+                border-bottom: 2px solid $violet;
+                transition: all 0.2s;
+            }
+
+            &:focus::placeholder {
+                opacity: 0;
+                transition: all 0.2s;
+            }
+        }
+    }
+
+    .choose__buttons button {
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .choose__submit {
+        flex-direction: column;
+        gap: 24px;
+
+        p {
+            margin-right: 0;
+        }
+    }
+}

@@ -123,6 +123,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_about_tabs_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules/about/tabs.js */ "./src/modules/about/tabs.js");
 /* harmony import */ var _modules_about_chat_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modules/about/chat.js */ "./src/modules/about/chat.js");
 /* harmony import */ var _modules_reasons_reasons_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modules/reasons/reasons.js */ "./src/modules/reasons/reasons.js");
+/* harmony import */ var _modules_form_form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../modules/form/form.js */ "./src/modules/form/form.js");
+/* harmony import */ var _modules_popup_popup_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../modules/popup/popup.js */ "./src/modules/popup/popup.js");
+
+
 
 
 
@@ -238,6 +242,88 @@ tabsDropdowns.forEach(item => {
 
 /***/ }),
 
+/***/ "./src/modules/form/form.js":
+/*!**********************************!*\
+  !*** ./src/modules/form/form.js ***!
+  \**********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const formButtons = document.querySelectorAll('.js-choose__button');
+const formService = document.querySelector('#formService');
+const formCurrency = document.querySelectorAll('.js-currency');
+const budgetRange = document.querySelector('#inputRange');
+const youChoose = document.querySelector('.js-choose__result span');
+let chosenCurrency = 'rub';
+
+// choose of service
+formButtons.forEach(button => {
+  button.addEventListener('click', e => {
+    formButtons.forEach(item => {
+      item.classList.remove('choose__button--isActive');
+    });
+    e.currentTarget.classList.toggle('choose__button--isActive');
+    formService.value = `${e.currentTarget.dataset.service}`;
+  });
+});
+
+// choose of currency
+formCurrency.forEach(item => {
+  item.addEventListener('click', e => {
+    formCurrency.forEach(currency => {
+      currency.classList.remove('choose__currency--isActive');
+    });
+    chosenCurrency = e.currentTarget.dataset.currency;
+    e.currentTarget.classList.add('choose__currency--isActive');
+    switch (chosenCurrency) {
+      case 'ipa':
+        budgetRange.max = '24000';
+        budgetRange.step = '4000';
+        break;
+      case 'usd':
+        budgetRange.max = '636';
+        budgetRange.step = '106';
+        break;
+      default:
+        budgetRange.max = '60000';
+        budgetRange.step = '10000';
+        break;
+    }
+    const range = document.querySelectorAll('.js-choose__limit');
+    range.forEach(checkpoint => {
+      const row = checkpoint;
+      switch (chosenCurrency) {
+        case 'ipa':
+          row.innerHTML = (24000 - (checkpoint.dataset.range - 1) * 4000).toFixed(0);
+          break;
+        case 'usd':
+          row.innerHTML = (636 - (checkpoint.dataset.range - 1) * 106).toFixed(0);
+          break;
+        default:
+          row.innerHTML = (60000 - (checkpoint.dataset.range - 1) * 10000).toFixed(0);
+          break;
+      }
+    });
+  });
+});
+budgetRange.addEventListener('input', () => {
+  let currency = '';
+  switch (chosenCurrency) {
+    case 'ipa':
+      currency = '₴';
+      break;
+    case 'usd':
+      currency = '$';
+      break;
+    default:
+      currency = '₽';
+      break;
+  }
+  youChoose.innerHTML = `${budgetRange.value} ${currency}`;
+});
+
+/***/ }),
+
 /***/ "./src/modules/nav/burger.js":
 /*!***********************************!*\
   !*** ./src/modules/nav/burger.js ***!
@@ -296,6 +382,27 @@ window.addEventListener('scroll', () => {
 
 /***/ }),
 
+/***/ "./src/modules/popup/popup.js":
+/*!************************************!*\
+  !*** ./src/modules/popup/popup.js ***!
+  \************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const makeModal = modalSel => {
+  const modalEl = document.querySelector(`${modalSel}Popup`);
+  const btnEl = document.querySelector(`${modalSel}__preview`);
+  const closeEl = document.querySelector(`${modalSel}Cross`);
+  const closeBody = document.querySelector('.popup');
+  const bg = document.querySelector(`${modalSel}Bg`);
+  btnEl.addEventListener('click', () => modalEl.classList.add('open'));
+  closeEl.addEventListener('click', () => modalEl.classList.remove('open'));
+  bg.addEventListener('click', () => modalEl.classList.remove('open'));
+};
+makeModal('#holdMyCode');
+
+/***/ }),
+
 /***/ "./src/modules/preloader/preloader.js":
 /*!********************************************!*\
   !*** ./src/modules/preloader/preloader.js ***!
@@ -337,7 +444,17 @@ const reasonsItem = document.querySelectorAll('.js-reasons__item');
 const reasonsGrid = document.querySelector('.js-reasons__grid');
 let activeHeader;
 const reasonsHeight = reasonsItem[6].offsetHeight;
-reasonsGrid.style.height = `${reasonsHeight}px`;
+const client = document.querySelector('.scroll');
+if (client.clientWidth <= 700) {
+  reasonsGrid.style.height = '100%';
+}
+window.addEventListener('resize', () => {
+  if (client.clientWidth <= 700) {
+    reasonsGrid.style.height = `${reasonsHeight}px`;
+  } else {
+    reasonsGrid.style.height = '100%';
+  }
+});
 reasonHeaders.forEach(header => {
   if (header.classList.contains('reasons__header--isActive')) {
     activeHeader = header;

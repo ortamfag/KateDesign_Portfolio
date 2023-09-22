@@ -3,8 +3,19 @@ const reasonsItem = document.querySelectorAll('.js-reasons__item');
 const reasonsGrid = document.querySelector('.js-reasons__grid');
 let activeHeader;
 const reasonsHeight = reasonsItem[6].offsetHeight;
+const client = document.querySelector('.scroll');
 
-reasonsGrid.style.height = `${reasonsHeight}px`;
+if (client.clientWidth <= 700) {
+    reasonsGrid.style.height = '100%';
+}
+
+window.addEventListener('resize', () => {
+    if (client.clientWidth <= 700) {
+        reasonsGrid.style.height = `${reasonsHeight}px`;
+    } else {
+        reasonsGrid.style.height = '100%';
+    }
+});
 
 reasonHeaders.forEach((header) => {
     if (header.classList.contains('reasons__header--isActive')) {

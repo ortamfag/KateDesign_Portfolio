@@ -42,6 +42,11 @@ img {
 
 a {
     text-decoration: none;
+    color: $violet;
+
+    &:checked {
+        color: $violet;
+    }
 }
 
 .is-hidden {
@@ -164,8 +169,9 @@ a {
 }
 
 .text16 {
+    @include adaptiveFont(14, 16, 320, 1440);
+
     font-weight: 400;
-    font-size: 16px;
 }
 
 .text20 {
@@ -176,6 +182,8 @@ a {
 }
 
 .text24 {
+    @include adaptiveFont(16, 24, 320, 1440);
+
     font-weight: 500;
     font-size: 24px;
 }
@@ -257,5 +265,11 @@ a {
 @media (max-width: 767px) {
     .h2 {
         line-height: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 $container320-offset;
     }
 }
