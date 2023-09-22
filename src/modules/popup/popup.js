@@ -11,3 +11,11 @@ const makeModal = (modalSel) => {
 };
 
 makeModal('#holdMyCode');
+makeModal('#Wine');
+makeModal('#FourCA');
+makeModal('#Calendar');
+makeModal('#Minimalism');
+makeModal('#Food');
+makeModal('#Nirvana');
+makeModal('#Turkey');
+makeModal('#Victorian');

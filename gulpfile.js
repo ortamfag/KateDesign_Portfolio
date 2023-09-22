@@ -190,7 +190,7 @@ const manifest = () => gulp.src(`${paths.srcResourcesFolder}/manifest/**`)
     .pipe(gulp.dest(`${paths.buildResourcesFolder}/manifest`));
 
 // images
-const images = () => gulp.src(`${paths.srcImgFolder}/**.{jpg,png,jpeg,gif,svg}`)
+const images = () => gulp.src(`${paths.srcImgFolder}/**.{jpg,png,jpeg,gif,svg,mp4}`)
     .pipe(plumber(
         notify.onError({
             title: 'IMAGES',
