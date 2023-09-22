@@ -351,21 +351,24 @@ burger.addEventListener('touch', () => {
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-const languages = document.querySelectorAll('.js-nav__lang');
-languages.forEach(lang => {
-  lang.addEventListener('click', event => {
-    const elem = event.currentTarget;
-    const langPosition = elem.dataset.position;
-    if (langPosition !== '1') {
-      for (let i = 0; i < languages.length; i += 1) {
-        if (languages[i].dataset.position === '1') {
-          languages[i].dataset.position = langPosition;
-          elem.dataset.position = '1';
-        }
-      }
-    }
-  });
-});
+// const languages = document.querySelectorAll('.js-nav__lang');
+
+// languages.forEach((lang) => {
+//     lang.addEventListener('click', (event) => {
+//         const elem = event.currentTarget;
+//         const langPosition = elem.dataset.position;
+
+//         if (langPosition !== '1') {
+//             for (let i = 0; i < languages.length; i += 1) {
+//                 if (languages[i].dataset.position === '1') {
+//                     languages[i].dataset.position = langPosition;
+//                     elem.dataset.position = '1';
+//                 }
+//             }
+//         }
+//     });
+// });
+
 const nav = document.querySelector('.js-nav');
 window.addEventListener('scroll', () => {
   // 80%
