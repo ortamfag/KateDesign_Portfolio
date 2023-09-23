@@ -161,6 +161,11 @@ a {
     line-height: 160%;
 }
 
+::selection {
+    color: $white;
+    background-color: $violet;
+}
+
 .buttonSmallText {
     @include adaptiveFont(18, 22, 320, 1440);
 
