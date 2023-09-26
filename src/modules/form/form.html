@@ -1,0 +1,180 @@
+<section id="form">
+    <div class="form">
+        <div class="hidden title-parent form__title container">
+            <h2 data-queue="1" class="title-animation h1">
+                Заполните творческий бриф
+            </h2>
+        </div>
+
+        <div class="form__main">
+            <div class="hidden title-parent">
+                <h2 data-queue="2" class="title-animation h2">
+                    или Свяжитесь со мной, как вам удобно
+                </h2>
+            </div>
+            <div class="form__contact">
+                <div class="form__baseContact">
+                    <div class="form__number">
+                        <svg class="">
+                            <use xlink:href="img/sprite.svg#phone"></use>
+                        </svg>
+
+                        <p class="text20">+7 930 967 62 25</p>
+                    </div>
+
+                    <div class="form__mail">
+                        <svg class="">
+                            <use xlink:href="img/sprite.svg#mail"></use>
+                        </svg>
+
+                        <p class="text20">rackitowa.cat@outlook.com</p>
+                    </div>
+                </div>
+
+                <div class="form__social">
+                    <a target="_blank" href="https://t.me/Katye_Rakitova">
+                        <svg class="telegram">
+                            <use xlink:href="img/sprite.svg#telegram"></use>
+                        </svg>
+                    </a>
+
+                    <a target="_blank" href="https://vk.com/kate_rakitova">
+                        <svg class="vk">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+
+                    <a target="_blank" href="https://www.behance.net/katye_rakitova">
+                        <svg class="behance">
+                            <use xlink:href="img/sprite.svg#behance"></use>
+                        </svg>
+                    </a>
+
+                    <a target="_blank" href="https://dprofile.ru/katye">
+                        <div class="Dprofile">
+                            <svg class="DprofileLogo">
+                                <use xlink:href="img/sprite.svg#Dprofile_logo"></use>
+                            </svg>
+
+                            <svg class="DprofileText">
+                                <use xlink:href="img/sprite.svg#Dprofile_text"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <form class="choose" method="POST" action="http://localhost:3001/form">
+                <div class="inDevelopment">
+                    <p class="h1">В разработке</p>
+                    <p class="text24">Если вы хотите сделать сайт своей мечты, свяжитесь со мной любым способом, указанным выше</p>
+                </div>
+                <div class="form__input">
+                    <p class="form__correction text16">Блоки со * обязательны для заполнения</p>
+                    <h4 class="text24">Какой дизайн вам требуется?*</h4>
+
+                    <input type="text" name="service" id="formService" class="formNone" value="t" required>
+                    <div class="choose__buttons">
+                        <button data-service="Одностраничный сайт" class="text20 js-choose__button" type="button">Одностраничный сайт</button>
+                        <button data-service="Многостраничный сайт" class="text20 js-choose__button" type="button">Многостраничный сайт</button>
+                        <button data-service="Приложение" class="text20 js-choose__button" type="button">Приложение</button>
+                        <button data-service="Другое" class="text20 js-choose__button" type="button">Другой</button>
+                    </div>
+
+                    <div class="choose__budget">
+                        <div>
+                            <h4 class="text24">Комфортный бюджет</h4>
+                            <div class="choose__currency">
+                                <div data-currency="rub" class="js-currency choose__currency--isActive">₽</div>
+                                <div data-currency="usd" class="js-currency">$</div>
+                                <div data-currency="ipa" class="js-currency">₴</div>
+                            </div>
+                        </div>
+
+                        <div class="js-choose__result choose__result">
+                            <p class="text24">Вы выбрали: до <span>0</span></p>
+                        </div>
+                    </div>
+
+                    <input type="range" class="choose__range" id="inputRange" name="inputRangeDesktop" min="0" max="60000" step="10000" value="0">
+                    <input type="number" class="choose__range--isNumber" name="inputRangeMobile" placeholder="Ваш бюджет">
+
+                    <div class="choose__limit">
+                        <p data-range="6" class="text20 js-choose__limit">до 10 000</p>
+                        <p data-range="5" class="text20 js-choose__limit">до 20 000</p>
+                        <p data-range="4" class="text20 js-choose__limit">до 30 000</p>
+                        <p data-range="3" class="text20 js-choose__limit">до 40 000</p>
+                        <p data-range="2" class="text20 js-choose__limit">до 50 000</p>
+                        <p data-range="1" class="text20 js-choose__limit">до 60 000</p>
+                    </div>
+
+                    <div class="choose__checkbox">
+                        <div class="choose__deadline">
+                            <h4 class="text24">Желаемые сроки</h4>
+                            <p>
+                                <input class="choose__item" type="radio" id="1week" name="deadline">
+                                <label class="text20" for="1week">1 неделя</label>
+                            </p>
+
+                            <p>
+                                <input class="choose__item" type="radio" id="2week" name="deadline">
+                                <label class="text20" for="2week">до 2-х недель</label>
+                            </p>
+
+                            <p>
+                                <input class="choose__item" type="radio" id="4week" name="deadline">
+                                <label class="text20" for="4week">до 4-х недель</label>
+                            </p>
+
+                            <p>
+                                <input class="choose__item" type="radio" id="2month" name="deadline">
+                                <label class="text20" for="2month">до 2-х месяцев</label>
+                            </p>
+
+                            <p>
+                                <input class="choose__item" type="radio" id="otherdeadline" name="deadline">
+                                <label class="text20" for="otherdeadline">Другие</label>
+                            </p>
+                        </div>
+
+                        <div class="choose__programming">
+                            <h4 class="text24">Нужно ли верстать сайт</h4>
+                            <p>
+                                <input class="choose__item" type="radio" id="programmingYES" name="programming">
+                                <label class="text20" for="programmingYES">Да</label>
+                            </p>
+
+                            <p>
+                                <input class="choose__item" type="radio" id="programmingNO" name="programming">
+                                <label class="text20" for="programmingNO">Нет</label>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="choose__info">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="text" name="social" placeholder="Telegram или WhatsApp">
+                        <input type="email" name="email" placeholder="E-mail">
+                    </div>
+
+                    <div class="choose__last">
+                        <input type="textarea" name="message" placeholder="Сообщение">
+                        <p class="text16">Что-то, о чем вы бы хотели сказать</p>
+                    </div>
+                </div>
+
+                <div class="choose__submit">
+                    <p class="text16">Нажимая кнопку отправить, Вы даете согласие на <a href="#">обработку персональных данных</a></p>
+
+                    <button class="button button-big button-solid" type="submit">
+                        <p class="buttonBigText">Отправить</p>
+
+                        <svg class="">
+                            <use xlink:href="img/sprite.svg#buttonArrow"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

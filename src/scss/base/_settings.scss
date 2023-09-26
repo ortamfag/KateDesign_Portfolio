@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    font-family: "Gilroy", sans-serif;
+    color: $white;
+    background-color: $black;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: $violet;
+
+    &:checked {
+        color: $violet;
+    }
+}
+
+.is-hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+// animation of appearance
+
+.hidden {
+    opacity: 0;
+}
+
+.hidden-show {
+    opacity: 1 !important;
+    transition: all 0.5s !important;
+
+    .title-entry {
+        left: 0% !important;
+        transition: all 0.3s;
+    }
+
+    .service-entry {
+        transform: translateY(0) !important;
+        transition: all 0.3s;
+    }
+
+    .portfolio-entry-left {
+        transform: translateX(0%) !important;
+        transition: all 0.4s;
+    }
+
+    .portfolio-entry-right {
+        transform: translateX(0%) !important;
+        transition: all 0.4s;
+    }
+}
+
+.title-entry {
+    position: relative;
+    left: -100%;
+    transition: all 0.3s;
+}
+
+.service-entry {
+    transform: translateY(200px);
+    transition: all 0.3s;
+}
+
+.portfolio-entry-left {
+    transform: translateX(-100%);
+    transition: all 0.4s;
+}
+
+.portfolio-entry-right {
+    transform: translateX(100%);
+    transition: all 0.4s;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 $container-offset;
+    max-width: $container-width;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.centered {
+    text-align: center;
+}
+
+.h1 {
+    @include adaptiveFont(44, 96, 320, 1440);
+
+    font-family: "Bebas", sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+}
+
+.h2 {
+    @include adaptiveFont(32, 48, 320, 1440);
+
+    font-family: "Bebas", sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.05em;
+}
+
+.h3 {
+    font-family: "Bebas", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.h4 {
+    @include adaptiveFont(24, 32, 320, 1440);
+
+    font-family: "Bebas", sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.96px;
+}
+
+.buttonBigText {
+    @include adaptiveFont(18, 22, 320, 1440);
+
+    font-weight: 600;
+    line-height: 160%;
+}
+
+::selection {
+    color: $white;
+    background-color: $violet;
+}
+
+.buttonSmallText {
+    @include adaptiveFont(18, 22, 320, 1440);
+
+    font-weight: 600;
+    line-height: 160%;
+}
+
+.text16 {
+    @include adaptiveFont(14, 16, 320, 1440);
+
+    font-weight: 400;
+}
+
+.text20 {
+    @include adaptiveFont(16, 20, 320, 1440);
+
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.text24 {
+    @include adaptiveFont(16, 24, 320, 1440);
+
+    font-weight: 500;
+}
+
+.title-parent {
+    overflow: hidden;
+
+    // cause scroll animation
+    opacity: 1 !important;
+}
+
+.title-animation {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 1s;
+
+    &[data-queue="1"] {
+        transition-delay: 0ms;
+    }
+
+    &[data-queue="2"] {
+        transition-delay: 200ms;
+    }
+
+    &[data-queue="3"] {
+        transition-delay: 400ms;
+    }
+
+    &[data-queue="4"] {
+        transition-delay: 600ms;
+    }
+
+    &[data-queue="5"] {
+        transition-delay: 800ms;
+    }
+
+    &[data-queue="6"] {
+        transition-delay: 1000ms;
+    }
+
+    &[data-queue="7"] {
+        transition-delay: 1200ms;
+    }
+
+    &[data-queue="8"] {
+        transition-delay: 1400ms;
+    }
+
+    &[data-queue="9"] {
+        transition-delay: 1600ms;
+    }
+
+    &[data-queue="10"] {
+        transition-delay: 1800ms;
+    }
+
+    &--isIntersecting {
+        transform: translateY(0%);
+        transition: transform 1s;
+    }
+}
+
+.animation-button {
+    opacity: 0;
+
+    &--isActive {
+        opacity: 1 !important;
+        transition: all 0.5s !important;
+        transition-delay: 1000ms !important;
+    }
+}
+
+@media (max-width: 1125px) {
+    .container {
+        padding: 0 $container1020-offset;
+    }
+}
+
+@media (max-width: 767px) {
+    .h2 {
+        line-height: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 0 $container320-offset;
+    }
+}

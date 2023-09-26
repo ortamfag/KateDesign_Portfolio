@@ -1,0 +1,184 @@
+.form {
+    padding: 110px 84px 110px 0;
+
+    &__title {
+        display: inline-block;
+        border-radius: 0 8px 8px 0;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        background-color: $violet;
+
+        h2 {
+            @include adaptiveFont(32, 96, 320, 1440);
+        }
+    }
+
+    &__main {
+        margin-top: 48px;
+        margin-left: 84px;
+    }
+
+    &__correction {
+        margin-bottom: 48px;
+    }
+
+    &__contact {
+        display: flex;
+        margin-top: 24px;
+
+        h2 {
+            display: block;
+        }
+
+        svg {
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &__baseContact {
+        display: flex;
+        align-items: center;
+    }
+
+    &__number {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+
+        svg {
+            margin-right: 12px;
+        }
+    }
+
+    &__mail {
+        display: flex;
+        align-items: center;
+        margin-right: 24px;
+
+        svg {
+            margin-right: 12px;
+        }
+    }
+
+    &__social {
+        display: flex;
+    }
+
+    &__input {
+        margin-top: 48px;
+        border-radius: 8px;
+        padding: 26px 48px;
+        color: #616161;
+        background-color: $grey;
+    }
+}
+
+.Dprofile {
+    display: flex;
+    align-items: center;
+
+    .DprofileText {
+        margin-left: 5px;
+        width: 70px;
+    }
+}
+
+.telegram,
+.vk,
+.behance {
+    margin-right: 28px;
+}
+
+@media (max-width: 1125px) {
+    .form {
+        padding: 110px 35px 110px 0;
+
+        &__main {
+            margin-left: 35px;
+        }
+    }
+}
+
+@media (max-width: 875px) {
+    .form {
+        &__contact {
+            justify-content: space-between;
+        }
+
+        &__baseContact {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__number {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .form {
+        padding: 110px $container320-offset 110px 0;
+
+        &__input {
+            padding: 16px 8px;
+        }
+
+        &__main {
+            margin-left: $container320-offset;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .form {
+        &__contact {
+            flex-direction: column;
+        }
+
+        &__social {
+            justify-content: space-between;
+            margin-top: 12px;
+        }
+    }
+
+    .telegram,
+    .vk,
+    .behance {
+        margin-right: 0;
+    }
+}
+
+form {
+    position: relative;
+}
+
+.inDevelopment {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $violet;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    opacity: 0.9;
+
+    .text24 {
+        margin-top: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .inDevelopment {
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,32 @@
+.discount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 110px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: $violet;
+
+    h2 {
+        margin-bottom: 48px;
+        text-align: center;
+    }
+
+    p {
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1090px) {
+    .discount p {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
+    .discount p {
+        width: 100%;
+    }
+}

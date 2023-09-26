@@ -1,0 +1,199 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    width: 800px;
+
+    &__item {
+        display: flex;
+
+        &[data-whois="client"] {
+            .chat__avatar {
+                margin-right: 12px;
+            }
+
+            .chat__typing {
+                left: 0;
+                top: 26px;
+            }
+
+            .chat__text {
+                border-radius: 0 8px 8px;
+            }
+        }
+
+        &[data-whois="freelancer"] {
+            justify-content: right;
+
+            .chat__avatar {
+                margin-left: 12px;
+            }
+
+            .chat__user {
+                text-align: right;
+            }
+
+            .chat__text {
+                border-radius: 8px 0 8px 8px;
+
+                p {
+                    max-width: 600px;
+                }
+            }
+
+            .chat__typing {
+                right: 0;
+                top: 26px;
+            }
+        }
+    }
+
+    &__avatar {
+        position: relative;
+        display: inline-flex;
+        min-width: 40px;
+
+        svg {
+            border-radius: 200px;
+            padding: 5px;
+            width: 40px;
+            height: 40px;
+            background-color: #E3DAFD;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+
+        &-online {
+            position: absolute;
+            right: 0;
+            top: 30px;
+            border: 1.5px solid #E3DAFD;
+            border-radius: 200px;
+            width: 10px;
+            height: 10px;
+            background-color: #12B76A;
+        }
+    }
+
+    &__message {
+        position: relative;
+    }
+
+    &__user {
+        margin-bottom: 6px;
+        height: 20px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #C8B5FC;
+    }
+
+    &__text {
+        padding: 10px 14px;
+        box-shadow: 1px 1px 5px 0 #C8B5FC40;
+        color: $black;
+        background-color: #E3DAFD;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100px);
+        transition: all 0.4s;
+
+        &-isTyped {
+            opacity: 1 !important;
+            visibility: visible;
+            transform: translateY(0) !important;
+            transition: all 0.4s;
+        }
+    }
+
+    &__typing {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 200px;
+        width: 125px;
+        height: 40px;
+        box-shadow: 1px 1px 5px 0 #C8B5FC40;
+        background-color: #E3DAFD;
+        opacity: 0;
+        transition: all 0.2s;
+
+        div {
+            border-radius: 200px;
+            width: 10px;
+            height: 10px;
+            background-color: $violet;
+            opacity: 0.6;
+            transform: scale(1);
+            transition: all 0.3s;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+
+        &-isActivePoint {
+            opacity: 1 !important;
+            transform: scale(1.1) !important;
+            transition: all 0.3s;
+        }
+
+        &-isTyped {
+            display: none !important;
+        }
+
+        &-isVisible {
+            opacity: 1 !important;
+            transition: all 0.2s;
+        }
+    }
+}
+
+.freelancer {
+    &-name {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    &-avatar {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    &-startTyping {
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+        transition: all 0.2s;
+    }
+}
+
+@media (max-width: 870px) {
+    .chat {
+        width: 100%;
+    }
+}
+
+@media (max-width: 810px) {
+    .chat__item[data-whois="freelancer"] {
+        margin-left: 75px;
+    }
+}
+
+@media (max-width: 700px) {
+    .chat__message {
+        width: 100%;
+    }
+
+    .chat__item[data-whois="freelancer"] {
+        margin-top: 12px;
+        margin-left: 0;
+    }
+
+    .chat__avatar {
+        display: none;
+    }
+}

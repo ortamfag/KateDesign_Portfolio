@@ -1,0 +1,308 @@
+<section id="about">
+    <div class="about container">
+
+        <h2 id="test" class="about__title h2 hidden title-parent">
+            <span data-queue="1" class="title-animation">Обо мне</span>
+        </h2>
+
+        <!-- CHAT -->
+        <div class="chat js-chat hidden">
+            <!-- CLIENT -->
+            <div data-whois="client" class="chat__item">
+                <div class="chat__avatar">
+                    <svg class="">
+                        <use xlink:href="img/sprite.svg#user"></use>
+                    </svg>
+
+                    <div class="chat__avatar-online"></div>
+                </div>
+
+                <div class="chat__message">
+                    <p class="chat__user">Клиент</p>
+
+                    <!-- chat__typing-isTyped -->
+                    <div class="chat__typing js-clientChatPoints">
+                        <div class="chat__typing-isActivePoint"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <!--  chat__text-isTyped -->
+                    <div class="chat__text js-clientMessage">
+                        <p>Привет! Почему ты решила стать UX/UI дизайнером?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FREELANCER -->
+            <div data-whois="freelancer" class="chat__item">
+                <div class="chat__message">
+                    <p class="chat__user freelancer-name js-freelancer-name">Екатерина</p>
+
+                    <!-- chat__typing-isTyped -->
+                    <div class="chat__typing js-freelancerChatPoints">
+                        <div class="chat__typing-isActivePoint"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <!--  chat__text-isTyped -->
+                    <div class="chat__text js-freelancerMessage">
+                        <p class="text16">
+                            Эта профессия позволяет сочетать творческий процесс с практической
+                            пользой для пользователей. Я работаю над созданием удобных и интуитивно
+                            понятных интерфейсов для различных приложений и сайтов,
+                            что улучшает опыт пользователей и повышает эффективность работы
+                            компаний. Кроме того, этот вид деятельности является одним из
+                            самых востребованных в IT-отрасли
+                        </p>
+                    </div>
+                </div>
+
+                <div class="chat__avatar freelancer-avatar js-freelancer-avatar">
+                    <picture>
+                      <source type="image/avif" srcset="img/about__avatar@1x.avif 1x, img/about__avatar@2x.avif 2x">
+                      <source type="image/webp" srcset="img/about__avatar@1x.webp 1x, img/about__avatar@2x.webp 2x">
+                      <img src="img/about__avatar@1x.png" srcset="img/about__avatar@2x.png 2x" alt="My photo in chat">
+                    </picture>
+
+                    <div class="chat__avatar-online">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabcontainer -->
+        <div class="tabs hidden">
+            <div class="tabs__header">
+                <div data-header="0" class="tabs__item tabs__item-isActive h3 hidden title-parent">
+                    <span data-queue="1" class="title-animation">Общая</span>
+                    <span data-queue="2" class="title-animation">информация</span>
+                </div>
+
+                <div data-header="1" class="tabs__item h3 hidden title-parent">
+                    <span data-queue="3" class="title-animation">Образование</span>
+                </div>
+
+                <div data-header="2" class="tabs__item h3 hidden title-parent">
+                    <span data-queue="4" class="title-animation">Опыт</span>
+                    <span data-queue="5" class="title-animation">работы</span>
+                </div>
+
+                <div data-header="3" class="tabs__item h3 hidden title-parent">
+                    <span data-queue="6" class="title-animation">Инструменты</span>
+                </div>
+            </div>
+
+            <div class="tabs__content">
+                <div data-tab="0" class="tabs__info tabs__info-isVisible">
+                    <div class="tabs__general">
+                        <p class="text20 hidden title-parent">
+                            <span data-queue="7" class="title-animation">
+                                Меня зовут Екатерина, я - UX/UI дизайнер, мне 21 год. Заканчиваю университет.
+                                Очень люблю свою профессиональную сферу. Верю в то, что правильный дизайн поможет
+                                пользователю достичь своих целей.
+                            </span>
+                        </p>
+
+                        <p class="text20 hidden title-parent">
+                            <span data-queue="8" class="title-animation">
+                                Работаю как с крупными компаниями, так и с небольшими проектами.
+                            </span>
+                        </p>
+
+                        <p class="text20 hidden title-parent">
+                            <span data-queue="9" class="title-animation">
+                                Создаю красивые и практичные сайты, повышающие конверсию.
+                                Разрабатываю стилистику сайта, исходя из фирменного стиля компании, или с нуля.
+                                Продумываю анимации и переходы по страницам.
+                            </span>
+                        </p>
+
+                        <a class="tabs__resume hidden title-parent inline-block">
+                            <!-- <picture>
+                            <source type="image/avif" srcset="img/{name}@1x.avif 1x, img/{name}@2x.avif 2x">
+                            <source type="image/webp" srcset="img/{name}@1x.webp 1x, img/{name}@2x.webp 2x">
+                            <img src="img/{name}@1x.jpg" srcset="img/{name}@2x.jpg 2x" alt="">
+                            </picture> -->
+
+                            <a target="_blank" href="https://katedesign.info/resources/resume.pdf"><span data-queue="10" class="text20 title-animation">Резюме_Ракитова_Екатерина.pdf</span></a>
+                        </a>
+                    </div>
+                </div>
+
+                <div data-tab="1" class="tabs__info">
+                    <div class="tabs__education">
+                        <div class="tabs__checkpoint">
+                            <div class="tabs__year">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#education__checkpoint"></use>
+                                </svg>
+
+                                <h4 class="h4">2019</h4>
+                            </div>
+
+                            <div class="tabs__way">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#way"></use>
+                                </svg>
+
+                                <p class="text20">Графический дизайн. SHAD - школа архитектуры и дизайна</p>
+                            </div>
+                        </div>
+
+                        <div class="tabs__checkpoint">
+                            <div class="tabs__year">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#education__checkpoint"></use>
+                                </svg>
+
+                                <h4 class="h4">2022</h4>
+                            </div>
+
+                            <div class="tabs__way">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#way"></use>
+                                </svg>
+
+                                <p class="text20">Udemy - Веб дизайн в Figma 2022 - с нуля до результата, основы UX/UI</p>
+                            </div>
+                        </div>
+
+                        <div class="tabs__checkpoint">
+                            <div class="tabs__year">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#education__checkpoint"></use>
+                                </svg>
+
+                                <h4 class="h4">2023</h4>
+                            </div>
+
+                            <div class="tabs__way">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#way"></use>
+                                </svg>
+
+                                <p class="text20">Udemy - Веб дизайн в Figma 2023 Продвинутый уровень. Создание UI Kit</p>
+                            </div>
+                        </div>
+
+                        <div class="tabs__checkpoint">
+                            <div class="tabs__year">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#education__checkpoint"></use>
+                                </svg>
+
+                                <h4 class="h4">2020 <span>-</span> 2024</h4>
+                            </div>
+
+                            <div class="tabs__way">
+                                <svg></svg>
+
+                                <p class="text20">Московский Политехнический Университет - Веб-технологии</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="tabs__certificate">
+                        <button class="button button-small button-opacity">
+                            <p>Сертификаты</p>
+
+                            <svg class="">
+                              <use xlink:href="img/sprite.svg#buttonArrow"></use>
+                            </svg>
+                        </button>
+                    </div> -->
+                </div>
+
+                <div data-tab="2" class="tabs__info">
+                    <div class="tabs__experience">
+                        <p class="text20">c 2021 года я работаю на себя. Создаю дизайн-проекты любой сложности. Общаюсь с заказчиком, анализирую конкурентов, составляю и анализирую User experience. Создаю UI-kit.</p>
+                        <p class="text20">Выполнила более 10 проектов от частных клиентов, в том числе европейских, как следствие: есть опыт деловой переписки, составления ТЗ вместе с ними, понимание специфичности областей их работы. </p>
+
+                        <div data-customer="BerkoDesign" class="tabs__dropdown js-tabs__dropdown">
+                            <div class="tabs__customer">
+                                <h4 class="text20">Berko Design</h4>
+
+                                <div class="tabs__plus js-tabs__plus">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                            <div class="tabs__description js-tabs__description">
+                                <p class="text20">Работаем на постоянной основе с 2022 года. Разрабатывала одностраничные сайты для медицинских учреждений</p>
+                            </div>
+                        </div>
+
+                        <div data-customer="Resanta" class="tabs__dropdown js-tabs__dropdown">
+                            <div class="tabs__customer">
+                                <h4 class="text20">Ресанта</h4>
+
+                                <div class="tabs__plus js-tabs__plus">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                            <div class="tabs__description js-tabs__description">
+                                <p class="text20">Работаем на постоянной основе с 2022 года. Разрабатывала одностраничные сайты для медицинских учреждений</p>
+                            </div>
+                        </div>
+
+                        <div data-customer="4TO" class="tabs__dropdown js-tabs__dropdown">
+                            <div class="tabs__customer">
+                                <h4 class="text20">Четвертое Творческое Объединение</h4>
+
+                                <div class="tabs__plus js-tabs__plus">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                            <div class="tabs__description js-tabs__description">
+                                <p class="text20">Работаем на постоянной основе с 2022 года. Разрабатывала одностраничные сайты для медицинских учреждений</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-tab="3" class="tabs__info">
+                    <div class="tabs__instruments">
+                        <div class="tabs__instrument">
+                            <svg class="">
+                              <use xlink:href="img/sprite.svg#figma"></use>
+                            </svg>
+
+                            <p class="text20">Figma</p>
+                        </div>
+
+                        <div class="tabs__instrument">
+                            <svg class="">
+                              <use xlink:href="img/sprite.svg#illustrator"></use>
+                            </svg>
+
+                            <p class="text20">Adobe Illustrator</p>
+                        </div>
+
+                        <div class="tabs__instrument">
+                            <svg class="">
+                              <use xlink:href="img/sprite.svg#photoshop"></use>
+                            </svg>
+
+                            <p class="text20">Adobe Photoshop</p>
+                        </div>
+
+                        <div class="tabs__instrument">
+                            <svg class="">
+                              <use xlink:href="img/sprite.svg#indesign"></use>
+                            </svg>
+
+                            <p class="text20">Adobe InDesign</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

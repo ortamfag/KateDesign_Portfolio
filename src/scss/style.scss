@@ -1,11 +1,18 @@
-@import "./base/reset";
-@import "vars";
-@import "mixins/font-face";
-@import "mixins/adaptive-font";
-@import "fonts";
-@import "settings";
-@import "./components/text";
-@import "./components/headerPortrait";
-@import "./components/burger";
-@import "./layout/header";
-@import "./layout/nav";
+// Переменные, миксины, функции
+@import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/variables";
+
+// CSS-файлы библиотек
+@import "vendor/libs";
+
+// Основное
+@import "base/fonts";
+@import "base/settings";
+
+// // Компоненты
+@import "./components/button";
+@import "./components/svg";
+
+// Модули
+@import "modules";

@@ -1,0 +1,224 @@
+.tabs {
+    margin-top: 64px;
+    width: 960px;
+
+    &__header {
+        display: flex;
+        margin-bottom: 32px;
+    }
+
+    &__item {
+        text-transform: uppercase;
+        color: $white;
+        transition: color 0.3s;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 48px;
+        }
+
+        &-isActive {
+            color: $violet !important;
+            transition: color 0.3s;
+        }
+    }
+
+    &__info {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s;
+
+        &-isVisible {
+            height: 100%;
+            opacity: 1 !important;
+            visibility: visible;
+            transition: opacity 0.3s;
+        }
+    }
+
+    &__general {
+        p {
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &__year {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 7px;
+            width: 18px;
+            height: 18px;
+        }
+
+        h4 {
+            @include adaptiveFont(17, 24, 320, 1440);
+
+            -webkit-text-stroke-width: 0.6px;
+            -webkit-text-stroke-color: #C8B5FC;
+            color: $black;
+        }
+    }
+
+    &__way {
+        display: flex;
+
+        svg {
+            margin-right: 7px;
+            width: 18px;
+            height: 58px;
+        }
+
+        p {
+            margin-top: 9px;
+            line-height: 1;
+        }
+    }
+
+    &__certificate {
+        margin-left: 18px;
+    }
+
+    &__experience {
+        p:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        p:last-child {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__dropdown {
+        display: none;
+        margin-bottom: 15px;
+    }
+
+    &__customer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        h4 {
+            color: #C8B5FC;
+        }
+    }
+
+    &__plus {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        transition: all 0.2s;
+
+        &-isActive {
+            transform: rotate(90deg) !important;
+            transition: all 0.2s;
+
+            div:first-child {
+                opacity: 0 !important;
+                transition: all 0.2s;
+            }
+        }
+
+        div {
+            position: absolute;
+            left: 50%;
+            top: 3px;
+            width: 2px;
+            height: 26px;
+            background-color: #C8B5FC;
+        }
+
+        div:first-child {
+            opacity: 1;
+            transform: rotate(90deg);
+            transition: all 0.2s;
+        }
+    }
+
+    &__description {
+        margin-top: 8px;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.3s;
+
+        &-isVisible {
+            height: 100px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: translateY(0) !important;
+            transition: all 0.3s;
+        }
+
+        p {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    &__instrument {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 30px;
+            width: 28px;
+            height: 28px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .tabs {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+
+        &__header {
+            flex-direction: column;
+        }
+
+        &__item {
+            margin-right: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 20%;
+            }
+        }
+
+        &__content {
+            margin-right: 5%;
+            max-width: 60%;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .tabs {
+        display: block;
+
+        &__header {
+            flex-flow: wrap;
+            flex-direction: row;
+        }
+
+        &__item {
+            margin-bottom: 0 !important;
+        }
+
+        &__content {
+            max-width: 100%;
+        }
+    }
+}
