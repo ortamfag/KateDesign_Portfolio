@@ -5,13 +5,15 @@ let activeHeader;
 const reasonsHeight = reasonsItem[6].offsetHeight;
 const client = document.querySelector('.scroll');
 
-if (client.clientWidth <= 700) {
+if (client.clientWidth > 700) {
     reasonsGrid.style.height = '100%';
+} else {
+    reasonsGrid.style.height = `${reasonsHeight + 50}px`;
 }
 
 window.addEventListener('resize', () => {
     if (client.clientWidth <= 700) {
-        reasonsGrid.style.height = `${reasonsHeight}px`;
+        reasonsGrid.style.height = `${reasonsHeight + 50}px`;
     } else {
         reasonsGrid.style.height = '100%';
     }
