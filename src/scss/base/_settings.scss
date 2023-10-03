@@ -201,7 +201,7 @@ a {
 
 .title-animation {
     display: inline-block;
-    transform: translateY(100%);
+    transform: translateY(110%);
     transition: transform 1s;
 
     &[data-queue="1"] {

@@ -25,9 +25,11 @@
     }
 
     &__content {
+        overflow-y: scroll;
         border-radius: 8px;
         padding: 64px;
         width: 100%;
+        height: calc(100vh - 60px);
         box-shadow: 0 0 16px 0 rgba(117 70 247 / 35%);
         color: $white;
         background-color: $grey;
@@ -43,6 +45,10 @@
 
         video {
             width: 100%;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
         }
     }
 

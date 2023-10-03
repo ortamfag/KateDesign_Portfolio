@@ -70,7 +70,10 @@ __webpack_require__.r(__webpack_exports__);
 const readProgress = document.querySelector('.js-read-progress');
 const pageHeight = document.querySelector('.scroll');
 window.addEventListener('scroll', () => {
+<<<<<<< HEAD
   console.log(readProgress.style.transitionDelay === '');
+=======
+>>>>>>> f8db1c4079c87e2c085e6077b6ba8a7fb3b31ad0
   if (readProgress.style.transitionDelay === '') {
     readProgress.style.transitionDelay = '0ms';
   }
@@ -126,6 +129,7 @@ hiddenElements.forEach(el => observer.observe(el, options));
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 /* harmony import */ var _modules_preloader_preloader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/preloader/preloader.js */ "./src/modules/preloader/preloader.js");
 /* harmony import */ var _modules_nav_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/nav/nav.js */ "./src/modules/nav/nav.js");
 /* harmony import */ var _modules_nav_burger_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/nav/burger.js */ "./src/modules/nav/burger.js");
@@ -135,6 +139,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_form_form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../modules/form/form.js */ "./src/modules/form/form.js");
 /* harmony import */ var _modules_popup_popup_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../modules/popup/popup.js */ "./src/modules/popup/popup.js");
 
+=======
+/* harmony import */ var _modules_nav_nav_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/nav/nav.js */ "./src/modules/nav/nav.js");
+/* harmony import */ var _modules_nav_burger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/nav/burger.js */ "./src/modules/nav/burger.js");
+/* harmony import */ var _modules_about_tabs_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/about/tabs.js */ "./src/modules/about/tabs.js");
+/* harmony import */ var _modules_about_chat_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules/about/chat.js */ "./src/modules/about/chat.js");
+/* harmony import */ var _modules_reasons_reasons_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modules/reasons/reasons.js */ "./src/modules/reasons/reasons.js");
+/* harmony import */ var _modules_form_form_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modules/form/form.js */ "./src/modules/form/form.js");
+/* harmony import */ var _modules_popup_popup_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../modules/popup/popup.js */ "./src/modules/popup/popup.js");
+>>>>>>> f8db1c4079c87e2c085e6077b6ba8a7fb3b31ad0
 
 
 
@@ -406,9 +419,30 @@ const makeModal = modalSel => {
   const btnEl = document.querySelector(`${modalSel}__preview`);
   const closeEl = document.querySelector(`${modalSel}Cross`);
   const bg = document.querySelector(`${modalSel}Bg`);
+<<<<<<< HEAD
   btnEl.addEventListener('click', () => modalEl.classList.add('open'));
   closeEl.addEventListener('click', () => modalEl.classList.remove('open'));
   bg.addEventListener('click', () => modalEl.classList.remove('open'));
+=======
+  const escapeKeyDownChecker = e => {
+    if (e.key === 'Escape') {
+      modalEl.classList.remove('open');
+      window.removeEventListener('keydown', escapeKeyDownChecker);
+    }
+  };
+  btnEl.addEventListener('click', () => {
+    modalEl.classList.add('open');
+    window.addEventListener('keydown', escapeKeyDownChecker);
+  });
+  closeEl.addEventListener('click', () => {
+    modalEl.classList.remove('open');
+    window.removeEventListener('keydown', escapeKeyDownChecker);
+  });
+  bg.addEventListener('click', () => {
+    modalEl.classList.remove('open');
+    window.removeEventListener('keydown', escapeKeyDownChecker);
+  });
+>>>>>>> f8db1c4079c87e2c085e6077b6ba8a7fb3b31ad0
 };
 makeModal('#holdMyCode');
 makeModal('#Wine');
@@ -422,6 +456,7 @@ makeModal('#Victorian');
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./src/modules/preloader/preloader.js":
 /*!********************************************!*\
   !*** ./src/modules/preloader/preloader.js ***!
@@ -451,6 +486,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+=======
+>>>>>>> f8db1c4079c87e2c085e6077b6ba8a7fb3b31ad0
 /***/ "./src/modules/reasons/reasons.js":
 /*!****************************************!*\
   !*** ./src/modules/reasons/reasons.js ***!
@@ -464,12 +501,23 @@ const reasonsGrid = document.querySelector('.js-reasons__grid');
 let activeHeader;
 const reasonsHeight = reasonsItem[6].offsetHeight;
 const client = document.querySelector('.scroll');
+<<<<<<< HEAD
 if (client.clientWidth <= 700) {
   reasonsGrid.style.height = '100%';
 }
 window.addEventListener('resize', () => {
   if (client.clientWidth <= 700) {
     reasonsGrid.style.height = `${reasonsHeight}px`;
+=======
+if (client.clientWidth > 700) {
+  reasonsGrid.style.height = '100%';
+} else {
+  reasonsGrid.style.height = `${reasonsHeight + 50}px`;
+}
+window.addEventListener('resize', () => {
+  if (client.clientWidth <= 700) {
+    reasonsGrid.style.height = `${reasonsHeight + 50}px`;
+>>>>>>> f8db1c4079c87e2c085e6077b6ba8a7fb3b31ad0
   } else {
     reasonsGrid.style.height = '100%';
   }
