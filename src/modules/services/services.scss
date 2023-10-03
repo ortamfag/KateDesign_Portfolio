@@ -126,6 +126,7 @@
 
         &__footer {
             flex-direction: column;
+            align-items: flex-start;
         }
 
         &__info {
@@ -175,8 +176,13 @@
                     display: none;
                 }
 
-                span {
-                    display: inline !important;
+                .services__question {
+                    // display: inline !important;
+                    width: 160px;
+                }
+
+                .services__answer {
+                    display: inline;
                 }
 
                 &:nth-child(2) {
@@ -184,5 +190,11 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 520px) {
+    .services__question {
+        width: 130px !important;
     }
 }
