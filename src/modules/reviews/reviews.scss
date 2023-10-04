@@ -3,6 +3,13 @@
 
     &__other {
         margin-top: 24px;
+        font-style: italic;
+        text-align: right;
+        color: #CCC;
+
+        a {
+            white-space: nowrap;
+        }
     }
 }
 
@@ -10,15 +17,14 @@
     margin-top: 24px;
     width: 100%;
 
-    &__toggle {
-        display: flex;
-        align-items: center;
-        margin-bottom: 24px;
+    svg {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
 
-        svg {
-            width: 32px;
-            height: 32px;
-        }
+    &-wrapper {
+        align-items: center;
     }
 
     &-inner {
@@ -39,25 +45,42 @@
     }
 
     &-left {
-        // margin-right: 5%;
-        // width: 55%;
-        width: 100%;
+        margin-right: 45px;
+        width: 129px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-right {
+        width: calc(100% - 129px);
 
         .text20:not(:last-child) {
             margin-bottom: 12px;
         }
     }
 
-    &-right {
-        // width: 45%;
+    &-slide {
+        padding-right: calc(32px + 5%);
+        padding-left: calc(32px + 5%);
     }
 
     &--prev {
-        margin-right: 20px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        z-index: 10;
+        transform: translateY(-50%);
         cursor: pointer;
     }
 
     &--next {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: 10;
+        transform: translateY(-50%);
         cursor: pointer;
     }
 
@@ -73,11 +96,53 @@
             width: 24px;
             height: 24px;
             background-color: $violet;
-            cursor: pointer;
 
             &:not(:last-child) {
                 margin-right: 10px;
             }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .swiper {
+        &-header {
+            margin-bottom: 20px;
+        }
+
+        &-wrapper {
+            align-items: flex-start;
+        }
+
+        &-inner {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &-slide {
+            padding: 0;
+        }
+
+        &-left {
+            margin-right: 5%;
+            margin-bottom: 20px;
+            width: 25%;
+        }
+
+        &-right {
+            width: 100%;
+        }
+
+        &--next {
+            display: none;
+        }
+
+        &--prev {
+            display: none;
+        }
+
+        &--pagination {
+            margin-top: 24px;
         }
     }
 }

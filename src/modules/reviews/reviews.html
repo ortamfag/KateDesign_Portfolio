@@ -6,18 +6,16 @@
 
         <!-- Slider main container -->
         <div class="swiper">
-            <div class="swiper__toggle">
-                <div class="swiper--prev">
-                    <svg class="swiper-left">
-                        <use xlink:href="img/sprite.svg#ArrowLeft"></use>
-                    </svg>
-                </div>
+            <div class="swiper--prev">
+                <svg class="swiper-left">
+                    <use xlink:href="img/sprite.svg#ArrowLeft"></use>
+                </svg>
+            </div>
 
-                <div class="swiper--next">
-                    <svg class="swiper-right">
-                        <use xlink:href="img/sprite.svg#ArrowRight"></use>
-                    </svg>
-                </div>
+            <div class="swiper--next">
+                <svg class="swiper-right">
+                    <use xlink:href="img/sprite.svg#ArrowRight"></use>
+                </svg>
             </div>
 
             <div class="swiper-wrapper">
@@ -25,6 +23,14 @@
                 <div class="swiper-slide">
                     <div class="swiper-inner">
                         <div class="swiper-left">
+                            <picture>
+                                <source type="image/avif" srcset="img/swiper-olga@2x.avif 1x, img/swiper-olga@4x.avif 2x">
+                                <source type="image/webp" srcset="img/swiper-olga@2x.webp 1x, img/swiper-olga@4x.webp 2x">
+                                <img src="img/swiper-olga@2x.png" srcset="img/swiper-olga@4x.png 2x" alt="">
+                            </picture>
+                        </div>
+
+                        <div class="swiper-right">
                             <div class="swiper-header">
                                 <h4 class="h4">Ольга Берко</h4>
                                 <p class="text24">Berko Design</p>
@@ -34,44 +40,36 @@
                             <p class="text20">Она продемонстрировала хорошее владение программой и внимательно слушала и дополняла задачи. Работать с ней было приятно, и я высоко ценю ее старания и креативный подход к деталям проекта.</p>
                             <p class="text20">Рекомендую Катю как надежного и креативного веб-дизайнера!</p>
                         </div>
-
-                        <div class="swiper-right">
-                            <!-- <picture>
-                              <source type="image/avif" srcset="img/swiper-olga@2x.avif 1x, img/swiper-olga@4x.avif 2x">
-                              <source type="image/webp" srcset="img/swiper-olga@2x.webp 1x, img/swiper-olga@4x.webp 2x">
-                              <img src="img/swiper-olga@2x.png" srcset="img/swiper-olga@4x.png 2x" alt="">
-                            </picture> -->
-                        </div>
                     </div>
                 </div>
 
                 <div class="swiper-slide">
                     <div class="swiper-inner">
                         <div class="swiper-left">
+                            <picture>
+                                <source type="image/avif" srcset="img/swiper-vishnevetskaya@2x.avif 1x, img/swiper-vishnevetskaya@4x.avif 2x">
+                                <source type="image/webp" srcset="img/swiper-vishnevetskaya@2x.webp 1x, img/swiper-vishnevetskaya@4x.webp 2x">
+                                <img src="img/swiper-vishnevetskaya@2x.png" srcset="img/swiper-vishnevetskaya@4x.png 2x" alt="">
+                            </picture>
+                        </div>
+
+                        <div class="swiper-right">
                             <div class="swiper-header">
                                 <h4 class="h4">Любовь Вишневецкая</h4>
                                 <p class="text24">ООО "Вертикаль"</p>
                             </div>
 
                             <p class="text20">Екатерина, добрый день, хочу поблагодарить тебя за работу, моим коллегам очень понравился результат дизайна нашего сайта. </p>
-                            <p class="text20">Все посчитали его локаничным и удобным, ты грамотно придумала расположение кнопок, а также учла все наши пожелания</p>
-                        </div>
-
-                        <div class="swiper-right">
-                            <!-- <picture>
-                              <source type="image/avif" srcset="img/swiper-olga@2x.avif 1x, img/swiper-olga@4x.avif 2x">
-                              <source type="image/webp" srcset="img/swiper-olga@2x.webp 1x, img/swiper-olga@4x.webp 2x">
-                              <img src="img/swiper-olga@2x.png" srcset="img/swiper-olga@4x.png 2x" alt="">
-                            </picture> -->
+                            <p class="text20">Все посчитали его лаконичным и удобным, ты грамотно придумала расположение кнопок, а также учла все наши пожелания</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- If we need pagination -->
-            <div class="swiper--pagination"></div>
         </div>
 
-        <p class="text24 reviews__other">Остальные отзывы можно увидеть на <a target="_blank" href="https://kwork.ru/user/katye_"> моей странице в Kwork </a></p>
+        <!-- If we need pagination -->
+        <div class="swiper--pagination"></div>
+
+        <p class="text20 reviews__other">Остальные отзывы можно увидеть <br> <a target="_blank" href="https://kwork.ru/user/katye_">на моей странице в KWORK </a></p>
     </div>
 </section>
