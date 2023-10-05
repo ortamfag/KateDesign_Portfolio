@@ -64,7 +64,7 @@
                 </div>
             </div>
 
-            <form class="choose" method="POST" action="http://localhost:3001/form">
+            <form class="choose" method="POST" id="brief" action="http://localhost:3001/form">
                 <div class="inDevelopment">
                     <p class="h1">В разработке</p>
                     <p class="text24">Если вы хотите сделать сайт своей мечты, свяжитесь со мной любым способом, указанным выше</p>
@@ -158,7 +158,7 @@
                     </div>
 
                     <div class="choose__last">
-                        <input type="textarea" name="message" placeholder="Сообщение">
+                        <textarea name="message" placeholder="Сообщение" form="brief"></textarea>
                         <p class="text16">Что-то, о чем вы бы хотели сказать</p>
                     </div>
                 </div>

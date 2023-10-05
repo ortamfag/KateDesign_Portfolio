@@ -214,19 +214,19 @@
     &__last {
         margin-top: 24px;
 
-        input {
+        textarea {
             @include adaptiveFont(18, 24, 320, 1440);
 
             outline: none;
-            border-right: 0;
-            border-bottom: 2px solid #616161;
-            padding: 16px 0;
+            border: 2px solid #616161;
+            padding: 16px;
             width: 100%;
+            max-width: 100%;
             font-weight: 500;
             color: $white;
             background-color: inherit;
             transition: all 0.2s;
-            resize: horizontal;
+            resize: vertical;
 
             &::placeholder {
                 @include adaptiveFont(18, 24, 320, 1440);
@@ -237,7 +237,7 @@
             }
 
             &:focus {
-                border-bottom: 2px solid $violet;
+                border: 2px solid $violet;
                 transition: all 0.2s;
             }
 
