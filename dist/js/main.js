@@ -429,6 +429,9 @@ const makeModal = modalSel => {
     window.removeEventListener('keydown', escapeKeyDownChecker);
   });
 };
+makeModal('#Certificate');
+// makeModal('#Warranty');
+
 makeModal('#holdMyCode');
 makeModal('#Wine');
 makeModal('#FourCA');

@@ -27,6 +27,9 @@ const makeModal = (modalSel) => {
     });
 };
 
+makeModal('#Certificate');
+// makeModal('#Warranty');
+
 makeModal('#holdMyCode');
 makeModal('#Wine');
 makeModal('#FourCA');
