@@ -117,9 +117,15 @@
     }
 }
 
+@media (max-width: 770px) {
+    .form {
+        padding-top: 64px !important;
+    }
+}
+
 @media (max-width: 767px) {
     .form {
-        padding: 110px $container320-offset 110px 0;
+        padding: 64px $container320-offset 64px 0;
 
         &__input {
             padding: 16px 8px;
@@ -178,6 +184,13 @@ form {
     .text24 {
         margin-top: 12px;
         text-align: center;
+    }
+}
+
+@media (max-width: 510px) {
+    .form {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
     }
 }
 

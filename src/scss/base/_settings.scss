@@ -192,6 +192,16 @@ a {
     font-weight: 500;
 }
 
+.main {
+    &-padding {
+        padding-top: 120px !important;
+    }
+
+    &-title {
+        color: $white;
+    }
+}
+
 .title-parent {
     overflow: hidden;
 
@@ -257,6 +267,18 @@ a {
         opacity: 1 !important;
         transition: all 0.5s !important;
         transition-delay: 1000ms !important;
+    }
+}
+
+@media (max-width: 770px) {
+    .main-padding {
+        padding-top: 64px !important;
+    }
+}
+
+@media (max-width: 510px) {
+    .main-padding {
+        padding-top: 60px !important;
     }
 }
 
