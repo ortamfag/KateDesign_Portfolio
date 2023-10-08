@@ -54,6 +54,20 @@
             transition: 0.3s;
         }
     }
+
+    &-disabled {
+        box-shadow: 1px 1px 5px 0px rgba(200, 181, 252, 0.25) !important;
+        background-color: #E0E0E0 !important;
+        border: 3px solid #E0E0E0 !important;
+        color: #9E9E9E !important;
+
+        &:hover {
+            box-shadow: 1px 1px 5px 0px rgba(200, 181, 252, 0.25) !important;
+            background-color: #E0E0E0 !important;
+            border: 3px solid #E0E0E0 !important;
+            color: #9E9E9E !important;
+        }
+    }
 }
 
 @media (max-width: 1020px) {
