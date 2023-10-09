@@ -198,37 +198,6 @@ const images = () => gulp.src(`${paths.srcImgFolder}/**.{jpg,png,jpeg,gif,svg,mp
         }),
     ))
     // .pipe(newer(paths.buildImgFolder))
-    .pipe(gulp.dest(paths.buildImgFolder));
-
-// webp format
-const webpImages = () => gulp.src([`${paths.srcImgFolder}/**.{jpg,jpeg,png}`])
-    // .pipe(newer(paths.buildImgFolder))
-    .pipe(webp())
-    .pipe(gulp.dest(paths.buildImgFolder));
-
-// avif format
-const avifImages = () => gulp.src([`${paths.srcImgFolder}/**.{jpg,jpeg,png}`])
-    // .pipe(newer(paths.buildImgFolder))
-    .pipe(avif({
-        quality: 80,
-        speed: 8,
-    }))
-    .pipe(gulp.dest(paths.buildImgFolder));
-
-const minifyPictures = () => gulp.src([`${paths.srcImgFolder}/**.{jpg,jpeg,png}`])
-    .pipe(avif(imageminAvif({
-        quality: 100,
-        lossless: true,
-        speed: 0,
-    })))
-
-    .pipe(webp(imageminWebp({
-        lossless: true,
-        quality: 100,
-        alphaQuality: 100,
-        method: 6,
-    })))
-
     .pipe(imagemin([
         imagemin.gifsicle({
             optimizationLevel: 3,
@@ -259,6 +228,27 @@ const minifyPictures = () => gulp.src([`${paths.srcImgFolder}/**.{jpg,jpeg,png}`
     ], {
         verbose: true,
     }))
+    .pipe(gulp.dest(paths.buildImgFolder));
+
+// webp format
+const webpImages = () => gulp.src([`${paths.srcImgFolder}/**.{jpg,jpeg,png}`])
+    // .pipe(newer(paths.buildImgFolder))
+    .pipe(webp(imageminWebp({
+        lossless: true,
+        quality: 100,
+        alphaQuality: 100,
+        method: 6,
+    })))
+    .pipe(gulp.dest(paths.buildImgFolder));
+
+// avif format
+const avifImages = () => gulp.src([`${paths.srcImgFolder}/**.{jpg,jpeg,png}`])
+    // .pipe(newer(paths.buildImgFolder))
+    .pipe(avif(imageminAvif({
+        quality: 100,
+        lossless: true,
+        speed: 0,
+    })))
     .pipe(gulp.dest(paths.buildImgFolder));
 
 // html include modules
@@ -294,8 +284,8 @@ const watchFiles = () => {
     gulp.watch(`${paths.srcModulesFolder}/**/*.html`, htmlInclude);
     gulp.watch(`${srcFolder}/views/**/*.html`, htmlInclude);
     gulp.watch(`${paths.srcResourcesFolder}/fonts/**`, fonts);
-    // gulp.watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,gif,svg}`, images);
-    // gulp.watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
+    gulp.watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,gif,svg}`, images);
+    gulp.watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
     gulp.watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
     gulp.watch(paths.srcSprites, svgSprites);
     gulp.watch(`${paths.srcResourcesFolder}/favicons/**`, gulp.series(favicon, faviconSVG));
@@ -323,5 +313,5 @@ const toProd = (done) => {
 // functions
 
 export const dev = gulp.series(clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, avifImages, svgSprites, watchFiles);
-export const build = gulp.series(toProd, clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, minifyPictures, svgSprites, htmlMinify);
+export const build = gulp.series(toProd, clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, images, webpImages, avifImages, svgSprites, htmlMinify);
 export const archive = zipFiles;
