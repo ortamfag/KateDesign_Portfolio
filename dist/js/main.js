@@ -130,8 +130,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_about_tabs_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/about/tabs.js */ "./src/modules/about/tabs.js");
 /* harmony import */ var _modules_about_chat_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules/about/chat.js */ "./src/modules/about/chat.js");
 /* harmony import */ var _modules_reasons_reasons_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modules/reasons/reasons.js */ "./src/modules/reasons/reasons.js");
-/* harmony import */ var _modules_form_form_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modules/form/form.js */ "./src/modules/form/form.js");
-/* harmony import */ var _modules_popup_popup_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../modules/popup/popup.js */ "./src/modules/popup/popup.js");
+/* harmony import */ var _modules_stages_stages_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modules/stages/stages.js */ "./src/modules/stages/stages.js");
+/* harmony import */ var _modules_form_form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../modules/form/form.js */ "./src/modules/form/form.js");
+/* harmony import */ var _modules_popup_popup_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../modules/popup/popup.js */ "./src/modules/popup/popup.js");
+
 
 
 
@@ -497,6 +499,41 @@ reasonHeaders.forEach(header => {
         item.classList.add('reasons__item--isActive');
       }
     });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/modules/stages/stages.js":
+/*!**************************************!*\
+  !*** ./src/modules/stages/stages.js ***!
+  \**************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const stages = document.querySelectorAll('.js-stage');
+const stagesWays = document.querySelectorAll('.js-stages__way');
+const stagesText = document.querySelectorAll('.js-stages__text');
+const stageAnimation = e => {
+  const stageData = e.currentTarget.dataset.stage;
+  for (let i = 0; i < stagesText.length; i += 1) {
+    if (stagesText[i].dataset.stage === stageData) {
+      stagesText[i].classList.add('stages__text--isActive');
+      break;
+    }
+  }
+  for (let i = 0; i < stagesWays.length; i += 1) {
+    if (stagesWays[i].dataset.stage === stageData) {
+      stagesWays[i].classList.add('stages__way--isActive');
+      break;
+    }
+  }
+};
+stages.forEach(stage => {
+  stage.addEventListener('transitionstart', e => {
+    stageAnimation(e);
+  }, {
+    once: true
   });
 });
 

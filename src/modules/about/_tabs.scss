@@ -7,6 +7,14 @@
         margin-bottom: 32px;
     }
 
+    &__resume {
+        display: flex;
+
+        span {
+            margin-left: 12px;
+        }
+    }
+
     &__item {
         text-transform: uppercase;
         color: $white;
