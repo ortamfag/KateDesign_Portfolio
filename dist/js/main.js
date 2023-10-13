@@ -364,24 +364,21 @@ navLinks.forEach(link => {
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-// const languages = document.querySelectorAll('.js-nav__lang');
-
-// languages.forEach((lang) => {
-//     lang.addEventListener('click', (event) => {
-//         const elem = event.currentTarget;
-//         const langPosition = elem.dataset.position;
-
-//         if (langPosition !== '1') {
-//             for (let i = 0; i < languages.length; i += 1) {
-//                 if (languages[i].dataset.position === '1') {
-//                     languages[i].dataset.position = langPosition;
-//                     elem.dataset.position = '1';
-//                 }
-//             }
-//         }
-//     });
-// });
-
+const languages = document.querySelectorAll('.js-nav__lang');
+languages.forEach(lang => {
+  lang.addEventListener('click', event => {
+    const elem = event.currentTarget;
+    const langPosition = elem.dataset.position;
+    if (langPosition !== '1') {
+      for (let i = 0; i < languages.length; i += 1) {
+        if (languages[i].dataset.position === '1') {
+          languages[i].dataset.position = langPosition;
+          elem.dataset.position = '1';
+        }
+      }
+    }
+  });
+});
 const nav = document.querySelector('.js-nav');
 window.addEventListener('scroll', () => {
   // 80%
@@ -430,8 +427,7 @@ const makeModal = modalSel => {
   });
 };
 makeModal('#Certificate');
-// makeModal('#Warranty');
-
+makeModal('#Warranty');
 makeModal('#holdMyCode');
 makeModal('#Wine');
 makeModal('#FourCA');
@@ -441,6 +437,16 @@ makeModal('#Food');
 makeModal('#Nirvana');
 makeModal('#Turkey');
 makeModal('#Victorian');
+const warrantyButton = document.querySelector('.js-popupWarranty-button');
+warrantyButton.addEventListener('click', () => {
+  document.querySelector('#WarrantyPopup').classList.remove('open');
+});
+const warrantyServices = document.querySelectorAll('.js-servicesWarranty');
+warrantyServices.forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelector('#WarrantyPopup').classList.add('open');
+  });
+});
 
 /***/ }),
 

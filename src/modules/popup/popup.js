@@ -28,8 +28,7 @@ const makeModal = (modalSel) => {
 };
 
 makeModal('#Certificate');
-// makeModal('#Warranty');
-
+makeModal('#Warranty');
 makeModal('#holdMyCode');
 makeModal('#Wine');
 makeModal('#FourCA');
@@ -39,3 +38,16 @@ makeModal('#Food');
 makeModal('#Nirvana');
 makeModal('#Turkey');
 makeModal('#Victorian');
+
+const warrantyButton = document.querySelector('.js-popupWarranty-button');
+warrantyButton.addEventListener('click', () => {
+    document.querySelector('#WarrantyPopup').classList.remove('open');
+});
+
+const warrantyServices = document.querySelectorAll('.js-servicesWarranty');
+
+warrantyServices.forEach((item) => {
+    item.addEventListener('click', () => {
+        document.querySelector('#WarrantyPopup').classList.add('open');
+    });
+});
