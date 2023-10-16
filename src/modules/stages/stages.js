@@ -1,9 +1,10 @@
 const stages = document.querySelectorAll('.js-stage');
 const stagesWays = document.querySelectorAll('.js-stages__way');
+const lastWayRect = document.querySelectorAll('.js-stages__rect');
 const stagesText = document.querySelectorAll('.js-stages__text');
 
-const stageAnimation = (e) => {
-    const stageData = e.currentTarget.dataset.stage;
+const stageAnimation = (thisStage) => {
+    const stageData = thisStage.dataset.stage;
 
     for (let i = 0; i < stagesText.length; i += 1) {
         if (stagesText[i].dataset.stage === stageData) {
@@ -20,8 +21,33 @@ const stageAnimation = (e) => {
     }
 };
 
-stages.forEach((stage) => {
-    stage.addEventListener('transitionstart', (e) => {
-        stageAnimation(e);
-    }, { once: true });
+const config = { attributes: true };
+
+const callback = (mutationList) => {
+    mutationList.forEach((mutation) => {
+        if (mutation.type === 'attributes') {
+            stageAnimation(mutation.target);
+        }
+    });
+};
+
+const observer = new MutationObserver(callback);
+
+// first stage
+stages[0].addEventListener('transitionstart', (e) => {
+    const thisStage = e.currentTarget;
+    stageAnimation(thisStage);
+}, { once: true });
+
+lastWayRect.forEach((rect, key) => {
+    const nextStage = stages[key + 1];
+    rect.addEventListener('transitionend', () => {
+        if (nextStage) {
+            if (nextStage.classList.contains('hidden-show')) {
+                stageAnimation(nextStage);
+            } else {
+                observer.observe(nextStage, config);
+            }
+        }
+    });
 });
