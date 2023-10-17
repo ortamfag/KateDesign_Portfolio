@@ -1,5 +1,5 @@
 .form {
-    padding: 110px 84px 110px 0;
+    padding: 110px 84px 0 0;
 
     &__title {
         display: inline-block;
@@ -92,7 +92,7 @@
 
 @media (max-width: 1125px) {
     .form {
-        padding: 110px 35px 110px 0;
+        padding: 110px 35px 0 0;
 
         &__main {
             margin-left: 35px;
@@ -125,7 +125,7 @@
 
 @media (max-width: 767px) {
     .form {
-        padding: 64px $container320-offset 64px 0;
+        padding: 64px $container320-offset 0 0;
 
         &__input {
             padding: 16px 8px;
@@ -190,7 +190,7 @@ form {
 @media (max-width: 510px) {
     .form {
         padding-top: 60px !important;
-        padding-bottom: 60px !important;
+        padding-bottom: 0 !important;
     }
 }
 

@@ -132,7 +132,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_reasons_reasons_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modules/reasons/reasons.js */ "./src/modules/reasons/reasons.js");
 /* harmony import */ var _modules_stages_stages_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modules/stages/stages.js */ "./src/modules/stages/stages.js");
 /* harmony import */ var _modules_form_form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../modules/form/form.js */ "./src/modules/form/form.js");
-/* harmony import */ var _modules_popup_popup_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../modules/popup/popup.js */ "./src/modules/popup/popup.js");
+/* harmony import */ var _modules_faq_faq_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../modules/faq/faq.js */ "./src/modules/faq/faq.js");
+/* harmony import */ var _modules_popup_popup_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../modules/popup/popup.js */ "./src/modules/popup/popup.js");
+
 
 
 
@@ -245,6 +247,25 @@ tabsDropdowns.forEach(item => {
         plus.classList.toggle('tabs__plus-isActive');
       }
     }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/modules/faq/faq.js":
+/*!********************************!*\
+  !*** ./src/modules/faq/faq.js ***!
+  \********************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const FAQItems = document.querySelectorAll('.js-faq__item');
+const FAQText = document.querySelectorAll('.js-faq__text');
+const FAQPlus = document.querySelectorAll('.js-faq__plus');
+FAQItems.forEach((item, key) => {
+  item.addEventListener('click', () => {
+    FAQText[key].classList.toggle('faq__text-isActive');
+    FAQPlus[key].classList.toggle('faq__plus-isActive');
   });
 });
 
