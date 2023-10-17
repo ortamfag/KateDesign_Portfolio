@@ -101,15 +101,20 @@
         }
     }
 
-    &__dropdown {
+    &__accordion {
         margin-bottom: 15px;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     &__customer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        cursor: pointer;
+        user-select: none;
 
         h4 {
             color: #C8B5FC;
@@ -149,19 +154,25 @@
     }
 
     &__description {
-        margin-top: 8px;
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-20px);
-        transition: all 0.3s;
+        display: grid;
+        grid-template-rows: 0fr;
+        margin-top: 0;
+        transition: all 0.4s;
 
         &-isVisible {
-            height: 100px !important;
-            opacity: 1 !important;
-            visibility: visible !important;
-            transform: translateY(0) !important;
-            transition: all 0.3s;
+            grid-template-rows: 1fr;
+            margin-top: 8px;
+        }
+
+        p,
+        a,
+        div {
+            display: block;
+            overflow: hidden;
+        }
+
+        &-isNonFirstText {
+            padding-top: 12px;
         }
 
         p {

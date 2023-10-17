@@ -233,20 +233,14 @@ tabsHeaders.forEach(header => {
   });
 });
 
-// dropdown
-
-const tabsDropdowns = document.querySelectorAll('.js-tabs__dropdown');
-tabsDropdowns.forEach(item => {
-  item.addEventListener('click', e => {
-    const dataset = e.currentTarget.dataset.customer;
-    for (let i = 0; i < tabsDropdowns.length; i += 1) {
-      if (dataset === tabsDropdowns[i].dataset.customer) {
-        const contentPart = tabsDropdowns[i].children[1];
-        const plus = tabsDropdowns[i].children[0].children[1];
-        contentPart.classList.toggle('tabs__description-isVisible');
-        plus.classList.toggle('tabs__plus-isActive');
-      }
-    }
+// accordion
+const accordionItems = document.querySelectorAll('.js-tabs__accordion');
+const accordionText = document.querySelectorAll('.js-tabs__description');
+const accordionPlus = document.querySelectorAll('.js-tabs__plus');
+accordionItems.forEach((item, key) => {
+  item.addEventListener('click', () => {
+    accordionText[key].classList.toggle('tabs__description-isVisible');
+    accordionPlus[key].classList.toggle('tabs__plus-isActive');
   });
 });
 
