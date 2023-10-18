@@ -61,3 +61,24 @@
         padding: 6px 12px;
     }
 }
+
+@media (max-width: 800px) {
+    .button:hover {
+        background-color: $violet;
+
+        svg {
+            transform: rotate(0deg);
+        }
+    }
+
+    .button:active,
+    .button:focus {
+        background-color: $violet-dark;
+        transition: all 0.3s;
+
+        svg {
+            transform: rotate(45deg);
+            transition: 0.3s;
+        }
+    }
+}

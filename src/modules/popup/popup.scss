@@ -146,6 +146,7 @@
     }
 
     &__close {
+        align-self: flex-start;
         cursor: pointer;
 
         img {
@@ -202,6 +203,12 @@
     height: 32px;
 }
 
+@media (max-width: 1099px) {
+    .popup__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 767px) {
     .popup {
         &__body {
@@ -211,35 +218,94 @@
         &__content {
             padding: 35px;
         }
+
+        &__certificate {
+            padding: 0 48px;
+        }
     }
 }
 
 @media (max-width: 500px) {
     .popup {
         &__content {
-            padding: 12px;
+            padding: 16px 12px;
         }
 
         &__logo {
-            flex-direction: column-reverse;
+            margin-bottom: 24px;
 
             .logo {
-                width: 100%;
+                width: auto;
+            }
+
+            &[data-popup="holdMyCode"] {
+                .logo {
+                    width: 75%;
+                }
+            }
+
+            &[data-popup="wine"] {
+                margin-bottom: 12px;
+
+                .logo {
+                    width: 55%;
+                }
+            }
+
+            &[data-popup="calendar"] {
+                .logo {
+                    margin-right: 15px;
+                }
+            }
+
+            &[data-popup="minimalism"] {
+                margin-bottom: 0;
+
+                .logo {
+                    margin-right: 15px;
+                    max-height: 300px;
+                }
+            }
+
+            &[data-popup="victorian"] {
+                margin-bottom: 32px;
+
+                .logo {
+                    margin-right: 15px;
+                }
+            }
+
+            &[data-popup="nirvana"] {
+                img {
+                    max-width: 305px;
+                    max-height: 125px;
+                }
+            }
+
+            &[data-popup="fourCA"] {
+                margin-bottom: 32px;
+
+                .logo {
+                    margin-right: 15px;
+                    width: auto;
+                }
             }
         }
 
         &__close {
-            align-self: flex-end;
+            align-self: flex-start;
         }
 
         &__twoPicture {
             flex-direction: column;
         }
-    }
-}
 
-@media (max-width: 1099px) {
-    .popup__grid {
-        grid-template-columns: 1fr;
+        &__item {
+            margin-bottom: 12px;
+        }
+
+        &__line {
+            margin-bottom: 24px;
+        }
     }
 }

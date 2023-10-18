@@ -1,3 +1,5 @@
+const body = document.querySelector('body');
+
 const makeModal = (modalSel) => {
     const modalEl = document.querySelector(`${modalSel}Popup`);
     const btnEl = document.querySelector(`${modalSel}__preview`);
@@ -11,17 +13,31 @@ const makeModal = (modalSel) => {
         }
     };
 
+    const mobileBackButtonChecker = () => {
+        body.classList.remove('noscroll');
+        modalEl.classList.remove('open');
+        window.history.back();
+        window.removeEventListener('hashchange', mobileBackButtonChecker);
+    };
+
     btnEl.addEventListener('click', () => {
+        window.history.pushState({ name: modalSel }, null, `${modalSel}`);
         modalEl.classList.add('open');
         window.addEventListener('keydown', escapeKeyDownChecker);
+        window.addEventListener('hashchange', mobileBackButtonChecker);
+        body.classList.add('noscroll');
     });
 
     closeEl.addEventListener('click', () => {
+        body.classList.remove('noscroll');
+        window.history.back();
         modalEl.classList.remove('open');
         window.removeEventListener('keydown', escapeKeyDownChecker);
     });
 
     bg.addEventListener('click', () => {
+        body.classList.remove('noscroll');
+        window.history.back();
         modalEl.classList.remove('open');
         window.removeEventListener('keydown', escapeKeyDownChecker);
     });

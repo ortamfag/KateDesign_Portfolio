@@ -29,6 +29,10 @@ body {
     background-color: $black;
 }
 
+.noscroll {
+    overflow-y: hidden;
+}
+
 *::before,
 *::after {
     box-sizing: inherit;
@@ -270,8 +274,7 @@ a {
 
     &--isActive {
         opacity: 1 !important;
-        transition: all 0.5s !important;
-        transition-delay: 1000ms !important;
+        transition: background-color 0.3s 0ms, opacity 0.5s 1000ms !important;
     }
 }
 
