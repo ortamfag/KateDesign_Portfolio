@@ -129,12 +129,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_nav_burger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/nav/burger.js */ "./src/modules/nav/burger.js");
 /* harmony import */ var _modules_about_tabs_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/about/tabs.js */ "./src/modules/about/tabs.js");
 /* harmony import */ var _modules_about_chat_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../modules/about/chat.js */ "./src/modules/about/chat.js");
-/* harmony import */ var _modules_reasons_reasons_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modules/reasons/reasons.js */ "./src/modules/reasons/reasons.js");
-/* harmony import */ var _modules_stages_stages_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modules/stages/stages.js */ "./src/modules/stages/stages.js");
-/* harmony import */ var _modules_form_form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../modules/form/form.js */ "./src/modules/form/form.js");
-/* harmony import */ var _modules_faq_faq_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../modules/faq/faq.js */ "./src/modules/faq/faq.js");
-/* harmony import */ var _modules_popup_popup_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../modules/popup/popup.js */ "./src/modules/popup/popup.js");
-
+/* harmony import */ var _modules_stages_stages_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../modules/stages/stages.js */ "./src/modules/stages/stages.js");
+/* harmony import */ var _modules_form_form_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modules/form/form.js */ "./src/modules/form/form.js");
+/* harmony import */ var _modules_faq_faq_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../modules/faq/faq.js */ "./src/modules/faq/faq.js");
+/* harmony import */ var _modules_popup_popup_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../modules/popup/popup.js */ "./src/modules/popup/popup.js");
 
 
 
@@ -478,58 +476,6 @@ const warrantyServices = document.querySelectorAll('.js-servicesWarranty');
 warrantyServices.forEach(item => {
   item.addEventListener('click', () => {
     document.querySelector('#WarrantyPopup').classList.add('open');
-  });
-});
-
-/***/ }),
-
-/***/ "./src/modules/reasons/reasons.js":
-/*!****************************************!*\
-  !*** ./src/modules/reasons/reasons.js ***!
-  \****************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-const reasonHeaders = document.querySelectorAll('.js-reasons__header');
-const reasonsItem = document.querySelectorAll('.js-reasons__item');
-const reasonsGrid = document.querySelector('.js-reasons__grid');
-let activeHeader;
-const reasonsHeight = reasonsItem[6].offsetHeight;
-const client = document.querySelector('.scroll');
-if (client.clientWidth > 700) {
-  reasonsGrid.style.height = '100%';
-} else {
-  reasonsGrid.style.height = `${reasonsHeight + 50}px`;
-}
-window.addEventListener('resize', () => {
-  if (client.clientWidth <= 700) {
-    reasonsGrid.style.height = `${reasonsHeight + 50}px`;
-  } else {
-    reasonsGrid.style.height = '100%';
-  }
-});
-reasonHeaders.forEach(header => {
-  if (header.classList.contains('reasons__header--isActive')) {
-    activeHeader = header;
-  }
-  header.addEventListener('click', e => {
-    const queue = e.currentTarget.dataset.reason;
-    activeHeader.classList.remove('reasons__header--isActive');
-    e.currentTarget.classList.add('reasons__header--isActive');
-    activeHeader = e.currentTarget;
-    reasonsItem.forEach(item => {
-      if (queue > item.dataset.reason) {
-        item.classList.add('reasons__item--isLeft');
-      } else if (queue < item.dataset.reason) {
-        if (item.classList.contains('reasons__item--isLeft')) {
-          item.classList.remove('reasons__item--isLeft');
-        }
-      }
-      item.classList.remove('reasons__item--isActive');
-      if (item.dataset.reason === queue) {
-        item.classList.add('reasons__item--isActive');
-      }
-    });
   });
 });
 

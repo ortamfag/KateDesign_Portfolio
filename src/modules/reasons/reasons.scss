@@ -2,7 +2,7 @@
     &__title {
         display: flex;
         align-items: center;
-        margin-bottom: 48px;
+        margin-bottom: 64px;
     }
 
     &__highlighted {
@@ -21,14 +21,11 @@
         background-color: $violet;
     }
 
-    &__headers--mobile {
-        display: none;
-    }
-
     &__grid {
         display: grid;
-        grid-gap: 64px 24px;
+        grid-gap: 24px;
         grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+        overflow-x: hidden;
     }
 
     &__item {
@@ -49,6 +46,10 @@
     &__reason {
         margin-bottom: 12px;
     }
+
+    &__slider {
+        display: none;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -62,37 +63,43 @@
 
 @media (max-width: 700px) {
     .reasons {
-        &__headers--mobile {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        padding-right: 0;
+        padding-left: 0;
+
+        &__title {
+            margin-bottom: 48px;
+            padding-right: 12px;
+            padding-left: 12px;
         }
 
         &__grid {
-            position: relative;
-            overflow-x: hidden;
-            margin-top: 8px;
-
-            .reasons__header {
-                display: none;
-            }
+            display: none;
         }
 
-        &__item {
-            position: absolute;
-            left: 0;
-            top: 0;
-            transform: translateX(105%);
-            transition: transform 0.2s;
+        &__slider {
+            display: block;
 
-            &--isActive {
-                transform: translateX(0%) !important;
-                transition: transform 0.2s;
+            .swiper-pagination-bullet {
+                display: block;
+                margin: 0 !important;
+                border-radius: 0;
+                width: auto;
+                height: auto;
+                background: none;
+                opacity: 1;
             }
 
-            &--isLeft {
-                transform: translateX(-105%);
-                transition: transform 0.2s;
+            .swiper-pagination-bullet-active {
+                flex-grow: 0.5;
+                -webkit-text-stroke-width: 0.8px;
+                -webkit-text-stroke-color: $violet;
+                color: $black;
+                opacity: 1;
+                transition: all 0.3s;
+            }
+
+            .swiper-inner {
+                padding: 0 12px;
             }
         }
 
@@ -103,12 +110,12 @@
             color: $black;
             transition: all 0.3s;
 
-            &--isActive {
-                flex-grow: 0.5;
-                -webkit-text-stroke-width: 0.8px;
-                -webkit-text-stroke-color: $violet;
-                color: $black;
-                transition: all 0.3s;
+            &-isMobile {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 12px;
+                padding: 0 12px;
             }
         }
     }
