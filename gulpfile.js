@@ -185,12 +185,17 @@ const favicon = () => {
 const faviconSVG = () => gulp.src(`${paths.srcResourcesFolder}/favicons/*.svg`)
     .pipe(gulp.dest(`${paths.buildResourcesFolder}/favicons/`));
 
+
 // manifest
 const manifest = () => gulp.src(`${paths.srcResourcesFolder}/manifest/**`)
     .pipe(gulp.dest(`${paths.buildResourcesFolder}/manifest`));
 
+
+const videos = () => gulp.src(`${paths.srcImgFolder}/**.mp4`)
+    .pipe(gulp.dest(paths.buildImgFolder));
+
 // images
-const images = () => gulp.src(`${paths.srcImgFolder}/**.{jpg,png,jpeg,gif,svg,mp4}`)
+const images = () => gulp.src(`${paths.srcImgFolder}/**.{jpg,png,jpeg,gif,svg}`)
     .pipe(plumber(
         notify.onError({
             title: 'IMAGES',
@@ -297,6 +302,7 @@ const watchFiles = () => {
     // gulp.watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,gif,svg}`, images);
     // gulp.watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
     gulp.watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
+    gulp.watch(`${paths.srcImgFolder}/**.mp4`, videos);
     gulp.watch(paths.srcSprites, svgSprites);
     gulp.watch(`${paths.srcResourcesFolder}/favicons/**`, gulp.series(favicon, faviconSVG));
     gulp.watch(`${paths.srcResourcesFolder}/manifest/**`, manifest);
@@ -322,6 +328,6 @@ const toProd = (done) => {
 
 // functions
 
-export const dev = gulp.series(clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, avifImages, svgSprites, watchFiles);
-export const build = gulp.series(toProd, clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, minifyPictures, svgSprites, htmlMinify);
+export const dev = gulp.series(clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, avifImages, svgSprites, watchFiles, videos);
+export const build = gulp.series(toProd, clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, minifyPictures, svgSprites, htmlMinify, videos);
 export const archive = zipFiles;

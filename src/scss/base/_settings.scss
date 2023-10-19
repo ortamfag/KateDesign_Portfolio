@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -22,15 +21,38 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    scrollbar-gutter: stable;
+}
+
 body {
     height: 100%;
     font-family: "Gilroy", sans-serif;
     color: $white;
+    -webkit-tap-highlight-color: transparent;
     background-color: $black;
+    scrollbar-color: $violet $grey;
+    scrollbar-width: auto;
+
+    &::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $grey;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 3px solid $grey;
+        border-radius: 10px;
+        background-color: $violet;
+    }
 }
 
 .noscroll {
     overflow-y: hidden;
+    width: 100%;
 }
 
 *::before,
@@ -333,11 +355,40 @@ a {
     .main-padding {
         padding-top: 60px !important;
     }
+
+    .body {
+        -webkit-tap-highlight-color: auto;
+        scrollbar-color: auto;
+        scrollbar-width: auto;
+
+        &::-webkit-scrollbar {
+            width: auto;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: auto;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border: auto;
+            border-radius: auto;
+            background-color: auto;
+        }
+    }
 }
 
 @media (max-width: 1125px) {
     .container {
         padding: 0 $container1020-offset;
+    }
+}
+
+@media (max-width: 770px) {
+    section {
+        margin-top: -50px;
+        padding-top: 50px;
+        -webkit-background-clip: content-box;
+        background-clip: content-box;
     }
 }
 
