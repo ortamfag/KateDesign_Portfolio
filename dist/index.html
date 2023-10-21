@@ -103,7 +103,7 @@
         <nav class="nav js-nav">
     <div class="read-progress js-read-progress"></div>
 
-    <div class="nav__mobile">
+    <div class="nav__mobile container">
         <h3 class="h3">KateDesign</h3>
 
         <div class="nav__burger js-burger">
@@ -230,10 +230,10 @@
         </div>
     </div>
 </div>
-        <div id="holdMyCodePopup" class="popup">
+        <div id="holdMyCodePopup" data-popup="0" class="popup js-sliderPopup">
     <div id="holdMyCodeBg" class="bg"></div>
     <div class="popup__body">
-        <div class="popup__content">
+        <div class="popup__content" id="holdMyCodeContent">
 
             <div class="popup__wrapper">
                 <div data-popup="holdMyCode" class="popup__logo">
@@ -326,14 +326,23 @@
                         </picture>
                     </div>
                 </div>
+
+                <div class="popup__switcher">
+                    <button data-popup="0" data-direction="right" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isRight" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-        <div id="WinePopup" class="popup">
+        <div id="WinePopup" data-popup="1" class="popup js-sliderPopup">
     <div id="WineBg" class="bg"></div>
     <div class="popup__body">
-        <div class="popup__content">
+        <div class="popup__content" id="WineContent">
             <div class="popup__wrapper">
                 <div data-popup="wine" class="popup__logo">
                     <svg class="logo" width="226" height="54" viewBox="0 0 226 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -379,15 +388,31 @@
                 </div>
 
                 <video src="img/wine.mp4" controls></video>
+
+                <div class="popup__switcher">
+                    <button data-popup="1" data-direction="left" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isLeft" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button data-popup="1" data-direction="right" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isRight" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-        <div id="FourCAPopup" class="popup">
+        <div id="FourCAPopup" data-popup="2" class="popup js-sliderPopup">
     <div id="FourCABg" class="bg"></div>
     <div class="popup__body">
-        <div class="popup__content">
+        <div class="popup__content" id="FourCAContent">
             <div class="popup__wrapper">
                 <div data-popup="fourCA" class="popup__logo">
                     <svg class="logo" width="267" height="127" viewBox="0 0 267 127" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -469,14 +494,30 @@
                         <img src="img/popup_FourCA-8-picture@2x.png" srcset="img/popup_FourCA-8-picture@4x.png 2x" alt="PortfolioPicture">
                     </picture>
                 </div>
+
+                <div class="popup__switcher">
+                    <button data-popup="2" data-direction="left" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isLeft" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button data-popup="2" data-direction="right" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isRight" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-        <div id="CalendarPopup" class="popup">
+        <div id="CalendarPopup" data-popup="3" class="popup js-sliderPopup">
     <div id="CalendarBg" class="bg"></div>
     <div class="popup__body">
-        <div class="popup__content">
+        <div class="popup__content" id="CalendarContent">
             <div class="popup__wrapper">
                 <div data-popup="calendar" class="popup__logo">
                     <svg class="logo">
@@ -539,14 +580,30 @@
                         <img src="img/popup_Calendar-6-picture@2x.png" srcset="img/popup_Calendar-6-picture@4x.png 2x" alt="PortfolioPicture">
                     </picture>
                 </div>
+
+                <div class="popup__switcher">
+                    <button data-popup="3" data-direction="left" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isLeft" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button data-popup="3" data-direction="right" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isRight" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-        <div id="MinimalismPopup" class="popup">
+        <div id="MinimalismPopup" data-popup="4" class="popup js-sliderPopup">
     <div id="MinimalismBg" class="bg"></div>
     <div class="popup__body">
-        <div class="popup__content">
+        <div class="popup__content" id="MinimalismContent">
             <div class="popup__wrapper">
                 <div data-popup="minimalism" class="popup__logo">
                     <svg class="logo" width="245" height="75" viewBox="0 0 245 75" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -611,14 +668,30 @@
                         <img src="img/popup_Minimalism-6-picture@2x.png" srcset="img/popup_Minimalism-6-picture@4x.png 2x" alt="PortfolioPicture">
                     </picture>
                 </div>
+
+                <div class="popup__switcher">
+                    <button data-popup="4" data-direction="left" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isLeft" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button data-popup="4" data-direction="right" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isRight" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-        <div id="FoodPopup" class="popup">
+        <div id="FoodPopup" data-popup="5" class="popup js-sliderPopup">
     <div id="FoodBg" class="bg"></div>
     <div class="popup__body">
-        <div class="popup__content">
+        <div class="popup__content" id="FoodContent">
             <div class="popup__wrapper">
                 <div data-popup="food" class="popup__logo">
                     <svg class="logo" width="192" height="44" viewBox="0 0 192 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -676,14 +749,30 @@
                         <img src="img/popup_Food-4-picture@2x.png" srcset="img/popup_Food-4-picture@4x.png 2x" alt="PortfolioPicture">
                     </picture>
                 </div>
+
+                <div class="popup__switcher">
+                    <button data-popup="5" data-direction="left" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isLeft" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button data-popup="5" data-direction="right" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isRight" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-        <div id="NirvanaPopup" class="popup">
+        <div id="NirvanaPopup" data-popup="6" class="popup js-sliderPopup">
     <div id="NirvanaBg" class="bg"></div>
     <div class="popup__body">
-        <div class="popup__content">
+        <div class="popup__content" id="NirvanaContent">
             <div class="popup__wrapper">
                 <div data-popup="nirvana" class="popup__logo">
                     <svg width="239" height="67" viewBox="0 0 239 67" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -774,14 +863,30 @@
                         <img src="img/popup_Nirvana-6-picture@2x.png" srcset="img/popup_Nirvana-6-picture@4x.png 2x" alt="PortfolioPicture">
                     </picture>
                 </div>
+
+                <div class="popup__switcher">
+                    <button data-popup="6" data-direction="left" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isLeft" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button data-popup="6" data-direction="right" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isRight" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-        <div id="TurkeyPopup" class="popup">
+        <div id="TurkeyPopup" data-popup="7" class="popup js-sliderPopup">
     <div id="TurkeyBg" class="bg"></div>
     <div class="popup__body">
-        <div class="popup__content">
+        <div class="popup__content" id="TurkeyContent">
             <div class="popup__wrapper">
                 <div data-popup="turkey" class="popup__logo">
                     <svg class="logo" width="187" height="81" viewBox="0 0 187 81" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -879,14 +984,30 @@
                         <img src="img/popup_Turkey-6-picture@2x.png" srcset="img/popup_Turkey-6-picture@4x.png 2x" alt="PortfolioPicture">
                     </picture>
                 </div>
+
+                <div class="popup__switcher">
+                    <button data-popup="7" data-direction="left" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isLeft" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button data-popup="7" data-direction="right" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isRight" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-        <div id="VictorianPopup" class="popup">
+        <div id="VictorianPopup" data-popup="8" class="popup js-sliderPopup">
     <div id="VictorianBg" class="bg"></div>
     <div class="popup__body">
-        <div class="popup__content">
+        <div class="popup__content" id="VictorianContent">
             <div class="popup__wrapper">
                 <div data-popup="victorian" class="popup__logo">
                     <svg class="logo" width="266" height="80" viewBox="0 0 266 80" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -945,6 +1066,15 @@
                         <img src="img/popup_Victorian-4-picture@2x.png" srcset="img/popup_Victorian-4-picture@4x.png 2x" alt="PortfolioPicture">
                     </picture>
                 </div>
+
+                <div class="popup__switcher">
+                    <button data-popup="8" data-direction="left" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isLeft" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -1001,7 +1131,7 @@
         <div id="scroll" class="scroll">
             <div class="mobile__padding"></div>
 
-<div class="header">
+<div class="header container">
     <div class="header__title">
         <div class="header__gradient-left">
             <picture>
@@ -1066,7 +1196,7 @@
                 <section id="about">
     <div class="about container main-padding">
 
-        <h2 class="h2 hidden title-parent main-title">
+        <h2 class="h2 hidden title-parent title-padding">
             <span data-queue="1" class="title-animation">Обо мне</span>
         </h2>
 
@@ -1362,12 +1492,12 @@
 </section>
                 <section id="services">
     <div class="services container main-padding">
-        <h2 class="h2 hidden title-parent main-title">
+        <h2 class="h2 hidden title-parent title-padding">
             <span data-queue="1" class="title-animation">Услуги</span>
         </h2>
 
         <div class="hidden">
-            <div class="services__item service-entry">
+            <div data-service="first" class="services__item service-entry">
                 <h3 class="h3">Одностраничный сайт</h3>
 
                 <div class="services__about">
@@ -1532,7 +1662,7 @@
 </section>
                 <section id="portfolio">
     <div class="portfolio container main-padding">
-        <h2 class="h2 hidden title-parent main-title">
+        <h2 class="h2 hidden title-parent title-padding">
             <span data-queue="1" class="title-animation">Портфолио</span>
         </h2>
 
@@ -1628,16 +1758,16 @@
             </div>
         </div>
 
-        <a href="https://flaxen-dust-967.notion.site/1ea64adee5374bdd9760f0ac4a579e08?pvs=4" target="_blank">
+        <!-- <a href="https://flaxen-dust-967.notion.site/1ea64adee5374bdd9760f0ac4a579e08?pvs=4" target="_blank">
             <button class="button button-big button-solid hidden">
                 <p class="buttonBigText">Смотреть еще</p>
             </button>
-        </a>
+        </a> -->
     </div>
 </section>
                 <section id="reviews">
     <div class="reviews container main-padding">
-        <h2 class="portfolio__title h2 hidden title-parent main-title">
+        <h2 class="h2 hidden title-parent title-padding">
             <span data-queue="1" class="title-animation">Отзывы</span>
         </h2>
 
@@ -1739,7 +1869,7 @@
                 <section id="discount">
     <div class="discount main-padding">
         <div class="discount__wrapper container">
-            <h2 class="h2 hidden title-parent main-title">
+            <h2 class="h2 hidden title-parent title-padding">
                 <span data-queue="1" class="title-animation">-10% на первый заказ</span>
             </h2>
 
@@ -1753,7 +1883,7 @@
 </section>
                 <section id="reasons">
     <div class="reasons container main-padding">
-        <div class="hidden title-parent reasons__title main-title">
+        <div class="hidden title-parent reasons__title title-padding">
             <div data-queue="1" class="reasons__sum h2 title-animation">
                 <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="90" height="90" rx="8" fill="#7546F7"/>
@@ -1946,7 +2076,7 @@
 </section>
                 <section id="stages">
     <div class="stages container main-padding">
-        <h2 class="h2 hidden title-parent main-title">
+        <h2 class="h2 hidden title-parent title-padding">
             <span data-queue="1" class="title-animation">Этапы работы над <span class="title-span">вашим</span> проектом</span>
         </h2>
 
@@ -2200,7 +2330,7 @@
     </div>
 </section>
                 <section id="form">
-    <div class="form">
+    <div class="form main-padding container">
         <div class="hidden title-parent form__title container">
             <h2 data-queue="1" class="title-animation h1">
                 Заполните творческий бриф
@@ -2381,7 +2511,7 @@
 </section>
                 <section id="faq">
     <div class="faq container main-padding">
-        <h2 class="h2 hidden title-parent main-title">
+        <h2 class="h2 hidden title-parent title-padding">
             <span data-queue="1" class="title-animation">FAQ</span>
         </h2>
 

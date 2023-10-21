@@ -9,7 +9,6 @@
         background-color: $violet;
 
         h2 {
-            margin-bottom: 48px;
             text-align: center;
         }
 
@@ -29,5 +28,12 @@
 @media (max-width: 767px) {
     .discount p {
         width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .discount__wrapper {
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }

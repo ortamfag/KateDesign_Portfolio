@@ -1,4 +1,40 @@
 const body = document.querySelector('body');
+const popupsFolder = document.querySelectorAll('.js-sliderPopup');
+const popupsSliderButtonsFolder = document.querySelectorAll('.js-popupSliderButton');
+
+window.addEventListener('popstate', () => {
+    console.log(`Перешли на адрес "${document.location}"`);
+});
+window.history.pushState({ name: '#' }, '', '#');
+
+const popupOrder = {
+    0: '#holdMyCode',
+    1: '#Wine',
+    2: '#FourCA',
+    3: '#Calendar',
+    4: '#Minimalism',
+    5: '#Food',
+    6: '#Nirvana',
+    7: '#Turkey',
+    8: '#Victorian',
+};
+
+popupsSliderButtonsFolder.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        const currentPopupNumber = Number(e.currentTarget.dataset.popup);
+        const currentPopup = popupOrder[currentPopupNumber];
+        const { direction } = e.currentTarget.dataset;
+        if (direction === 'left') {
+            document.querySelector(`${popupOrder[currentPopupNumber - 1]}Popup`).classList.add('open');
+            window.history.replaceState({ name: popupOrder[currentPopupNumber - 1] }, '', `${popupOrder[currentPopupNumber - 1]}`);
+        } else if (direction === 'right') {
+            document.querySelector(`${popupOrder[currentPopupNumber + 1]}Popup`).classList.add('open');
+            window.history.replaceState({ name: popupOrder[currentPopupNumber + 1] }, '', `${popupOrder[currentPopupNumber + 1]}`);
+        }
+        document.querySelector(`${currentPopup}Popup`).classList.remove('open');
+        document.querySelector(`${currentPopup}Content`).scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
 
 const makeModal = (modalSel) => {
     const modalEl = document.querySelector(`${modalSel}Popup`);
@@ -10,6 +46,7 @@ const makeModal = (modalSel) => {
         if (e.key === 'Escape') {
             modalEl.classList.remove('open');
             window.removeEventListener('keydown', escapeKeyDownChecker);
+            // window.history.back();
         }
     };
 
@@ -21,7 +58,8 @@ const makeModal = (modalSel) => {
     };
 
     btnEl.addEventListener('click', () => {
-        window.history.pushState({ name: modalSel }, null, `${modalSel}`);
+        window.history.replaceState({ name: '#portfolio' }, '', '#portfolio');
+        window.history.pushState({ name: modalSel }, '', `${modalSel}`);
         modalEl.classList.add('open');
         window.addEventListener('keydown', escapeKeyDownChecker);
         window.addEventListener('hashchange', mobileBackButtonChecker);
@@ -30,14 +68,14 @@ const makeModal = (modalSel) => {
 
     closeEl.addEventListener('click', () => {
         body.classList.remove('noscroll');
-        window.history.back();
+        // window.history.back();
         modalEl.classList.remove('open');
         window.removeEventListener('keydown', escapeKeyDownChecker);
     });
 
     bg.addEventListener('click', () => {
         body.classList.remove('noscroll');
-        window.history.back();
+        // window.history.back();
         modalEl.classList.remove('open');
         window.removeEventListener('keydown', escapeKeyDownChecker);
     });

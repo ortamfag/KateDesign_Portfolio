@@ -171,6 +171,23 @@ a {
     transition: all 0.2s;
 }
 
+.title-padding {
+    margin-bottom: 48px;
+    color: $white;
+}
+
+@media (max-width: 768px) {
+    .title-padding {
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 440px) {
+    .title-padding {
+        margin-bottom: 18px;
+    }
+}
+
 @media (max-width: 700px) {
     .reasons-entry-left {
         transform: translateX(0%);
@@ -181,7 +198,7 @@ a {
 .container {
     margin: 0 auto;
     padding: 0 $container-offset;
-    max-width: $container-width;
+    max-width: 100%;
 }
 
 .inline-block {
@@ -267,10 +284,6 @@ a {
 .main {
     &-padding {
         padding-top: 120px !important;
-    }
-
-    &-title {
-        color: $white;
     }
 }
 

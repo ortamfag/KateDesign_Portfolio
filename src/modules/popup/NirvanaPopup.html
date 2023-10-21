@@ -1,7 +1,7 @@
-<div id="NirvanaPopup" class="popup">
+<div id="NirvanaPopup" data-popup="6" class="popup js-sliderPopup">
     <div id="NirvanaBg" class="bg"></div>
     <div class="popup__body">
-        <div class="popup__content">
+        <div class="popup__content" id="NirvanaContent">
             <div class="popup__wrapper">
                 <div data-popup="nirvana" class="popup__logo">
                     <svg width="239" height="67" viewBox="0 0 239 67" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,6 +92,22 @@
                         <source type="image/webp" srcset="img/popup_Nirvana-6-picture@2x.webp 1x, img/popup_Nirvana-6-picture@4x.webp 2x">
                         <img src="img/popup_Nirvana-6-picture@2x.png" srcset="img/popup_Nirvana-6-picture@4x.png 2x" alt="PortfolioPicture">
                     </picture>
+                </div>
+
+                <div class="popup__switcher">
+                    <button data-popup="6" data-direction="left" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isLeft" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+
+                    <button data-popup="6" data-direction="right" class="button button-big button-solid js-popupSliderButton">
+                        <svg class="popup__switcher-isRight" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.25 12L3.75 12" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5 18.75L3.75 12L10.5 5.25" stroke="#FCF7FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>

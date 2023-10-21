@@ -16,8 +16,8 @@
             "main1 main1 sub1 sub2"
             "sub3 main2 main2 sub4"
             "sub5 sub6 main3 main3";
-        margin-top: 48px;
-        margin-bottom: 60px;
+
+        // margin-bottom: 60px;
     }
 
     &__item {
@@ -81,7 +81,6 @@
                 "sub1 sub4"
                 "main3 main3"
                 "sub5 sub6";
-            margin: 12px 0;
         }
     }
 }

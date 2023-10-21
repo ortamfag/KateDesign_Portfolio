@@ -328,6 +328,6 @@ const toProd = (done) => {
 
 // functions
 
-export const dev = gulp.series(clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, avifImages, svgSprites, watchFiles, videos);
-export const build = gulp.series(toProd, clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, minifyPictures, svgSprites, htmlMinify, videos);
+export const dev = gulp.series(clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, avifImages, svgSprites, videos, watchFiles);
+export const build = gulp.series(toProd, clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, minifyPictures, svgSprites, videos, htmlMinify);
 export const archive = zipFiles;

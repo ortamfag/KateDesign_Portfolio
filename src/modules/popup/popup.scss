@@ -9,8 +9,8 @@
     height: 100%;
     color: $white;
     opacity: 0;
-    visibility: hidden;
     transition: all 0.3s ease 0s;
+    pointer-events: none;
 
     &__body {
         position: relative;
@@ -179,11 +179,32 @@
             color: $white;
         }
     }
+
+    &__switcher {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 48px;
+
+        svg {
+            &:hover {
+                transform: rotate(0);
+            }
+        }
+
+        &-isRight {
+            transform: rotate(180deg) !important;
+        }
+
+        &[data-popup="0"] {
+            justify-content: flex-end;
+        }
+    }
 }
 
 .open {
     opacity: 1;
-    visibility: visible;
+    pointer-events: all;
 }
 
 .bg {
