@@ -1,10 +1,10 @@
 const body = document.querySelector('body');
-const popupsFolder = document.querySelectorAll('.js-sliderPopup');
+// const popupsFolder = document.querySelectorAll('.js-sliderPopup');
 const popupsSliderButtonsFolder = document.querySelectorAll('.js-popupSliderButton');
 
-window.addEventListener('popstate', () => {
-    console.log(`Перешли на адрес "${document.location}"`);
-});
+// window.addEventListener('popstate', () => {
+//     console.log(`Перешли на адрес "${document.location}"`);
+// });
 window.history.pushState({ name: '#' }, '', '#');
 
 const popupOrder = {
@@ -42,19 +42,22 @@ const makeModal = (modalSel) => {
     const closeEl = document.querySelector(`${modalSel}Cross`);
     const bg = document.querySelector(`${modalSel}Bg`);
 
-    const escapeKeyDownChecker = (e) => {
-        if (e.key === 'Escape') {
-            modalEl.classList.remove('open');
-            window.removeEventListener('keydown', escapeKeyDownChecker);
-            // window.history.back();
-        }
-    };
-
-    const mobileBackButtonChecker = () => {
+    const hidePopup = () => {
         body.classList.remove('noscroll');
         modalEl.classList.remove('open');
+    };
+
+    const backButtonChecker = () => {
         window.history.back();
-        window.removeEventListener('hashchange', mobileBackButtonChecker);
+        window.removeEventListener('hashchange', hidePopup);
+    };
+
+    const escapeKeyDownChecker = (e) => {
+        if (e.key === 'Escape') {
+            window.removeEventListener('keydown', escapeKeyDownChecker);
+            backButtonChecker();
+            hidePopup();
+        }
     };
 
     btnEl.addEventListener('click', () => {
@@ -62,22 +65,20 @@ const makeModal = (modalSel) => {
         window.history.pushState({ name: modalSel }, '', `${modalSel}`);
         modalEl.classList.add('open');
         window.addEventListener('keydown', escapeKeyDownChecker);
-        window.addEventListener('hashchange', mobileBackButtonChecker);
+        window.addEventListener('hashchange', hidePopup);
         body.classList.add('noscroll');
     });
 
     closeEl.addEventListener('click', () => {
-        body.classList.remove('noscroll');
-        // window.history.back();
-        modalEl.classList.remove('open');
         window.removeEventListener('keydown', escapeKeyDownChecker);
+        backButtonChecker();
+        hidePopup();
     });
 
     bg.addEventListener('click', () => {
-        body.classList.remove('noscroll');
-        // window.history.back();
-        modalEl.classList.remove('open');
         window.removeEventListener('keydown', escapeKeyDownChecker);
+        backButtonChecker();
+        hidePopup();
     });
 };
 

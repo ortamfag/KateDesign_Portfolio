@@ -120,6 +120,10 @@
                 margin-bottom: 12px;
             }
         }
+
+        &[data-item="last"] {
+            margin-bottom: 0;
+        }
     }
 
     &__line {
@@ -135,6 +139,10 @@
         justify-content: center;
         margin-bottom: 24px;
         gap: 12px;
+
+        &[data-item="last"] {
+            margin-bottom: 0;
+        }
 
         &--isColumn {
             flex-direction: column;
@@ -184,7 +192,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 48px;
+        padding-top: 48px;
+        padding-bottom: 48px;
 
         svg {
             &:hover {
@@ -243,6 +252,10 @@
         &__certificate {
             padding: 0 48px;
         }
+
+        &__wrapper {
+            max-height: 80vh;
+        }
     }
 }
 
@@ -250,6 +263,11 @@
     .popup {
         &__content {
             padding: 16px 12px;
+        }
+
+        &__switcher {
+            padding-top: 24px;
+            padding-bottom: 24px;
         }
 
         &__logo {
