@@ -1,6 +1,11 @@
 .tabs {
+    position: relative;
     margin-top: 64px;
     width: 960px;
+
+    &Menu {
+        display: none;
+    }
 
     &__header {
         display: flex;
@@ -9,6 +14,7 @@
 
     &__resume {
         display: flex;
+        align-items: center;
 
         span {
             margin-left: 12px;
@@ -194,6 +200,10 @@
             margin-bottom: 25px;
         }
     }
+
+    &__content {
+        display: block;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -216,8 +226,20 @@
         }
 
         &__content {
-            margin-right: 5%;
-            max-width: 60%;
+            margin-right: 24px;
+            max-width: 100%;
+        }
+
+        &__way {
+            p {
+                width: calc(100% - 25px);
+            }
+        }
+
+        &__year {
+            h4 {
+                width: calc(100% - 25px);
+            }
         }
     }
 }
@@ -226,9 +248,41 @@
     .tabs {
         display: block;
 
+        &Menu {
+            display: block;
+
+            .swiper-inner {
+                padding: 0 15px;
+            }
+        }
+
         &__header {
-            flex-flow: wrap;
-            flex-direction: row;
+            display: none;
+
+            &-isMobile {
+                display: grid;
+                column-gap: 10px;
+                grid-template-columns: minmax(61px, 1fr) minmax(115px, 1fr) minmax(111px, 1fr) minmax(102px, 1fr);
+                overflow-x: scroll !important;
+                padding-right: 10px;
+                padding-bottom: 24px !important;
+                padding-left: 10px;
+
+                &::-webkit-scrollbar {
+                    width: 0 !important;
+                }
+
+                .swiper-pagination-bullet {
+                    background-color: #1F2025;
+                    opacity: 1 !important;
+                    transition: all 0.2s;
+                }
+
+                .swiper-pagination-bullet-active {
+                    background-color: #7546F7;
+                    opacity: 1 !important;
+                }
+            }
         }
 
         &__item {
@@ -236,7 +290,45 @@
         }
 
         &__content {
-            max-width: 100%;
+            display: none;
         }
+
+        &__scroll {
+            @include adaptiveFont(14, 16, 320, 680);
+
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin: 0 !important;
+            border-radius: 24px !important;
+            padding: 2px 8px !important;
+            width: 100% !important;
+            height: 100% !important;
+            font-weight: 400 !important;
+            line-height: 140% !important;
+            color: #FCF7FF !important;
+        }
+
+        &__instruments {
+            padding-bottom: 20vh;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .tabs__certificate {
+        .button-small {
+            padding: 4px 10px;
+        }
+
+        .button-opacity {
+            border: 1px solid #7546F7;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .tabs__way p {
+        margin-top: 3px;
     }
 }

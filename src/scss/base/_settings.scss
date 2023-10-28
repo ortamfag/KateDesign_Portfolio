@@ -247,7 +247,7 @@ a {
     @include adaptiveFont(18, 22, 320, 1440);
 
     font-weight: 600;
-    line-height: 160%;
+    line-height: 1;
 }
 
 ::selection {
@@ -356,6 +356,10 @@ a {
         opacity: 1 !important;
         transition: background-color 0.3s 0ms, opacity 0.5s 1000ms !important;
     }
+}
+
+.ellipse {
+    @include adaptiveFont(20, 80, 320, 2560);
 }
 
 @media (max-width: 770px) {

@@ -33,3 +33,19 @@ const reasons = new Swiper('.reasons__slider', {
         }
     },
 })
+
+const tabsMenu = ['общее', 'образование', 'опыт работы', 'инструменты']
+
+const tabs = new Swiper('.tabsMenu', {
+    direction: 'horizontal',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+        el: '.tabs__header-isMobile',
+        clickable: true,
+        renderBullet: function(index, className) {
+            return '<h3 class="' + className + ' tabs__scroll js-tabs__scroll" data-header="' + index + '">' + (tabsMenu[index]) + '</h3>';
+        }
+    },
+})

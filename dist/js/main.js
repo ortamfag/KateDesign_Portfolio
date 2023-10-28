@@ -242,6 +242,47 @@ accordionItems.forEach((item, key) => {
   });
 });
 
+// mobile tabs scrollX
+const tabsSlider = document.querySelector('.js-tabs__slider');
+window.addEventListener('load', () => {
+  const tabsSliderHeader = document.querySelectorAll('.js-tabs__scroll');
+  tabsSliderHeader.forEach(item => {
+    item.addEventListener('transitionstart', e => {
+      if (e.currentTarget.classList.contains('swiper-pagination-bullet-active')) {
+        switch (e.currentTarget.dataset.header) {
+          case '2':
+            {
+              const previousHeaderWidth = tabsSliderHeader[0].clientWidth + 10 + 8;
+              tabsSlider.scroll({
+                left: previousHeaderWidth,
+                behavior: 'smooth'
+              });
+              break;
+            }
+          case '3':
+            {
+              const firstHeaderWidth = tabsSliderHeader[0].offsetWidth + 10 + 8;
+              const previousHeaderWidth = tabsSliderHeader[1].offsetWidth + 10 + 8;
+              tabsSlider.scroll({
+                left: previousHeaderWidth + firstHeaderWidth,
+                behavior: 'smooth'
+              });
+              break;
+            }
+          default:
+            tabsSlider.scroll({
+              left: 0,
+              behavior: 'smooth'
+            });
+            break;
+        }
+      }
+    });
+  });
+}, {
+  once: true
+});
+
 /***/ }),
 
 /***/ "./src/modules/faq/faq.js":
