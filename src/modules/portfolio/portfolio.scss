@@ -73,14 +73,35 @@
     .portfolio {
         &__grid {
             grid-gap: 8px;
-            grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / calc(50% - 4px) calc(50% - 4px);
+            grid-template: 1fr 1fr 1fr 1fr 1fr / calc(50% - 4px) calc(50% - 4px);
             grid-template-areas:
                 "main1 main1"
-                "sub3 sub2"
-                "main2 main2"
-                "sub1 sub4"
-                "main3 main3"
-                "sub5 sub6";
+                "sub1 sub2"
+                "sub3 main2"
+                "sub4 sub5"
+                "sub6 main3";
+        }
+    }
+
+    #Minimalism__preview {
+        .portfolio__item {
+            height: 100%;
+
+            img {
+                border-radius: 8px;
+                height: 100%;
+            }
+        }
+    }
+
+    #Victorian__preview {
+        .portfolio__item {
+            height: 100%;
+
+            img {
+                border-radius: 8px;
+                height: 100%;
+            }
         }
     }
 }
