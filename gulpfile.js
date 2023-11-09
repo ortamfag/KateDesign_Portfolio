@@ -215,8 +215,8 @@ const webpImages = () => gulp.src([`${paths.srcImgFolder}/**.{jpg,jpeg,png}`])
 const avifImages = () => gulp.src([`${paths.srcImgFolder}/**.{jpg,jpeg,png}`])
     // .pipe(newer(paths.buildImgFolder))
     .pipe(avif({
-        quality: 80,
-        speed: 8,
+        quality: 60,
+        speed: 6,
     }))
     .pipe(gulp.dest(paths.buildImgFolder));
 
@@ -328,6 +328,6 @@ const toProd = (done) => {
 
 // functions
 
-export const dev = gulp.series(clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, avifImages, svgSprites, videos, watchFiles);
+export const dev = gulp.series(clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, images, avifImages, svgSprites, videos, watchFiles);
 export const build = gulp.series(toProd, clean, htmlInclude, scripts, scriptsLibrary, styles, fonts, favicon, faviconSVG, manifest, minifyPictures, svgSprites, videos, htmlMinify);
 export const archive = zipFiles;

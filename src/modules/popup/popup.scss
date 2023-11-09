@@ -140,6 +140,14 @@
         margin-bottom: 24px;
         gap: 12px;
 
+        picture {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }
+
         &[data-item="last"] {
             margin-bottom: 0;
         }

@@ -8,14 +8,14 @@ const popupsSliderButtonsFolder = document.querySelectorAll('.js-popupSliderButt
 window.history.pushState({ name: '#' }, '', '#');
 
 const popupOrder = {
-    0: '#holdMyCode',
-    1: '#Wine',
+    0: '#Food',
+    1: '#holdMyCode',
     2: '#FourCA',
-    3: '#Calendar',
-    4: '#Minimalism',
-    5: '#Food',
-    6: '#Nirvana',
-    7: '#Turkey',
+    3: '#Wine',
+    4: '#Turkey',
+    5: '#Nirvana',
+    6: '#Calendar',
+    7: '#Minimalism',
     8: '#Victorian',
 };
 
