@@ -179,12 +179,6 @@ form {
     }
 }
 
-@media (max-width: 510px) {
-    .form {
-        padding-bottom: 0 !important;
-    }
-}
-
 @media (max-width: 1024px) {
     .inDevelopment {
         justify-content: flex-start;

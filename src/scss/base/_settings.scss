@@ -228,9 +228,10 @@ a {
 }
 
 .h3 {
+    @include adaptiveFont(24, 40, 320, 1440);
+
     font-family: "Bebas", sans-serif;
     font-weight: 400;
-    font-size: 40px;
     line-height: 40px;
 }
 
@@ -287,10 +288,8 @@ a {
     font-weight: 500;
 }
 
-.main {
-    &-padding {
-        padding-bottom: 120px !important;
-    }
+.main-padding {
+    padding-top: 120px !important;
 }
 
 .title-parent {
@@ -370,15 +369,12 @@ a {
 
 @media (max-width: 770px) {
     .main-padding {
-        padding-top: 64px !important;
+        padding-top: 48px !important;
+        padding-bottom: 0 !important;
     }
 }
 
 @media (max-width: 510px) {
-    .main-padding {
-        padding-top: 60px !important;
-    }
-
     .body {
         -webkit-tap-highlight-color: auto;
         scrollbar-color: auto;
@@ -408,8 +404,8 @@ a {
 
 @media (max-width: 770px) {
     section {
-        margin-top: -50px;
-        padding-top: 50px;
+        margin-top: -48px;
+        padding-top: 48px;
         -webkit-background-clip: content-box;
         background-clip: content-box;
     }

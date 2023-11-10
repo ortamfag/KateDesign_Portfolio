@@ -459,15 +459,8 @@ window.addEventListener('scroll', () => {
 
 __webpack_require__.r(__webpack_exports__);
 const body = document.querySelector('body');
-// const popupsFolder = document.querySelectorAll('.js-sliderPopup');
 const popupsSliderButtonsFolder = document.querySelectorAll('.js-popupSliderButton');
-
-// window.addEventListener('popstate', () => {
-//     console.log(`Перешли на адрес "${document.location}"`);
-// });
-window.history.pushState({
-  name: '#'
-}, '', '#');
+window.history.scrollRestoration = 'manual';
 const popupOrder = {
   0: '#Food',
   1: '#holdMyCode',
@@ -524,18 +517,29 @@ const makeModal = modalSel => {
       hidePopup();
     }
   };
-  btnEl.addEventListener('click', () => {
-    window.history.replaceState({
-      name: '#portfolio'
-    }, '', '#portfolio');
+  const btnFunction = () => {
+    window.history.scrollRestoration = 'manual';
     window.history.pushState({
       name: modalSel
     }, '', `${modalSel}`);
+    window.history.scrollRestoration = 'manual';
     modalEl.classList.add('open');
     window.addEventListener('keydown', escapeKeyDownChecker);
     window.addEventListener('hashchange', hidePopup);
     body.classList.add('noscroll');
-  });
+  };
+  switch (modalSel) {
+    case '#Warranty':
+      // eslint-disable-next-line no-case-declarations
+      const warrantyServices = document.querySelectorAll('.js-servicesWarranty');
+      warrantyServices.forEach(item => {
+        item.addEventListener('click', btnFunction);
+      });
+      break;
+    default:
+      btnEl.addEventListener('click', btnFunction);
+      break;
+  }
   closeEl.addEventListener('click', () => {
     window.removeEventListener('keydown', escapeKeyDownChecker);
     backButtonChecker();
@@ -560,14 +564,13 @@ makeModal('#Turkey');
 makeModal('#Victorian');
 const warrantyButton = document.querySelector('.js-popupWarranty-button');
 warrantyButton.addEventListener('click', () => {
+  body.classList.remove('noscroll');
   document.querySelector('#WarrantyPopup').classList.remove('open');
 });
-const warrantyServices = document.querySelectorAll('.js-servicesWarranty');
-warrantyServices.forEach(item => {
-  item.addEventListener('click', () => {
-    document.querySelector('#WarrantyPopup').classList.add('open');
-  });
-});
+
+// warrantyServices.forEach((item, key) => {
+//     makeModal('#Warranty', `#WarrantyPopup${key}`);
+// });
 
 /***/ }),
 

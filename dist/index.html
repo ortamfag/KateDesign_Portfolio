@@ -121,12 +121,12 @@
                 <li data-queue="8" class="nav__item">ОБО МНЕ</li>
             </a>
 
-            <a href="#services" class="js-nav__link">
-                <li data-queue="7" class="nav__item">УСЛУГИ</li>
+            <a href="#portfolio" class="js-nav__link">
+                <li data-queue="7" class="nav__item">ПОРТФОЛИО</li>
             </a>
 
-            <a href="#portfolio" class="js-nav__link">
-                <li data-queue="6" class="nav__item">ПОРТФОЛИО</li>
+            <a href="#services" class="js-nav__link">
+                <li data-queue="6" class="nav__item">УСЛУГИ</li>
             </a>
 
             <a href="#reviews" class="js-nav__link">
@@ -215,7 +215,7 @@
                         </picture>
                     </div>
 
-                    <div class="popup__certificate">
+                    <div data-item="last" class="popup__certificate">
                         <h2 class="h2">2019</h2>
                         <p class="text20 popup__text">Графический дизайн. SHAD — школа архитектуры и дизайна</p>
 
@@ -421,7 +421,7 @@
                 </div>
 
                 <div data-item="last" class="popup__item">
-                    <video src="img/wine.mp4" controls></video>
+                    <video src="img/wine.mp4" controls controlsList="nodownload"></video>
                 </div>
 
                 <div class="popup__switcher">
@@ -1140,7 +1140,7 @@
                     </ul>
                 </div>
 
-                <div class="popup__item">
+                <div data-item="last" class="popup__item">
                     <a href="#form" class="js-popupWarranty-button">
                         <button class="button button-small button-opacity">
                             <p class="buttonBigText">Заказать сайт</p>
@@ -1744,7 +1744,7 @@
 
         <div class="portfolio__grid">
             <div id="Food__preview" class="grid-entry hidden">
-                <div class="portfolio__item portfolio-entry-right">
+                <div class="portfolio__item portfolio-entry-left">
                     <div class="portfolio__tags">
                         <div class="portfolio__tag">
                             <p class="text10">многостраничный сайт</p>
@@ -1846,7 +1846,7 @@
             </div>
 
             <div id="Wine__preview" class="grid-entry hidden">
-                <div class="portfolio__item portfolio-entry-right">
+                <div class="portfolio__item portfolio-entry-left">
                     <div class="portfolio__tags">
                         <div class="portfolio__tag">
                             <p class="text10">анимация</p>
@@ -1886,7 +1886,7 @@
             </div>
 
             <div id="Turkey__preview" class="grid-entry hidden">
-                <div class="portfolio__item portfolio-entry-left">
+                <div class="portfolio__item portfolio-entry-right">
                     <div class="portfolio__tags">
                         <div class="portfolio__tag">
                             <p class="text10">многостраничный сайт</p>
@@ -1934,7 +1934,7 @@
             </div>
 
             <div id="Nirvana__preview" class="grid-entry hidden">
-                <div class="portfolio__item portfolio-entry-left">
+                <div class="portfolio__item portfolio-entry-right">
                     <div class="portfolio__tags">
                         <div class="portfolio__tag">
                             <p class="text10">одностраничный сайт</p>
@@ -2044,7 +2044,7 @@
             </div>
 
             <div id="Minimalism__preview" class="grid-entry hidden">
-                <div class="portfolio__item portfolio-entry-right">
+                <div class="portfolio__item portfolio-entry-left">
                     <div class="portfolio__tags">
                         <div class="portfolio__tag">
                             <p class="text10">одностраничный сайт</p>
@@ -2165,7 +2165,7 @@
                             <span class="services__answer">от 1 недели</span>
                         </p>
 
-                        <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <span class="js-servicesWarranty">Подробнее</span></p>
+                        <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <span id="WarrantyPopup0" class="js-servicesWarranty">Подробнее</span></p>
                     </div>
 
                     <a href="#form">
@@ -2221,7 +2221,7 @@
                             <span class="services__question">Сроки работы: </span><br>
                             <span class="services__answer">от 3 недель</span>
                         </p>
-                        <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <span class="js-servicesWarranty">Подробнее</span></p>
+                        <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <span id="WarrantyPopup1" class="js-servicesWarranty">Подробнее</span></p>
                     </div>
 
                     <a href="#form">
@@ -2274,7 +2274,7 @@
                             <span class="services__question">Сроки работы: </span><br>
                             <span class="services__answer">от 3 недель</span>
                         </p>
-                        <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <span class="js-servicesWarranty">Подробнее</span></p>
+                        <p class="text16">*правки по макету вносятся бесплатно в течение 2 месяцев после завершения работы. <span id="WarrantyPopup2" class="js-servicesWarranty">Подробнее</span></p>
                     </div>
 
                     <a href="#form">
@@ -2757,7 +2757,7 @@
                                 Я гарантирую высокое качество работы, которое будет соответствовать ожиданиям клиента
                             </p>
 
-                            <button class="button button-small button-opacity js-servicesWarranty">
+                            <button id="WarrantyPopup3" class="button button-small button-opacity js-servicesWarranty">
                                 <p class="buttonBigText">Подробнее</p>
 
                                 <svg class="">
@@ -2841,7 +2841,7 @@
                         Я гарантирую высокое качество работы, которое будет соответствовать ожиданиям клиента
                     </p>
 
-                    <button class="button button-small button-opacity" id="Warranty__preview">
+                    <button class="button button-small button-opacity js-servicesWarranty" id="Warranty__preview">
                         <p class="buttonBigText">Подробнее</p>
 
                         <svg class="">
@@ -3092,7 +3092,7 @@
                             Все моменты мы обсуждаем на самом начальном этапе разработки. Далее заключаем договор, в котором указаны все этапы работ, сроки, стоимость, порядок оплаты и итог, который клиент получает по окончанию сотрудничества.
                         </p>
 
-                        <a class="js-servicesWarranty faq__text-isNonFirstText">Подробнее о гарантиях</a>
+                        <a id="WarrantyPopup4" class="js-servicesWarranty faq__text-isNonFirstText">Подробнее о гарантиях</a>
                     </div>
                 </div>
             </div>
@@ -3159,6 +3159,12 @@
                     </p>
                 </div>
             </div>
+
+            <a target="_blank" href="https://taplink.cc/rakitova_katye">
+                <button data-queue="2" class="button button-small button-opacity">
+                    <p class="buttonSmallText">Не нашли ответа на свой вопрос? Напишите мне</p>
+                </button>
+            </a>
         </div>
     </div>
 </section>
